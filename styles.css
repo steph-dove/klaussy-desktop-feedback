@@ -97,16 +97,12 @@ code {
 }
 
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 26px;
   height: 26px;
   border-radius: 6px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 15px;
-  line-height: 1;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .brand-name {
