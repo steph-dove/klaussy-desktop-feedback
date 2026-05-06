@@ -8,11 +8,14 @@ This repo hosts two things:
 ## Report a bug / request a feature
 
 Open an issue in the [Issues tab](https://github.com/steph-dove/klausify-desktop-feedback/issues). Include:
-- macOS version
+- OS and version (macOS / Windows / Linux distro)
 - Klaussy version (About → Version)
 - Steps to reproduce
 - What you expected vs. what happened
-- Logs from `~/Library/Logs/Klaussy/main.log` if relevant
+- Logs if relevant:
+  - macOS: `~/Library/Logs/Klaussy/main.log`
+  - Windows: `%APPDATA%\Klaussy\logs\main.log`
+  - Linux: `~/.config/Klaussy/logs/main.log`
 
 ## Development
 
@@ -20,8 +23,8 @@ Plain HTML + CSS — no build step.
 
 ```bash
 # Preview locally
-python3 -m http.server 8080
-# Then open http://localhost:8080
+python3 -m http.server 8000
+# Then open http://localhost:8000
 ```
 
 ## Deployment (GitHub Pages)
@@ -36,25 +39,10 @@ Optional — custom domain:
 2. Add a DNS CNAME record pointing `klaussy.app` at `steph-dove.github.io`.
 3. Enable HTTPS in the Pages settings after the DNS propagates.
 
-## Placeholders to fill before shipping
-
-Search `index.html` for `{{…}}` markers:
-- `{{DISCORD_INVITE_URL}}` — your Discord server invite link
-- `{{COMPANY_NAME}}` — legal entity name (used in footer copyright)
-- `{{YEAR}}` — current year
-
-A quick one-liner to patch them (run from the repo root):
-
-```bash
-sed -i '' \
-  -e 's|{{DISCORD_INVITE_URL}}|https://discord.gg/YOUR_INVITE|g' \
-  -e 's|{{COMPANY_NAME}}|Stephanie Dover|g' \
-  -e "s|{{YEAR}}|$(date +%Y)|g" \
-  index.html
-```
-
 ## Privacy & EULA pages
 
-`privacy.html` and `eula.html` are linked from the footer. Generate from the source Markdown in the app repo (`klausify-desktop/docs/{PRIVACY,EULA}.md`) once they've been through legal review — any Markdown-to-HTML converter works, or a static wrapper with `<article>` around the raw text.
+`privacy.html` and `eula.html` are linked from the footer. The source Markdown lives in the app repo at `klausify-desktop/docs/{PRIVACY,EULA}.md` — regenerate the HTML from there if either changes.
 
-Pull-request templates for this repo can be added later under `.github/ISSUE_TEMPLATE/`.
+## Pricing CTAs
+
+All three pricing CTAs in `index.html` point to the Lemon Squeezy checkout at `https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358`. The Lemon Squeezy product surfaces all enabled tiers (Founder / Team — Small / Team — Large) on that single page. Toggle tiers on or off in the Lemon Squeezy dashboard rather than editing the HTML.

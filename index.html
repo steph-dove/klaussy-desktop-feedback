@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klaussy — Multi-terminal Claude Code worktree manager</title>
-  <meta name="description" content="A macOS app that orchestrates multiple Claude Code sessions across git worktrees, reviews PRs with AI, and offers local inline autocomplete.">
+  <meta name="description" content="A desktop app for macOS, Windows, and Linux that orchestrates multiple Claude Code sessions across git worktrees, reviews PRs with AI, and offers local inline autocomplete.">
   <meta property="og:title" content="Klaussy">
-  <meta property="og:description" content="Multi-terminal Claude Code worktree manager + PR reviewer for macOS.">
+  <meta property="og:description" content="Multi-terminal Claude Code worktree manager + PR reviewer. macOS, Windows, Linux.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
@@ -22,6 +22,7 @@
     <nav class="nav-links">
       <a href="#features">Features</a>
       <a href="#requirements">Requirements</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="https://github.com/steph-dove/klausify-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
     </nav>
@@ -38,18 +39,18 @@
       <h1>Run Claude Code across every worktree.<br>In one window.</h1>
       <p class="tagline">For the 20&times; developer.</p>
       <p class="lede">
-        Klaussy is a macOS app that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
+        Klaussy is a desktop app for macOS, Windows, and Linux that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest" id="download-btn">
-          Download for macOS
-          <span class="btn-sub">Universal · Apple Silicon + Intel</span>
+          Download Klaussy
+          <span class="btn-sub">macOS · Windows · Linux</span>
         </a>
         <a class="btn btn-secondary" href="https://discord.gg/9bpSdwCx">
           Join the Discord
         </a>
       </div>
-      <p class="hero-note">Requires macOS 12 (Monterey) or later. <a href="#requirements">See full requirements</a>.</p>
+      <p class="hero-note">Free to try. <a href="#pricing">$39 lifetime access</a> unlocks an access key for every platform.</p>
     </div>
 
   </section>
@@ -67,15 +68,15 @@
         </div>
 
         <div class="feature">
-          <div class="feature-icon">⤸</div>
-          <h3>Inline AI — locally</h3>
-          <p>Tab-autocomplete as you type, powered by <code>qwen2.5-coder</code> running on your machine via Ollama. ~100ms latency. No code leaves your laptop.</p>
+          <div class="feature-icon">⚙</div>
+          <h3>Auto-debug CI failures</h3>
+          <p>Klaussy connects to your PR's CI checks. When one goes red, pull the logs in with a click and Claude runs a focused debug pass — likely cause, suggested fix, applied straight to the worktree.</p>
         </div>
 
         <div class="feature">
-          <div class="feature-icon">⌘K</div>
-          <h3>Cmd+K inline edits</h3>
-          <p>Select code, describe the change. Claude streams the replacement live in a diff preview. Accept or reject in-place.</p>
+          <div class="feature-icon">⑂</div>
+          <h3>Full PR review surface</h3>
+          <p>Pull in a PR, read the diff with inline comments, run an AI review that breaks into per-finding cards — ignore, implement, or append to PR.</p>
         </div>
 
         <div class="feature">
@@ -85,9 +86,9 @@
         </div>
 
         <div class="feature">
-          <div class="feature-icon">⑂</div>
-          <h3>Full PR review surface</h3>
-          <p>Pull in a PR, read the diff with inline comments, run an AI review that breaks into per-finding cards — ignore, implement, or append to PR. CI failures get an AI debug pass too.</p>
+          <div class="feature-icon">⤸</div>
+          <h3>Inline AI — locally</h3>
+          <p>Tab-autocomplete as you type, powered by <code>qwen2.5-coder</code> running on your machine via Ollama. ~100ms latency. No code leaves your laptop.</p>
         </div>
 
         <div class="feature">
@@ -118,11 +119,61 @@
     <div class="container">
       <h2>What you need</h2>
       <ul class="req-list">
-        <li><strong>macOS 12</strong> (Monterey) or later. Apple Silicon or Intel.</li>
+        <li><strong>macOS 12</strong> (Monterey) or later — Apple Silicon or Intel — <strong>Windows 10/11</strong>, or <strong>Ubuntu 22.04+</strong> (other modern Linux distros generally work).</li>
         <li><strong><a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code CLI</a></strong> installed and authenticated. Klaussy orchestrates <code>claude</code> — it doesn't replace it.</li>
         <li><strong><a href="https://cli.github.com" target="_blank" rel="noopener">GitHub CLI (gh)</a></strong> authenticated. Required for PR review features.</li>
-        <li><strong>Homebrew</strong> (optional). Only needed if you opt into local inline autocomplete — Klaussy installs Ollama via <code>brew</code>.</li>
+        <li><strong>Ollama</strong> (optional). Only needed if you opt into local inline autocomplete. On macOS, Klaussy can install it via Homebrew; on Windows/Linux, install from <a href="https://ollama.com/download" target="_blank" rel="noopener">ollama.com</a>.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Lifetime access</h2>
+      <p class="pricing-sub">One-time purchase. Unlocks an access key that works on macOS, Windows, and Linux — and includes every future update.</p>
+
+      <div class="pricing-grid">
+
+        <div class="price-card price-card-featured">
+          <p class="price-eyebrow">Founder</p>
+          <p class="price-amount"><span class="price-currency">$</span>39</p>
+          <p class="price-note">One developer. Lifetime.</p>
+          <ul class="price-list">
+            <li>Access key for macOS, Windows, and Linux</li>
+            <li>All future updates included</li>
+            <li>Early-access price — rises to $69, then $99</li>
+          </ul>
+          <a class="btn btn-primary price-cta" href="https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358" target="_blank" rel="noopener" data-purchase="founder">Get access key</a>
+        </div>
+
+        <div class="price-card">
+          <p class="price-eyebrow">Team — Small</p>
+          <p class="price-amount"><span class="price-currency">$</span>349</p>
+          <p class="price-note">3 seats. Lifetime.</p>
+          <ul class="price-list">
+            <li>3 access keys for your team</li>
+            <li>All future updates included</li>
+            <li>One invoice for the whole team</li>
+          </ul>
+          <a class="btn btn-secondary price-cta" href="https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358" target="_blank" rel="noopener" data-purchase="team-small">Buy team license</a>
+        </div>
+
+        <div class="price-card">
+          <p class="price-eyebrow">Team — Large</p>
+          <p class="price-amount"><span class="price-currency">$</span>599</p>
+          <p class="price-note">10 seats. Lifetime.</p>
+          <ul class="price-list">
+            <li>10 access keys for your team</li>
+            <li>All future updates included</li>
+            <li>One invoice for the whole team</li>
+          </ul>
+          <a class="btn btn-secondary price-cta" href="https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358" target="_blank" rel="noopener" data-purchase="team-large">Buy team license</a>
+        </div>
+
+      </div>
+
+      <p class="pricing-fineprint">Klaussy is free to download and try. An access key is required to keep using it past the trial.</p>
     </div>
   </section>
 
@@ -138,7 +189,22 @@
 
       <details>
         <summary>Do I need a Claude subscription?</summary>
-        <p>You need whatever plan your <code>claude</code> CLI is configured for. Klaussy doesn't bill separately for AI usage.</p>
+        <p>You need whatever plan your <code>claude</code> CLI is configured for. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.</p>
+      </details>
+
+      <details>
+        <summary>How does the access key work?</summary>
+        <p>After purchase you'll receive a license key. Paste it into Klaussy → Settings → License once, on any of your machines. The key is tied to you, not to a single OS — the same key activates Klaussy on macOS, Windows, and Linux.</p>
+      </details>
+
+      <details>
+        <summary>What does &ldquo;lifetime&rdquo; mean here?</summary>
+        <p>One-time payment, no subscription. You get every future update to Klaussy at no extra cost for as long as the app exists. AI usage (Claude, GitHub) still runs on your own accounts.</p>
+      </details>
+
+      <details>
+        <summary>Which platforms are supported?</summary>
+        <p>macOS 12+ (Apple Silicon and Intel), Windows 10/11, and Ubuntu 22.04+ (other modern Linux distros generally work). All builds are signed where the platform supports it.</p>
       </details>
 
       <details>
@@ -148,7 +214,7 @@
 
       <details>
         <summary>What happens to my data if I uninstall?</summary>
-        <p>Remove <code>~/Library/Application Support/Klaussy</code> and <code>~/Library/Logs/Klaussy</code> for a clean slate. Ollama and its models persist independently; remove via <code>brew uninstall ollama</code> and <code>rm -rf ~/.ollama</code>.</p>
+        <p>On macOS, remove <code>~/Library/Application Support/Klaussy</code> and <code>~/Library/Logs/Klaussy</code>. On Windows, remove <code>%APPDATA%\Klaussy</code>. On Linux, remove <code>~/.config/Klaussy</code> and <code>~/.local/share/Klaussy</code>. Ollama and its models persist independently — uninstall it through your package manager and remove <code>~/.ollama</code>.</p>
       </details>
 
       <details>
@@ -168,7 +234,7 @@
   <section class="final-cta">
     <div class="container">
       <h2>Get the beta.</h2>
-      <p>macOS 12+. Signed and notarized.</p>
+      <p>macOS, Windows, Linux. Free to try — $39 lifetime access unlocks an access key for every platform.</p>
       <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
         Download Klaussy
       </a>
