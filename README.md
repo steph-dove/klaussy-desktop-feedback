@@ -94,7 +94,7 @@ One-time purchase. Unlocks an access key that works on macOS, Windows, and Linux
 | Tier | Price | Seats |
 | --- | --- | --- |
 | **Founder** *(early-access price; rises to $69, then $99)* | $39 | 1 |
-| **Team — Small** | $349 | 3 |
+| **Team — Small** | $349 | 5 |
 | **Team — Large** | $599 | 10 |
 
 [**→ Get an access key**](https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358)
