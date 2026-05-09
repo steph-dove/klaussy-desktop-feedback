@@ -22,10 +22,9 @@ Free to try. **$39 lifetime access** unlocks an access key for every platform.
 
 ## Requirements
 
-- **macOS 12+** (Apple Silicon or Intel), **Windows 10/11**, or **Ubuntu 22.04+** (other modern Linux distros generally work).
-- **[Claude Code CLI](https://claude.ai/code)** installed and authenticated. Klaussy orchestrates `claude` — it doesn't replace it.
-- **[GitHub CLI (`gh`)](https://cli.github.com)** authenticated. Required for PR review features.
-- **Ollama** *(optional)* — only needed for local inline autocomplete. On macOS, Klaussy can install it via Homebrew; on Windows/Linux, install from [ollama.com](https://ollama.com/download).
+Klaussy runs on **macOS 12+** (Apple Silicon or Intel), **Windows 10/11**, or **Ubuntu 22.04+** (other modern Linux distros generally work).
+
+You'll also need the [Claude Code CLI](https://claude.ai/code) and the [GitHub CLI (`gh`)](https://cli.github.com), both authenticated. Ollama is optional and only needed for local inline autocomplete.
 
 ## Install
 
@@ -41,6 +40,52 @@ Download the right asset for your platform from the [latest release](https://git
 | Linux (Debian/Ubuntu) | `Klaussy-<ver>-amd64.deb` |
 
 Klaussy auto-updates after install — no need to manually grab future versions.
+
+## Setup
+
+After installing Klaussy, install the two CLIs it drives. Klaussy's first-run check will tell you if any are missing.
+
+### macOS
+
+```bash
+# Claude Code CLI (requires Node.js — `brew install node` if needed)
+npm install -g @anthropic-ai/claude-code
+
+# GitHub CLI
+brew install gh && gh auth login
+
+# Ollama (optional — only for local inline autocomplete)
+brew install ollama
+```
+
+### Windows
+
+```powershell
+# Claude Code CLI (requires Node.js — `winget install OpenJS.NodeJS` if needed)
+npm install -g @anthropic-ai/claude-code
+
+# GitHub CLI
+winget install --id GitHub.cli
+gh auth login
+
+# Ollama (optional) — download from https://ollama.com/download
+```
+
+### Linux (Ubuntu/Debian)
+
+```bash
+# Claude Code CLI (requires Node.js — `sudo apt install nodejs npm` if needed)
+npm install -g @anthropic-ai/claude-code
+
+# GitHub CLI
+sudo apt install gh
+gh auth login
+
+# Ollama (optional)
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Run `claude` once after install to authenticate. The same goes for `gh auth login` if you skipped it above.
 
 ## Pricing
 
