@@ -1,18 +1,98 @@
-# Klaussy — Landing Page & Feedback
+# Klaussy
 
-This repo hosts two things:
+**Run Claude Code across every worktree. In one window.**
+For the 20× developer.
 
-1. The landing page for [Klaussy](https://github.com/steph-dove/klausify-desktop) (served via GitHub Pages).
-2. The public issue tracker for bug reports and feature requests.
+Klaussy is a desktop app for **macOS, Windows, and Linux** that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
+
+### [⬇ Download Klaussy](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
+
+Free to try. **$39 lifetime access** unlocks an access key for every platform.
+
+---
+
+## What it does
+
+- **Parallel worktrees, one view.** Spawn a worktree per task, each with its own Claude Code instance. Columns, grid, or single-pane view. Switch with a click; no more juggling `cd`s.
+- **Auto-debug CI failures.** Klaussy connects to your PR's CI checks. When one goes red, pull the logs in with a click and Claude runs a focused debug pass — likely cause, suggested fix, applied straight to the worktree.
+- **Full PR review surface.** Pull in a PR, read the diff with inline comments, run an AI review that breaks into per-finding cards — ignore, implement, or append to PR.
+- **Plan · Debug · Review.** A dropdown on every worktree that spawns a dedicated Claude tab running `/ultraplan`, `/debug`, or a multi-phase PR review — each on the same worktree, no context loss.
+- **Inline AI — locally.** Tab-autocomplete as you type, powered by `qwen2.5-coder` running on your machine via Ollama. ~100ms latency. No code leaves your laptop.
+- **Built-in editor.** Monaco editor with LSP diagnostics. Open any file, edit, commit straight from the diff panel. AI-generated commit messages optional.
+
+## Requirements
+
+- **macOS 12+** (Apple Silicon or Intel), **Windows 10/11**, or **Ubuntu 22.04+** (other modern Linux distros generally work).
+- **[Claude Code CLI](https://claude.ai/code)** installed and authenticated. Klaussy orchestrates `claude` — it doesn't replace it.
+- **[GitHub CLI (`gh`)](https://cli.github.com)** authenticated. Required for PR review features.
+- **Ollama** *(optional)* — only needed for local inline autocomplete. On macOS, Klaussy can install it via Homebrew; on Windows/Linux, install from [ollama.com](https://ollama.com/download).
+
+## Install
+
+Download the right asset for your platform from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest):
+
+| Platform | File |
+| --- | --- |
+| macOS (Apple Silicon) | `Klaussy-<ver>-arm64.dmg` |
+| macOS (Intel) | `Klaussy-<ver>-x64.dmg` |
+| Windows (installer) | `Klaussy-<ver>-x64-setup.exe` |
+| Windows (portable) | `Klaussy-<ver>-x64-portable.exe` |
+| Linux (AppImage) | `Klaussy-<ver>-x86_64.AppImage` |
+| Linux (Debian/Ubuntu) | `Klaussy-<ver>-amd64.deb` |
+
+Klaussy auto-updates after install — no need to manually grab future versions.
+
+## Pricing
+
+One-time purchase. Unlocks an access key that works on macOS, Windows, and Linux — and includes every future update.
+
+| Tier | Price | Seats |
+| --- | --- | --- |
+| **Founder** *(early-access price; rises to $69, then $99)* | $39 | 1 |
+| **Team — Small** | $349 | 3 |
+| **Team — Large** | $599 | 10 |
+
+[**→ Get an access key**](https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358)
+
+Klaussy is free to download and try. An access key is required to keep using it past the trial.
+
+## FAQ
+
+**Does my code get sent to third parties?**
+When you use Claude features, prompts + repo context go to Anthropic via the `claude` CLI you already trust. GitHub operations go through your local `gh`. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
+
+**Do I need a Claude subscription?**
+You need whatever plan your `claude` CLI is configured for. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.
+
+**How does the access key work?**
+After purchase you'll receive a license key. Paste it into Klaussy → Settings → License once, on any of your machines. The key is tied to you, not to a single OS — the same key activates Klaussy on macOS, Windows, and Linux.
+
+**What does "lifetime" mean here?**
+One-time payment, no subscription. Every future update is included for as long as the app exists. AI usage (Claude, GitHub) still runs on your own accounts.
+
+**What happens to my data if I uninstall?**
+- macOS: remove `~/Library/Application Support/Klaussy` and `~/Library/Logs/Klaussy`
+- Windows: remove `%APPDATA%\Klaussy`
+- Linux: remove `~/.config/Klaussy` and `~/.local/share/Klaussy`
+
+Ollama and its models persist independently — uninstall it through your package manager and remove `~/.ollama`.
+
+**Is this open source?**
+The application itself is commercial, closed-source. Feedback and bug reports live in this public repo. Bundled open-source components are listed in About → Licenses.
 
 ## Report a bug / request a feature
 
-Open an issue in the [Issues tab](https://github.com/steph-dove/klausify-desktop-feedback/issues). Include:
+Open an issue in the [Issues tab](https://github.com/steph-dove/klausify-desktop-feedback/issues) or drop it in the [Discord](https://discord.gg/ZxNhsuMyYu). Both get read.
+
+Please include:
 - OS and version (macOS / Windows / Linux distro)
 - Klaussy version (About → Version)
-- Steps to reproduce
-- What you expected vs. what happened
+- Steps to reproduce, expected vs. actual behavior
 - Logs if relevant:
   - macOS: `~/Library/Logs/Klaussy/main.log`
   - Windows: `%APPDATA%\Klaussy\logs\main.log`
   - Linux: `~/.config/Klaussy/logs/main.log`
+
+---
+
+[Privacy](https://steph-dove.github.io/klausify-desktop-feedback/privacy.html) · [EULA](https://steph-dove.github.io/klausify-desktop-feedback/eula.html) · © 2026 Stephanie Dover.
