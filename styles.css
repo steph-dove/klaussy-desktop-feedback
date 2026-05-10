@@ -222,6 +222,12 @@ code {
   margin: 0 auto 40px;
 }
 
+/* When a second caption follows a screenshot in the same section, give it
+ * breathing room above so the two examples don't run together. */
+.example-shot-wrap + .example-sub {
+  margin-top: 64px;
+}
+
 .example-shot-wrap {
   max-width: 1200px;
   margin: 0 auto;
