@@ -118,6 +118,13 @@
              alt="Klaussy's Checks tab showing a failing 'Lint, format, build' run. The Debug panel below has expanded with Claude's three-part analysis (what broke, caused-by-this-PR, fix) and shows 'Fix this' and 'Open as task' buttons."
              onerror="this.parentElement.style.display='none';" />
       </div>
+
+      <p class="example-sub">AI PR review: each finding is its own card with severity, file:line location, the offending code, and a written critique. Per-finding actions: <strong>Ignore</strong>, <strong>Add to PR</strong>, <strong>Claude implement</strong>, or open a chat with <strong>Ask Claude</strong> / <strong>Claude investigate</strong>.</p>
+      <div class="example-shot-wrap">
+        <img class="example-shot" src="screenshot-pr-review.png"
+             alt="A High-severity finding in the Review tab pointing at src/hooks/useSpeechRecognition.js:97-112, with a code block, written comment explaining the swallowed-errors bug, and a row of action buttons including Copy, Claude investigate, Ask Claude, Ignore, Add to PR, and Claude implement."
+             onerror="this.parentElement.style.display='none';" />
+      </div>
     </div>
   </section>
 
