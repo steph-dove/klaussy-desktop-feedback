@@ -711,6 +711,9 @@ code {
 /* ---- Responsive tweaks ---- */
 
 @media (max-width: 640px) {
+  .brand-name {
+    display: none;
+  }
   .nav-links {
     gap: 14px;
     font-size: 12px;
