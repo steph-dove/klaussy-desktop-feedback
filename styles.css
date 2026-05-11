@@ -312,6 +312,7 @@ code {
 
 .features h2,
 .requirements h2,
+.pricing h2,
 .faq h2,
 .final-cta h2 {
   font-size: clamp(26px, 3.5vw, 34px);
