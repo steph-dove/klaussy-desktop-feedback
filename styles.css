@@ -303,6 +303,137 @@ code {
   color: var(--text);
 }
 
+/* ---- Download picker ---- */
+
+.download-picker {
+  max-width: 560px;
+  margin: 28px auto 0;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.download-picker[open] {
+  border-color: var(--border-strong);
+}
+
+.download-picker > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.download-picker > summary::-webkit-details-marker {
+  display: none;
+}
+
+.download-picker > summary:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.download-picker-hint {
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.download-picker-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.download-picker-list li + li {
+  border-top: 1px solid var(--border);
+}
+
+.download-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 2px 12px;
+  padding: 12px 18px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+
+.download-row:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.download-row-platform {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.download-row-note {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.download-row-file {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--accent);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.download-picker-mac-help {
+  margin: 0;
+  padding: 14px 18px;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  line-height: 1.55;
+}
+
+.download-picker-mac-help strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 520px) {
+  .download-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .download-row-file {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 4px;
+  }
+}
+
 /* ---- Features ---- */
 
 .features {

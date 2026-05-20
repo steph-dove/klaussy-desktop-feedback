@@ -10,6 +10,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="download.js" defer></script>
 </head>
 <body>
 
@@ -42,15 +43,67 @@
         Klaussy is a desktop app for macOS, Windows, and Linux that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest" id="download-btn">
-          Download Klaussy
-          <span class="btn-sub">macOS · Windows · Linux</span>
+        <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest" id="download-btn" data-smart-download>
+          <span class="btn-label">Download Klaussy</span>
+          <span class="btn-sub">macOS &middot; Windows &middot; Linux</span>
         </a>
         <a class="btn btn-secondary" href="https://discord.gg/ZxNhsuMyYu">
           Join the Discord
         </a>
       </div>
       <p class="hero-note">Free to try. <a href="#pricing">$39 lifetime access</a> unlocks an access key for every platform.</p>
+
+      <details class="download-picker">
+        <summary>Need a different platform? <span class="download-picker-hint">All downloads &darr;</span></summary>
+        <ul class="download-picker-list">
+          <li>
+            <a class="download-row" data-download-pick="mac:arm64" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
+              <span class="download-row-platform">macOS &middot; Apple Silicon</span>
+              <span class="download-row-note">M1 / M2 / M3 / M4 Macs (2020 and later)</span>
+              <span class="download-row-file" data-download-filename>.dmg</span>
+            </a>
+          </li>
+          <li>
+            <a class="download-row" data-download-pick="mac:x64" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
+              <span class="download-row-platform">macOS &middot; Intel</span>
+              <span class="download-row-note">Pre-2020 MacBooks, iMacs, Mac mini</span>
+              <span class="download-row-file" data-download-filename>.dmg</span>
+            </a>
+          </li>
+          <li>
+            <a class="download-row" data-download-pick="win:setup" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
+              <span class="download-row-platform">Windows &middot; Installer</span>
+              <span class="download-row-note">Standard install on Windows 10 / 11</span>
+              <span class="download-row-file" data-download-filename>.exe</span>
+            </a>
+          </li>
+          <li>
+            <a class="download-row" data-download-pick="win:portable" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
+              <span class="download-row-platform">Windows &middot; Portable</span>
+              <span class="download-row-note">Single-file .exe, no install needed</span>
+              <span class="download-row-file" data-download-filename>.exe</span>
+            </a>
+          </li>
+          <li>
+            <a class="download-row" data-download-pick="linux:deb" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
+              <span class="download-row-platform">Linux &middot; Debian / Ubuntu</span>
+              <span class="download-row-note">Ubuntu, Debian, Mint, Pop!_OS</span>
+              <span class="download-row-file" data-download-filename>.deb</span>
+            </a>
+          </li>
+          <li>
+            <a class="download-row" data-download-pick="linux:appimage" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
+              <span class="download-row-platform">Linux &middot; AppImage</span>
+              <span class="download-row-note">Works on any Linux (Fedora, Arch, openSUSE, &hellip;)</span>
+              <span class="download-row-file" data-download-filename>.AppImage</span>
+            </a>
+          </li>
+        </ul>
+        <p class="download-picker-mac-help">
+          <strong>Not sure if your Mac is Apple Silicon or Intel?</strong>
+          Click the Apple menu &rarr; <em>About This Mac</em>. If the <em>Chip</em> row says &ldquo;Apple M1/M2/M3/M4&rdquo; you have Apple Silicon. If it says &ldquo;Intel&rdquo;, pick the Intel build.
+        </p>
+      </details>
     </div>
 
   </section>
@@ -249,8 +302,9 @@
     <div class="container">
       <h2>Get the beta.</h2>
       <p>macOS, Windows, Linux. Free to try — $39 lifetime access unlocks an access key for every platform.</p>
-      <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest">
-        Download Klaussy
+      <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest" data-smart-download>
+        <span class="btn-label">Download Klaussy</span>
+        <span class="btn-sub">macOS &middot; Windows &middot; Linux</span>
       </a>
     </div>
   </section>

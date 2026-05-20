@@ -5,7 +5,9 @@ For the 20× developer.
 
 Klaussy is a desktop app for **macOS, Windows, and Linux** that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
 
-### [⬇ Download Klaussy](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
+### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
+
+The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest).
 
 Free to try. **$39 lifetime access** unlocks an access key for every platform.
 
@@ -28,16 +30,49 @@ You'll also need the [Claude Code CLI](https://claude.ai/code) and the [GitHub C
 
 ## Install
 
-Download the right asset for your platform from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest):
+Easiest: open **[klaussy.com](https://www.klaussy.com/#download-btn)** — it detects your OS and offers the right file directly.
 
-| Platform | File |
+Or grab the matching file from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest) using the picker below.
+
+<details>
+<summary><b>macOS</b> — pick by chip type</summary>
+
+Open the Apple menu → **About This Mac** and look at the **Chip** (or **Processor**) row.
+
+| Your Mac says | Download |
 | --- | --- |
-| macOS (Apple Silicon) | `Klaussy-<ver>-arm64.dmg` |
-| macOS (Intel) | `Klaussy-<ver>-x64.dmg` |
-| Windows (installer) | `Klaussy-<ver>-x64-setup.exe` |
-| Windows (portable) | `Klaussy-<ver>-x64-portable.exe` |
-| Linux (AppImage) | `Klaussy-<ver>-x86_64.AppImage` |
-| Linux (Debian/Ubuntu) | `Klaussy-<ver>-amd64.deb` |
+| Apple M1 / M2 / M3 / M4 (Apple Silicon) | `Klaussy-<ver>-macOS-arm64.dmg` |
+| Intel | `Klaussy-<ver>-macOS-x64.dmg` |
+
+Open the `.dmg`, drag **Klaussy** into **Applications**, done. Klaussy is signed and notarized — no quarantine workaround needed.
+
+</details>
+
+<details>
+<summary><b>Windows</b> — installer or portable</summary>
+
+| Want | Download |
+| --- | --- |
+| Standard install on Windows 10/11 | `Klaussy-<ver>-Windows-Setup.exe` |
+| Portable (no install) | `Klaussy-<ver>-Windows-Portable.exe` |
+
+Signed with an SSL.com EV certificate — Windows SmartScreen should pass cleanly.
+
+</details>
+
+<details>
+<summary><b>Linux</b> — by distro</summary>
+
+| Distro | Download |
+| --- | --- |
+| Ubuntu, Debian, Mint, Pop!_OS | `Klaussy-<ver>-Linux-Debian-Ubuntu.deb` |
+| Fedora, Arch, openSUSE, anything else | `Klaussy-<ver>-Linux.AppImage` |
+
+`.deb`: `sudo dpkg -i Klaussy-<ver>-Linux-Debian-Ubuntu.deb`
+
+AppImage: `chmod +x Klaussy-<ver>-Linux.AppImage && ./Klaussy-<ver>-Linux.AppImage`
+
+</details>
 
 Klaussy auto-updates after install — no need to manually grab future versions.
 
