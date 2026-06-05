@@ -22,8 +22,8 @@
   };
 
   const PRIMARY_LABEL = {
-    'mac:arm64':      'Download for macOS — Apple Silicon',
-    'mac:x64':        'Download for macOS — Intel',
+    'mac:arm64':      'Download for macOS (Apple Silicon)',
+    'mac:x64':        'Download for macOS (Intel)',
     'win:setup':      'Download for Windows',
     'linux:appimage': 'Download for Linux (AppImage)',
     'linux:deb':      'Download for Linux (Debian/Ubuntu)',

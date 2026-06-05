@@ -3,7 +3,7 @@
 **Run your AI coding agent across every worktree. In one window.**
 For the 20× developer.
 
-Klaussy is a desktop app for **macOS, Windows, and Linux** that orchestrates multiple AI coding-agent sessions — **Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot** — across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
+A desktop app for **macOS, Windows, and Linux**. Run multiple AI coding agents (**Claude Code, Codex, Gemini, Copilot**) across git worktrees, review PRs with AI, and get local tab-autocomplete that never leaves your machine.
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
