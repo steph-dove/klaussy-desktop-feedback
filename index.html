@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klaussy — Multi-terminal Claude Code worktree manager</title>
-  <meta name="description" content="A desktop app for macOS, Windows, and Linux that orchestrates multiple Claude Code sessions across git worktrees, reviews PRs with AI, and offers local inline autocomplete.">
+  <title>Klaussy — Multi-terminal AI coding-agent worktree manager</title>
+  <meta name="description" content="A desktop app for macOS, Windows, and Linux that orchestrates multiple AI coding-agent sessions (Claude Code, OpenAI Codex, Google Gemini, GitHub Copilot) across git worktrees, reviews PRs with AI, and offers local inline autocomplete.">
   <meta property="og:title" content="Klaussy">
-  <meta property="og:description" content="Multi-terminal Claude Code worktree manager + PR reviewer. macOS, Windows, Linux.">
+  <meta property="og:description" content="Multi-terminal AI coding-agent worktree manager + PR reviewer. Claude, Codex, Gemini, Copilot. macOS, Windows, Linux.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
@@ -37,10 +37,10 @@
     <div class="container">
       <p class="eyebrow">Early access</p>
       <p class="wordmark">KLAUSSY</p>
-      <h1>Run Claude Code across every worktree.<br>In one window.</h1>
+      <h1>Run your AI coding agent across every worktree.<br>In one window.</h1>
       <p class="tagline">For the 20&times; developer.</p>
       <p class="lede">
-        Klaussy is a desktop app for macOS, Windows, and Linux that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
+        Klaussy is a desktop app for macOS, Windows, and Linux that orchestrates multiple AI coding-agent sessions — Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot — across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://github.com/steph-dove/klausify-desktop-feedback/releases/latest" id="download-btn" data-smart-download>
@@ -115,15 +115,21 @@
       <div class="feature-grid">
 
         <div class="feature">
+          <div class="feature-icon">⇄</div>
+          <h3>Any agent, your choice</h3>
+          <p>Run each task on Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot. Pick a default, switch per terminal, or run the same task in two agents side by side.</p>
+        </div>
+
+        <div class="feature">
           <div class="feature-icon">▤</div>
           <h3>Parallel worktrees, one view</h3>
-          <p>Spawn a worktree per task, each with its own Claude Code instance. Columns, grid, or single-pane view. No more <code>cd</code> juggling.</p>
+          <p>Spawn a worktree per task, each with its own agent instance. Columns, grid, or single-pane view. No more <code>cd</code> juggling.</p>
         </div>
 
         <div class="feature">
           <div class="feature-icon">⚙</div>
           <h3>Auto-debug CI failures</h3>
-          <p>Klaussy connects to your PR's CI; one click pulls the failing job's logs and Claude returns root cause + suggested fix, applied straight to the worktree.</p>
+          <p>Klaussy connects to your PR's CI; one click pulls the failing job's logs and your agent returns root cause + suggested fix, applied straight to the worktree.</p>
         </div>
 
         <div class="feature">
@@ -135,7 +141,7 @@
         <div class="feature">
           <div class="feature-icon">▾</div>
           <h3>Plan · Debug · Review</h3>
-          <p>Every worktree has a dropdown that spawns a dedicated Claude tab running Claude skills to plan and debug, or a multi-phase PR review — same worktree, no context loss.</p>
+          <p>Every worktree has a dropdown that spawns a dedicated agent tab running Klaussy's guided Plan flow, a Debug pass, or a multi-phase PR review — same worktree, no context loss.</p>
         </div>
 
         <div class="feature">
@@ -161,21 +167,21 @@
       <p class="example-sub">Left: a Review action running on one worktree. Middle: another worktree idling. Right: a live GitHub PR with inline comment threads and a review composer.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="screenshot-hero.png"
-             alt="Klaussy with parallel Claude Code terminals, a Review action in flight on the left, and a GitHub PR review surface on the right showing inline comment threads."
+             alt="Klaussy with parallel AI coding-agent terminals, a Review action in flight on the left, and a GitHub PR review surface on the right showing inline comment threads."
              onerror="this.parentElement.style.display='none';" />
       </div>
 
-      <p class="example-sub">Debugging a failing CI check: click <strong>Debug</strong> on the red row and Claude pulls the job logs, points at the exact line, and proposes a fix. Ask follow-ups in the chat, then click <strong>Fix this</strong> to have Claude apply it in the PR worktree.</p>
+      <p class="example-sub">Debugging a failing CI check: click <strong>Debug</strong> on the red row and your agent pulls the job logs, points at the exact line, and proposes a fix. Ask follow-ups in the chat, then click <strong>Fix this</strong> to have the agent apply it in the PR worktree.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="screenshot-debug-ci.png"
-             alt="Klaussy's Checks tab showing a failing 'Lint, format, build' run with its file:line annotations expanded. Below, the Debug panel shows Claude's three-part analysis (what broke, caused-by-this-PR, fix) and a chat composer for follow-up questions, plus 'Fix this' and 'Open as task' buttons."
+             alt="Klaussy's Checks tab showing a failing 'Lint, format, build' run with its file:line annotations expanded. Below, the Debug panel shows the agent's three-part analysis (what broke, caused-by-this-PR, fix) and a chat composer for follow-up questions, plus 'Fix this' and 'Open as task' buttons."
              onerror="this.parentElement.style.display='none';" />
       </div>
 
-      <p class="example-sub">AI PR review: each finding is its own card with severity, file:line location, the offending code, and a written critique. Per-finding actions: <strong>Ignore</strong>, <strong>Add to PR</strong>, <strong>Claude implement</strong>, or open a chat with <strong>Ask Claude</strong> / <strong>Claude investigate</strong>.</p>
+      <p class="example-sub">AI PR review: each finding is its own card with severity, file:line location, the offending code, and a written critique. Per-finding actions: <strong>Ignore</strong>, <strong>Add to PR</strong>, <strong>Implement</strong>, or open a chat to <strong>Ask</strong> or <strong>Investigate</strong> — all run on your selected agent.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="screenshot-pr-review.png"
-             alt="A High-severity finding in the Review tab pointing at src/hooks/useSpeechRecognition.js:97-112, with a code block, written comment explaining the swallowed-errors bug, and a row of action buttons including Copy, Claude investigate, Ask Claude, Ignore, Add to PR, and Claude implement."
+             alt="A High-severity finding in the Review tab pointing at src/hooks/useSpeechRecognition.js:97-112, with a code block, written comment explaining the swallowed-errors bug, and a row of action buttons including Copy, Investigate, Ask, Ignore, Add to PR, and Implement."
              onerror="this.parentElement.style.display='none';" />
       </div>
     </div>
@@ -187,7 +193,7 @@
       <h2>What you need</h2>
       <ul class="req-list">
         <li><strong>macOS 12</strong> (Monterey) or later — Apple Silicon or Intel — <strong>Windows 10/11</strong>, or <strong>Ubuntu 22.04+</strong> (other modern Linux distros generally work).</li>
-        <li><strong><a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code CLI</a></strong> installed and authenticated. Klaussy orchestrates <code>claude</code> — it doesn't replace it.</li>
+        <li><strong>At least one agent CLI</strong> installed and authenticated — <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>, <a href="https://github.com/openai/codex" target="_blank" rel="noopener">OpenAI Codex</a>, <a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener">Google Gemini</a>, or <a href="https://github.com/github/copilot-cli" target="_blank" rel="noopener">GitHub Copilot</a>. Klaussy orchestrates the agent you choose — it doesn't replace it.</li>
         <li><strong><a href="https://cli.github.com" target="_blank" rel="noopener">GitHub CLI (gh)</a></strong> authenticated. Required for PR review features.</li>
         <li><strong>Ollama</strong> (optional). Only needed if you opt into local inline autocomplete. On macOS, Klaussy can install it via Homebrew; on Windows/Linux, install from <a href="https://ollama.com/download" target="_blank" rel="noopener">ollama.com</a>.</li>
       </ul>
@@ -251,12 +257,12 @@
 
       <details>
         <summary>Does my code get sent to third parties?</summary>
-        <p>When you use Claude features, prompts + repo context go to Anthropic via the <code>claude</code> CLI you already trust. GitHub operations go through your local <code>gh</code>. Inline autocomplete runs entirely locally via Ollama and <code>qwen2.5-coder:1.5b</code> — nothing per-keystroke leaves your machine. We don't run a server of our own.</p>
+        <p>When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), or GitHub (Copilot). GitHub operations go through your local <code>gh</code>. Inline autocomplete runs entirely locally via Ollama and <code>qwen2.5-coder:1.5b</code> — nothing per-keystroke leaves your machine. We don't run a server of our own.</p>
       </details>
 
       <details>
-        <summary>Do I need a Claude subscription?</summary>
-        <p>You need whatever plan your <code>claude</code> CLI is configured for. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.</p>
+        <summary>Do I need a subscription for the agents?</summary>
+        <p>You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.</p>
       </details>
 
       <details>
@@ -266,7 +272,7 @@
 
       <details>
         <summary>What does &ldquo;lifetime&rdquo; mean here?</summary>
-        <p>One-time payment, no subscription. You get every future update to Klaussy at no extra cost for as long as the app exists. AI usage (Claude, GitHub) still runs on your own accounts.</p>
+        <p>One-time payment, no subscription. You get every future update to Klaussy at no extra cost for as long as the app exists. AI usage (your agents, GitHub) still runs on your own accounts.</p>
       </details>
 
       <details>

@@ -1,9 +1,9 @@
 # Klaussy
 
-**Run Claude Code across every worktree. In one window.**
+**Run your AI coding agent across every worktree. In one window.**
 For the 20× developer.
 
-Klaussy is a desktop app for **macOS, Windows, and Linux** that orchestrates multiple Claude Code sessions across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
+Klaussy is a desktop app for **macOS, Windows, and Linux** that orchestrates multiple AI coding-agent sessions — **Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot** — across git worktrees, reviews pull requests with AI, and offers tab-autocomplete from a local model — nothing per-keystroke ever leaves your machine.
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
@@ -15,10 +15,11 @@ Free to try. **$39 lifetime access** unlocks an access key for every platform.
 
 ## What it does
 
-- **Parallel worktrees, one view.** Spawn a worktree per task, each with its own Claude Code instance. Columns, grid, or single-pane view. Switch with a click; no more juggling `cd`s.
-- **Auto-debug CI failures.** Klaussy connects to your PR's CI checks. When one goes red, pull the logs in with a click and Claude runs a focused debug pass — likely cause, suggested fix, applied straight to the worktree.
+- **Any agent, your choice.** Run each task on **Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot** — pick a global default, switch it per terminal, or run the same task in two agents side by side. PR review, implement, CI-debug, and ask all follow your selected agent + model.
+- **Parallel worktrees, one view.** Spawn a worktree per task, each with its own agent instance. Columns, grid, or single-pane view. Switch with a click; no more juggling `cd`s.
+- **Auto-debug CI failures.** Klaussy connects to your PR's CI checks. When one goes red, pull the logs in with a click and your agent runs a focused debug pass — likely cause, suggested fix, applied straight to the worktree.
 - **Full PR review surface.** Pull in a PR, read the diff with inline comments, run an AI review that breaks into per-finding cards — ignore, implement, or append to PR.
-- **Plan · Debug · Review.** A dropdown on every worktree that spawns a dedicated Claude tab running `/ultraplan`, `/debug`, or a multi-phase PR review — each on the same worktree, no context loss.
+- **Plan · Debug · Review.** A dropdown on every worktree that spawns a dedicated agent tab running Klaussy's guided **Plan** flow, a **Debug** pass, or a multi-phase PR **Review** — each on the same worktree, no context loss.
 - **Inline AI — locally.** Tab-autocomplete as you type, powered by `qwen2.5-coder` running on your machine via Ollama. ~100ms latency. No code leaves your laptop.
 - **Built-in editor.** Monaco editor with LSP diagnostics. Open any file, edit, commit straight from the diff panel. AI-generated commit messages optional.
 
@@ -26,7 +27,7 @@ Free to try. **$39 lifetime access** unlocks an access key for every platform.
 
 Klaussy runs on **macOS 12+** (Apple Silicon or Intel), **Windows 10/11**, or **Ubuntu 22.04+** (other modern Linux distros generally work).
 
-You'll also need the [Claude Code CLI](https://claude.ai/code) and the [GitHub CLI (`gh`)](https://cli.github.com), both authenticated. Ollama is optional and only needed for local inline autocomplete.
+You'll also need **at least one supported agent CLI** — [Claude Code](https://claude.ai/code), [OpenAI Codex](https://github.com/openai/codex), [Google Gemini](https://github.com/google-gemini/gemini-cli), or [GitHub Copilot](https://github.com/github/copilot-cli) — and the [GitHub CLI (`gh`)](https://cli.github.com), all authenticated. Ollama is optional and only needed for local inline autocomplete.
 
 ## Install
 
@@ -78,49 +79,41 @@ Klaussy auto-updates after install — no need to manually grab future versions.
 
 ## Setup
 
-After installing Klaussy, install the two CLIs it drives. Klaussy's first-run check will tell you if any are missing.
+After installing Klaussy, install **at least one agent CLI** plus the GitHub CLI. Klaussy's first-run check tells you what's missing.
 
-### macOS
+### Agents — install whichever you use (at least one)
+
+All four are npm packages, so they need Node.js (`brew install node` on macOS, `winget install OpenJS.NodeJS` on Windows, `sudo apt install nodejs npm` on Ubuntu/Debian).
 
 ```bash
-# Claude Code CLI (requires Node.js — `brew install node` if needed)
-npm install -g @anthropic-ai/claude-code
+npm install -g @anthropic-ai/claude-code   # Claude Code   (Anthropic)
+npm install -g @openai/codex               # OpenAI Codex
+npm install -g @google/gemini-cli          # Google Gemini
+npm install -g @github/copilot             # GitHub Copilot
+```
 
-# GitHub CLI
+Run each agent once to sign in (e.g. `claude`, `codex`, `gemini`, `copilot`) — they use your own account/subscription.
+
+### GitHub CLI (for PR review, checkout, CI)
+
+```bash
+# macOS
 brew install gh && gh auth login
-
-# Ollama (optional — only for local inline autocomplete)
-brew install ollama
+# Windows
+winget install --id GitHub.cli && gh auth login
+# Linux (Ubuntu/Debian)
+sudo apt install gh && gh auth login
 ```
 
-### Windows
-
-```powershell
-# Claude Code CLI (requires Node.js — `winget install OpenJS.NodeJS` if needed)
-npm install -g @anthropic-ai/claude-code
-
-# GitHub CLI
-winget install --id GitHub.cli
-gh auth login
-
-# Ollama (optional) — download from https://ollama.com/download
-```
-
-### Linux (Ubuntu/Debian)
+### Ollama (optional — only for local inline autocomplete)
 
 ```bash
-# Claude Code CLI (requires Node.js — `sudo apt install nodejs npm` if needed)
-npm install -g @anthropic-ai/claude-code
-
-# GitHub CLI
-sudo apt install gh
-gh auth login
-
-# Ollama (optional)
+# macOS
+brew install ollama
+# Linux
 curl -fsSL https://ollama.com/install.sh | sh
+# Windows — download from https://ollama.com/download
 ```
-
-Run `claude` once after install to authenticate. The same goes for `gh auth login` if you skipped it above.
 
 ## Pricing
 
@@ -139,16 +132,16 @@ Klaussy is free to download and try. An access key is required to keep using it 
 ## FAQ
 
 **Does my code get sent to third parties?**
-When you use Claude features, prompts + repo context go to Anthropic via the `claude` CLI you already trust. GitHub operations go through your local `gh`. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
+When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), or GitHub (Copilot). GitHub operations go through your local `gh`. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
 
-**Do I need a Claude subscription?**
-You need whatever plan your `claude` CLI is configured for. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.
+**Do I need a subscription for the agents?**
+You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.
 
 **How does the access key work?**
 After purchase you'll receive a license key. Paste it into Klaussy → Settings → License once, on any of your machines. The key is tied to you, not to a single OS — the same key activates Klaussy on macOS, Windows, and Linux.
 
 **What does "lifetime" mean here?**
-One-time payment, no subscription. Every future update is included for as long as the app exists. AI usage (Claude, GitHub) still runs on your own accounts.
+One-time payment, no subscription. Every future update is included for as long as the app exists. AI usage (your agents, GitHub) still runs on your own accounts.
 
 **What happens to my data if I uninstall?**
 - macOS: remove `~/Library/Application Support/Klaussy` and `~/Library/Logs/Klaussy`
