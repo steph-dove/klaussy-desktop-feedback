@@ -9,7 +9,7 @@ A desktop app for **macOS, Windows, and Linux**. Run multiple AI coding agents (
 
 The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest).
 
-Free to try. **$39 lifetime access** unlocks an access key for every platform.
+Free to try. **$99 lifetime access** unlocks an access key for every platform.
 
 ---
 
@@ -121,7 +121,7 @@ One-time purchase. Unlocks an access key that works on macOS, Windows, and Linux
 
 | Tier | Price | Seats |
 | --- | --- | --- |
-| **Founder** *(early-access price; rises to $69, then $99)* | $39 | 1 |
+| **Individual** | $99 | 1 |
 | **Team — Small** | $349 | 5 |
 | **Team — Large** | $599 | 10 |
 
