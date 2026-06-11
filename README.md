@@ -1,9 +1,9 @@
 # Klaussy
 
-**Run your AI coding agent across every worktree. In one window.**
+**Run one AI coding session across every repo. In one window.**
 For the 20× developer.
 
-A desktop app for **macOS, Windows, and Linux**. Run multiple AI coding agents (**Claude Code, Codex, Gemini, Copilot**) across git worktrees, review PRs with AI, and get local tab-autocomplete that never leaves your machine.
+A desktop app for **macOS, Windows, and Linux**. Start **sessions** that span multiple repos — same branch everywhere, an AI agent (**Claude Code, Codex, Gemini, Copilot**) in each — review PRs with AI, and get local tab-autocomplete that never leaves your machine.
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
@@ -15,8 +15,8 @@ Free to try. **$99 lifetime access** unlocks an access key for every platform.
 
 ## What it does
 
-- **Any agent, your choice.** Run each task on **Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot** — pick a global default, switch it per terminal, or run the same task in two agents side by side. PR review, implement, CI-debug, and ask all follow your selected agent + model.
-- **Parallel worktrees, one view.** Spawn a worktree per task, each with its own agent instance. Columns, grid, or single-pane view. Switch with a click; no more juggling `cd`s.
+- **Any agent, your choice.** Run each session on **Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot** — pick a global default, switch it per terminal, or run the same session in two agents side by side. PR review, implement, CI-debug, and ask all follow your selected agent + model.
+- **Multi-repo sessions, one view.** Name a session and pick every repo it touches — including straight from your recent GitHub repos, cloned on demand. Each repo gets the same branch, its own worktree, and its own agent, opened side by side. Resume a whole session later with one click — every repo comes back with its agent conversation — and manage or delete sessions (worktrees included) from the sidebar. Columns, grid, or single-pane view; no more juggling `cd`s.
 - **Auto-debug CI failures.** Klaussy connects to your PR's CI checks. When one goes red, pull the logs in with a click and your agent runs a focused debug pass — likely cause, suggested fix, applied straight to the worktree.
 - **Full PR review surface.** Pull in a PR, read the diff with inline comments, run an AI review that breaks into per-finding cards — ignore, implement, or append to PR.
 - **Plan · Debug · Review.** A dropdown on every worktree that spawns a dedicated agent tab running Klaussy's guided **Plan** flow, a **Debug** pass, or a multi-phase PR **Review** — each on the same worktree, no context loss.
