@@ -27,11 +27,11 @@ Free to try. **$99 lifetime access** unlocks an access key for every platform.
 
 ## How sessions work
 
-A session is just a workspace you name — stack several on one repo, fan one across many repos, or mix agents inside a single session.
+Stack several on one repo, fan one across many repos, or mix agents inside a single session.
 
 | <img src="diagram-sessions-per-repo.svg" alt="Three sessions all pointing to one repo" width="320"> | <img src="diagram-repos-per-session.svg" alt="One session fanning out to three repos" width="320"> | <img src="diagram-agents-per-session.svg" alt="One session fanning out to three agents" width="320"> |
 |:--:|:--:|:--:|
-| **Many sessions, one repo.** Parallel sessions on the same repo — a feature here, a hotfix there — each in its own worktree. | **One session, many repos.** Every repo a change touches, same branch everywhere, side by side. | **One session, many agents.** Mix Claude Code, Codex, Gemini, and Copilot in a single session. |
+| **Many sessions, one repo.** Parallel sessions on the same repo — a feature here, a hotfix there. | **One session, many repos.** Every repo a change touches, same branch everywhere, side by side. | **One session, many agents.** Mix Claude Code, Codex, Gemini, and Copilot in a single session. |
 
 ## Requirements
 
