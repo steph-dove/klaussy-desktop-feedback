@@ -22,6 +22,7 @@ Free to try. **$99 lifetime access** unlocks an access key for every platform.
 - **Full PR review surface.** Pull in a PR, read the diff with inline comments, run an AI review that breaks into per-finding cards — ignore, implement, or append to PR.
 - **Plan · Debug · Review.** A dropdown on every worktree that spawns a dedicated agent tab running Klaussy's guided **Plan** flow, a **Debug** pass, or a multi-phase PR **Review** — each on the same worktree, no context loss.
 - **Inline AI — locally.** Tab-autocomplete as you type, powered by `qwen2.5-coder` running on your machine via Ollama. ~100ms latency. No code leaves your laptop.
+- **Safe commits.** Before code leaves your hands, Klaussy reviews the staged diff — catching leaked secrets, silent failures, debug leftovers, and correctness landmines, plus your repo's own linter, shown on a per-lens scorecard. Wired to the Commit button and as git pre-commit/pre-push hooks, so it catches agent commits and pushes too — fix first or commit anyway.
 - **Built-in editor.** Monaco editor with LSP diagnostics. Open any file, edit, commit straight from the diff panel. AI-generated commit messages optional.
 
 ## Requirements
