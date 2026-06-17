@@ -7,7 +7,7 @@ A desktop app for **macOS, Windows, and Linux**. Start **sessions** that span mu
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
-The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest).
+The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest).
 
 Free to try. **$99 lifetime access** unlocks an access key for every platform.
 
@@ -33,7 +33,7 @@ You'll also need **at least one supported agent CLI** — [Claude Code](https://
 
 Easiest: open **[klaussy.com](https://www.klaussy.com/#download-btn)** — it detects your OS and offers the right file directly.
 
-Or grab the matching file from the [latest release](https://github.com/steph-dove/klausify-desktop-feedback/releases/latest) using the picker below.
+Or grab the matching file from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest) using the picker below.
 
 <details>
 <summary><b>macOS</b> — pick by chip type</summary>
@@ -155,7 +155,7 @@ The application itself is commercial, closed-source. Feedback and bug reports li
 
 ## Report a bug / request a feature
 
-Open an issue in the [Issues tab](https://github.com/steph-dove/klausify-desktop-feedback/issues) or drop it in the [Discord](https://discord.gg/ZxNhsuMyYu). Both get read.
+Open an issue in the [Issues tab](https://github.com/steph-dove/klaussy-desktop-feedback/issues) or drop it in the [Discord](https://discord.gg/ZxNhsuMyYu). Both get read.
 
 Please include:
 - OS and version (macOS / Windows / Linux distro)
@@ -168,4 +168,4 @@ Please include:
 
 ---
 
-[Privacy](https://steph-dove.github.io/klausify-desktop-feedback/privacy.html) · [EULA](https://steph-dove.github.io/klausify-desktop-feedback/eula.html) · © 2026 Stephanie Dover.
+[Privacy](https://steph-dove.github.io/klaussy-desktop-feedback/privacy.html) · [EULA](https://steph-dove.github.io/klaussy-desktop-feedback/eula.html) · © 2026 Stephanie Dover.
