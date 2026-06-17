@@ -25,6 +25,14 @@ Free to try. **$99 lifetime access** unlocks an access key for every platform.
 - **Safe commits.** Before code leaves your hands, Klaussy reviews the staged diff — catching leaked secrets, silent failures, debug leftovers, and correctness landmines, plus your repo's own linter, shown on a per-lens scorecard. Wired to the Commit button and as git pre-commit/pre-push hooks, so it catches agent commits and pushes too — fix first or commit anyway.
 - **Built-in editor.** Monaco editor with LSP diagnostics. Open any file, edit, commit straight from the diff panel. AI-generated commit messages optional.
 
+## How sessions work
+
+A session is just a workspace you name — stack several on one repo, fan one across many repos, or mix agents inside a single session.
+
+| <img src="diagram-sessions-per-repo.svg" alt="Three sessions all pointing to one repo" width="320"> | <img src="diagram-repos-per-session.svg" alt="One session fanning out to three repos" width="320"> | <img src="diagram-agents-per-session.svg" alt="One session fanning out to three agents" width="320"> |
+|:--:|:--:|:--:|
+| **Many sessions, one repo.** Parallel sessions on the same repo — a feature here, a hotfix there — each in its own worktree. | **One session, many repos.** Every repo a change touches, same branch everywhere, side by side. | **One session, many agents.** Mix Claude Code, Codex, Gemini, and Copilot in a single session. |
+
 ## Requirements
 
 Klaussy runs on **macOS 12+** (Apple Silicon or Intel), **Windows 10/11**, or **Ubuntu 22.04+** (other modern Linux distros generally work).
