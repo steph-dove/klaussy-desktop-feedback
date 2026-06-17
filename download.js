@@ -7,7 +7,7 @@
 // direct download links rather than a generic releases page.
 
 (() => {
-  const REPO = 'steph-dove/klausify-desktop-feedback';
+  const REPO = 'steph-dove/klaussy-desktop-feedback';
   const API_URL = `https://api.github.com/repos/${REPO}/releases/latest`;
   const CACHE_KEY = 'klaussy-latest-release';
   const CACHE_TTL_MS = 60 * 60 * 1000;
