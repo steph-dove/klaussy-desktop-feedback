@@ -445,6 +445,7 @@ code {
 .requirements h2,
 .pricing h2,
 .faq h2,
+.diagrams h2,
 .final-cta h2 {
   font-size: clamp(26px, 3.5vw, 34px);
   font-weight: 700;
@@ -502,6 +503,63 @@ code {
 
 .feature code {
   font-size: 12px;
+}
+
+/* ---- How sessions work (diagrams) ---- */
+.diagrams {
+  padding: 96px 0;
+  border-top: 1px solid var(--border);
+}
+
+.diagrams h2 {
+  margin-bottom: 16px;
+}
+
+.diagrams-sub {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 48px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.diagram {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px 22px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.diagram:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.diagram figcaption {
+  margin-top: 6px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.diagram figcaption strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 /* ---- Pricing ---- */
@@ -855,6 +913,7 @@ code {
   .features,
   .requirements,
   .faq,
+  .diagrams,
   .final-cta {
     padding: 72px 0;
   }

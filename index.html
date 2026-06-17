@@ -108,6 +108,32 @@
 
   </section>
 
+  <!-- How sessions work -->
+  <section id="how-sessions-work" class="diagrams">
+    <div class="container">
+      <h2>One session. Your shape.</h2>
+      <p class="diagrams-sub">A session is just a workspace you name. Stack several on one repo, fan one across many repos, or run a mix of agents inside a single session.</p>
+      <div class="diagram-grid">
+
+        <figure class="diagram">
+          <img src="diagram-sessions-per-repo.svg" alt="Three sessions — A, B, and C — each pointing to the same repo, api." loading="lazy" />
+          <figcaption><strong>Many sessions, one repo.</strong> Run parallel sessions on the same repo — a feature here, a hotfix there — each in its own worktree.</figcaption>
+        </figure>
+
+        <figure class="diagram">
+          <img src="diagram-repos-per-session.svg" alt="One session fanning out to three repos: api, web, and infra." loading="lazy" />
+          <figcaption><strong>One session, many repos.</strong> Pull every repo a change touches into one session — same branch everywhere, side by side.</figcaption>
+        </figure>
+
+        <figure class="diagram">
+          <img src="diagram-agents-per-session.svg" alt="One session fanning out to three agents: Claude Code, Codex, and Gemini." loading="lazy" />
+          <figcaption><strong>One session, many agents.</strong> Mix any number of agents in a session — Claude Code, Codex, Gemini, Copilot — even different ones on the same repo.</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Features -->
   <section id="features" class="features">
     <div class="container">
