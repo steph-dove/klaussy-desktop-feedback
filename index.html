@@ -176,24 +176,38 @@
   <section class="example">
     <div class="container">
       <h2>See it in action</h2>
-      <p class="example-sub">Left: a Review action running on one worktree. Middle: another worktree idling. Right: a live GitHub PR with inline comment threads and a review composer.</p>
+      <p class="example-sub">One session, every repo, your pick of agents. Here a single session spans two repos side by side — <strong>OpenAI Codex</strong> on the left, <strong>Claude Code</strong> on the right — while Klaussy builds a conventions-aware <code>CLAUDE.md</code> so both agents work from your codebase's real structure.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="screenshot-hero.png"
-             alt="Klaussy with parallel AI coding-agent terminals, a Review action in flight on the left, and a GitHub PR review surface on the right showing inline comment threads."
-             onerror="this.parentElement.style.display='none';" />
-      </div>
-
-      <p class="example-sub">Debugging a failing CI check: click <strong>Debug</strong> on the red row and your agent pulls the job logs, points at the exact line, and proposes a fix. Ask follow-ups in the chat, then click <strong>Fix this</strong> to have the agent apply it in the PR worktree.</p>
-      <div class="example-shot-wrap">
-        <img class="example-shot" src="screenshot-debug-ci.png"
-             alt="Klaussy's Checks tab showing a failing 'Lint, format, build' run with its file:line annotations expanded. Below, the Debug panel shows the agent's three-part analysis (what broke, caused-by-this-PR, fix) and a chat composer for follow-up questions, plus 'Fix this' and 'Open as task' buttons."
+             alt="Klaussy running one session across two repos: an OpenAI Codex terminal on the left, a Claude Code terminal in the middle, and a Changes panel on the right showing a freshly generated CLAUDE.md with the repo's architecture, API routes, and tech stack."
              onerror="this.parentElement.style.display='none';" />
       </div>
 
       <p class="example-sub">AI PR review: each finding is its own card with severity, file:line location, the offending code, and a written critique. Per-finding actions: <strong>Ignore</strong>, <strong>Add to PR</strong>, <strong>Implement</strong>, or open a chat to <strong>Ask</strong> or <strong>Investigate</strong> — all run on your selected agent.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="screenshot-pr-review.png"
-             alt="A High-severity finding in the Review tab pointing at src/hooks/useSpeechRecognition.js:97-112, with a code block, written comment explaining the swallowed-errors bug, and a row of action buttons including Copy, Investigate, Ask, Ignore, Add to PR, and Implement."
+             alt="The Review tab listing 24 findings as cards; the top one is a Blocker (Correctness) on src/hooks/useSpeechRecognition.js with a code block, a detailed written explanation, and a row of action buttons: Copy, Investigate, Ask, Ignore, Add to PR, and Implement."
+             onerror="this.parentElement.style.display='none';" />
+      </div>
+
+      <p class="example-sub">Debugging a failing CI check: click <strong>Debug</strong> on the red row and your agent pulls the job logs, pinpoints the cause, and proposes a fix. Ask follow-ups in the chat, then click <strong>Fix this</strong> to have the agent apply it in the PR worktree.</p>
+      <div class="example-shot-wrap">
+        <img class="example-shot" src="screenshot-debug-ci.png"
+             alt="Klaussy's Checks tab on a failing 'Lint, format, test, build' run, with a Debug panel showing the agent's analysis and a concrete patch, a follow-up chat composer, and 'Fix this' and 'Open as task' buttons."
+             onerror="this.parentElement.style.display='none';" />
+      </div>
+
+      <p class="example-sub">Review the full diff in-app: every changed file with add/remove counts, the unified diff, and inline comment threads you — or your agent — can reply to. The same surface you'd get on GitHub.</p>
+      <div class="example-shot-wrap">
+        <img class="example-shot" src="screenshot-pr-files.png"
+             alt="The Files tab of a pull request: the left rail lists 38 changed files with per-file plus/minus bars; the main pane shows the .github/workflows/ci.yml diff with an inline comment thread."
+             onerror="this.parentElement.style.display='none';" />
+      </div>
+
+      <p class="example-sub">Any agent, plus a real editor. Run Claude, Codex, Gemini, or Copilot in the terminal with a built-in <strong>Monaco editor</strong> and LSP diagnostics right beside it — edit, then commit from the diff panel.</p>
+      <div class="example-shot-wrap">
+        <img class="example-shot" src="screenshot-agent-editor.png"
+             alt="Klaussy with a Gemini CLI session on the left and the built-in code editor open on api.ts — with a minimap and inline diagnostics — on the right."
              onerror="this.parentElement.style.display='none';" />
       </div>
     </div>
