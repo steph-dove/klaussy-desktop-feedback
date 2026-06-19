@@ -223,6 +223,13 @@
              onerror="this.parentElement.style.display='none';" />
       </div>
 
+      <p class="example-sub">The same check expanded to its annotations: every failure parsed out with its <code>file:line</code>, the test name, the error message, and stack frames — so you can see exactly what broke before sending the agent in to debug it.</p>
+      <div class="example-shot-wrap">
+        <img class="example-shot" src="screenshot-debug-ci-annotations.png"
+             alt="Klaussy's Checks tab showing 10 annotations for a failing 'Lint, format, test, build' run: a Node.js 20 deprecation warning, a 'Process completed with exit code 1' failure, and several test failures in src/hooks/useSpeechRecognition.test.js each with a 'TypeError: () => mockRecognizer is not a constructor' message and expandable stack frames."
+             onerror="this.parentElement.style.display='none';" />
+      </div>
+
       <p class="example-sub">Review the full diff in-app: every changed file with add/remove counts, the unified diff, and inline comment threads you — or your agent — can reply to. The same surface you'd get on GitHub.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="screenshot-pr-files.png"
