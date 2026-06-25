@@ -432,5 +432,34 @@
   </div>
 </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    const img = document.createElement('img');
+    img.className = 'lightbox-img';
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+
+    document.querySelectorAll('.example-shot').forEach(shot => {
+      shot.addEventListener('click', () => {
+        img.src = shot.src;
+        img.alt = shot.alt;
+        overlay.classList.add('active');
+      });
+    });
+
+    overlay.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        overlay.classList.remove('active');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
