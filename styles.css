@@ -142,6 +142,18 @@ code {
   text-transform: uppercase;
   background: var(--accent-dim);
   padding: 6px 12px;
+}
+
+.creator-badge {
+  display: inline-block;
+  color: var(--accent-hover);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  padding: 6px 14px;
   border-radius: 999px;
   margin-bottom: 22px;
 }
@@ -249,6 +261,47 @@ code {
 @media (max-width: 640px) {
   .example { padding: 72px 0; }
   .example-shot { border-radius: 8px; }
+}
+
+/* ---- Logo Strip ---- */
+
+.logo-strip {
+  padding: 56px 0 24px;
+  margin-top: 56px;
+  border-top: 1px solid var(--border);
+}
+
+.logo-strip-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 48px;
+}
+
+.logo-grid span {
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
+  opacity: 0.45;
+  transition: opacity 0.15s, color 0.15s;
+  cursor: default;
+}
+
+.logo-grid span:hover {
+  opacity: 0.85;
+  color: var(--text);
 }
 
 /* ---- Buttons ---- */

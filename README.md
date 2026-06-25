@@ -3,6 +3,8 @@
 **Run multiple repos. Mix any agents. In one window.**
 For the 20× developer.
 
+*Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, GitHub, Twitch, Rad AI, and O'Reilly Media.*
+
 A desktop app for **macOS, Windows, and Linux**. Start **sessions** across one repo or many — same branch everywhere, any number of agents (**Claude Code, Codex, Gemini, Copilot**) in each, even different ones side by side — review PRs with AI, and get local tab-autocomplete that never leaves your machine.
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
