@@ -5,7 +5,7 @@ The multi-agent workspace for professional engineers.
 
 *Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, GitHub, Twitch, Rad AI, and O'Reilly Media.*
 
-A desktop app for **macOS, Windows, and Linux**. Start **sessions** across one repo or many — same branch everywhere, any number of agents (**Claude Code, Codex, Gemini, Copilot**) in each, even different ones side by side — review PRs with AI, and get local tab-autocomplete that never leaves your machine.
+A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions with any mix of AI agents (**Claude, Gemini, Copilot, Codex**) side-by-side. Review pull requests with AI, and get blazing-fast, 100% local autocomplete that never leaves your machine.
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
