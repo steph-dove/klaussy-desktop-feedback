@@ -129,15 +129,17 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 One-time purchase. Unlocks an access key that works on macOS, Windows, and Linux — and includes every future update.
 
-| Tier | Price | Seats |
-| --- | --- | --- |
-| **Individual** | $99 | 1 |
-| **Team — Small** | $349 | 5 |
-| **Team — Large** | $599 | 10 |
+| Tier | Price | Seats | Details |
+| --- | --- | --- | --- |
+| **Individual** | $99 | 1 | One developer. Lifetime. |
+| **Team — Small** | $349 | 5 | 5 access keys. Lifetime. |
+| **Team — Large** | $599 | 10 | 10 access keys. Lifetime. |
 
 [**→ Get an access key**](https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358)
 
-Klaussy is free to download and try. An access key is required to keep using it past the trial.
+Klaussy is source-available under the Sustainable Use License (SUL 1.0). An access key is required for official binary updates and commercial/production use past the trial.
+
+For custom integrations, VPC deployments, or tailored AI environments, our developer team and AI architect team partner directly with companies to build bespoke solutions fitted exactly to your workflows. Contact us on [Discord](https://discord.gg/ZxNhsuMyYu) or book a meeting directly via [Calendly](https://calendly.com/doverstephaniem/30min).
 
 ## FAQ
 
@@ -161,7 +163,10 @@ One-time payment, no subscription. Every future update is included for as long a
 Ollama and its models persist independently — uninstall it through your package manager and remove `~/.ollama`.
 
 **Is this open source?**
-The application itself is commercial, closed-source. Feedback and bug reports live in this public repo. Bundled open-source components are listed in About → Licenses.
+Klaussy Desktop is source-available under the Sustainable Use License (SUL 1.0). You can view, customize, and build the software from source for personal use or development. For official binary releases, automated updates, and commercial usage, we require a license key. Bundled open-source components are listed in About → Licenses.
+
+**What is the Sustainable Use License (SUL 1.0)?**
+The Sustainable Use License is a source-available license. It allows individuals and organizations to inspect, modify, and run the code for personal use or development. However, commercial use in production requires a license key, and you cannot use it to offer a competing hosted service.
 
 ## Report a bug / request a feature
 
