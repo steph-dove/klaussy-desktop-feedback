@@ -129,7 +129,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 ## Enterprise & Partnerships
 
-For custom integrations, VPC deployments, or tailored AI environments, our developer team and AI architect team partner directly with companies to build bespoke solutions fitted exactly to your workflows. You can book a meeting directly via [Calendly](https://calendly.com/doverstephaniem/30min) or join our [Discord](https://discord.gg/ZxNhsuMyYu).
+Need a customized multi-agent coding environment? Our developer team and AI architect team partner directly with companies to build tailored enterprise solutions fitted exactly to your specific workflows, security guidelines, and internal APIs.
+
+- **Tailored Environments:** Extend Klaussy with integrations for your private repositories, internal tools, and proprietary developer systems.
+- **Custom AI Orchestration:** Work directly with our AI architects to set up customized multi-agent behaviors, custom model bindings, and security rules.
+- **VPC & Secure Deployment:** Host completely locally or inside your private cloud with strict data governance, custom LLM routing, and full security compliance.
+
+You can book a call directly with our AI Architects via [Calendly](https://calendly.com/doverstephaniem/30min) or join our [Discord](https://discord.gg/ZxNhsuMyYu).
 
 ## FAQ
 
@@ -138,6 +144,9 @@ When you use an agent, prompts + repo context go to that agent's provider via th
 
 **Do I need a subscription for the agents?**
 You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.
+
+**Why the 2 GB download prompt for inline autocomplete?**
+~500 MB is Ollama's runtime; ~1 GB is the `qwen2.5-coder:1.5b` model weights. You only see this prompt if you opt in — otherwise a free word-based completer handles Tab.
 
 **What happens to my data if I uninstall?**
 - macOS: remove `~/Library/Application Support/Klaussy` and `~/Library/Logs/Klaussy`
