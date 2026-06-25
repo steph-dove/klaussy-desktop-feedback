@@ -9,7 +9,7 @@ A desktop app for **macOS, Windows, and Linux**. Start **sessions** across one r
 
 The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest).
 
-Free to try. **$99 lifetime access** unlocks an access key for every platform.
+Source-available under the Sustainable Use License (SUL 1.0). Free for personal use and development.
 
 ---
 
@@ -125,21 +125,9 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 ```
 
-## Pricing
+## Enterprise & Partnerships
 
-One-time purchase. Unlocks an access key that works on macOS, Windows, and Linux — and includes every future update.
-
-| Tier | Price | Seats | Details |
-| --- | --- | --- | --- |
-| **Individual** | $99 | 1 | One developer. Lifetime. |
-| **Team — Small** | $349 | 5 | 5 access keys. Lifetime. |
-| **Team — Large** | $599 | 10 | 10 access keys. Lifetime. |
-
-[**→ Get an access key**](https://klaussy.lemonsqueezy.com/checkout/buy/c7d797d4-85e2-4f5f-81bc-a360739a3358)
-
-Klaussy is source-available under the Sustainable Use License (SUL 1.0). An access key is required for official binary updates and commercial/production use past the trial.
-
-For custom integrations, VPC deployments, or tailored AI environments, our developer team and AI architect team partner directly with companies to build bespoke solutions fitted exactly to your workflows. Contact us on [Discord](https://discord.gg/ZxNhsuMyYu) or book a meeting directly via [Calendly](https://calendly.com/doverstephaniem/30min).
+For custom integrations, VPC deployments, or tailored AI environments, our developer team and AI architect team partner directly with companies to build bespoke solutions fitted exactly to your workflows. You can book a meeting directly via [Calendly](https://calendly.com/doverstephaniem/30min) or join our [Discord](https://discord.gg/ZxNhsuMyYu).
 
 ## FAQ
 
@@ -147,13 +135,7 @@ For custom integrations, VPC deployments, or tailored AI environments, our devel
 When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), or GitHub (Copilot). GitHub operations go through your local `gh`. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
 
 **Do I need a subscription for the agents?**
-You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately for AI usage — your purchase is a one-time license for the app itself.
-
-**How does the access key work?**
-After purchase you'll receive a license key. Paste it into Klaussy → Settings → License once, on any of your machines. The key is tied to you, not to a single OS — the same key activates Klaussy on macOS, Windows, and Linux.
-
-**What does "lifetime" mean here?**
-One-time payment, no subscription. Every future update is included for as long as the app exists. AI usage (your agents, GitHub) still runs on your own accounts.
+You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.
 
 **What happens to my data if I uninstall?**
 - macOS: remove `~/Library/Application Support/Klaussy` and `~/Library/Logs/Klaussy`
@@ -163,10 +145,10 @@ One-time payment, no subscription. Every future update is included for as long a
 Ollama and its models persist independently — uninstall it through your package manager and remove `~/.ollama`.
 
 **Is this open source?**
-Klaussy Desktop is source-available under the Sustainable Use License (SUL 1.0). You can view, customize, and build the software from source for personal use or development. For official binary releases, automated updates, and commercial usage, we require a license key. Bundled open-source components are listed in About → Licenses.
+Klaussy Desktop is source-available under the Sustainable Use License (SUL 1.0). You can view, customize, and build the software from source for personal use or development. For custom enterprise integrations, self-hosting, or custom AI routing, contact our team to partner. Bundled open-source components are listed in About → Licenses.
 
 **What is the Sustainable Use License (SUL 1.0)?**
-The Sustainable Use License is a source-available license. It allows individuals and organizations to inspect, modify, and run the code for personal use or development. However, commercial use in production requires a license key, and you cannot use it to offer a competing hosted service.
+The Sustainable Use License is a source-available license. It allows individuals and organizations to inspect, modify, and run the code for personal use or development. However, commercial production usage requires a separate agreement, and you cannot use the software to host a competing service.
 
 ## Report a bug / request a feature
 
