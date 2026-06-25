@@ -11,7 +11,7 @@ A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions 
 
 The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest).
 
-Source-available under the Sustainable Use License (SUL 1.0). Free for personal use and development.
+Source-available under the Sustainable Use License (SUL 1.0). 100% free for individual developers and personal use; paid license required only for commercial production/redistribution.
 
 ---
 
