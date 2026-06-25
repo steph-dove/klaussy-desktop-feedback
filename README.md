@@ -1,7 +1,7 @@
 # Klaussy
 
 **Run multiple repos. Mix any agents. In one window.**
-For the 20× developer.
+The multi-agent workspace for professional engineers.
 
 *Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, GitHub, Twitch, Rad AI, and O'Reilly Media.*
 
