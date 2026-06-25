@@ -205,28 +205,28 @@
       <h2>See it in action</h2>
       <p class="example-sub">One session, every repo, your pick of agents. Here a single session spans two repos side by side — <strong>OpenAI Codex</strong> on the left, <strong>Claude Code</strong> on the right — while Klaussy builds a conventions-aware <code>CLAUDE.md</code> so both agents work from your codebase's real structure.</p>
       <div class="example-shot-wrap">
-        <img class="example-shot" src="screenshot-hero.png"
+        <img class="example-shot" src="klaussy_multi_agent_workspace.png"
              alt="Klaussy running one session across two repos: an OpenAI Codex terminal on the left, a Claude Code terminal in the middle, and a Changes panel on the right showing a freshly generated CLAUDE.md with the repo's architecture, API routes, and tech stack."
              onerror="this.parentElement.style.display='none';" />
       </div>
 
       <p class="example-sub">AI PR review: each finding is its own card with severity, file:line location, the offending code, and a written critique. Per-finding actions: <strong>Ignore</strong>, <strong>Add to PR</strong>, <strong>Implement</strong>, or open a chat to <strong>Ask</strong> or <strong>Investigate</strong> — all run on your selected agent.</p>
       <div class="example-shot-wrap">
-        <img class="example-shot" src="screenshot-pr-review.png"
+        <img class="example-shot" src="klaussy_pr_ai_review.png"
              alt="The Review tab listing 24 findings as cards; the top one is a Blocker (Correctness) on src/hooks/useSpeechRecognition.js with a code block, a detailed written explanation, and a row of action buttons: Copy, Investigate, Ask, Ignore, Add to PR, and Implement."
              onerror="this.parentElement.style.display='none';" />
       </div>
 
       <p class="example-sub">Debugging a failing CI check: click <strong>Debug</strong> on the red row and your agent pulls the job logs, pinpoints the cause, and proposes a fix. Ask follow-ups in the chat, then click <strong>Fix this</strong> to have the agent apply it in the PR worktree.</p>
       <div class="example-shot-wrap">
-        <img class="example-shot" src="screenshot-debug-ci.png"
+        <img class="example-shot" src="klaussy_ci_debug.png"
              alt="Klaussy's Checks tab on a failing 'Lint, format, test, build' run, with a Debug panel showing the agent's analysis and a concrete patch, a follow-up chat composer, and 'Fix this' and 'Open as task' buttons."
              onerror="this.parentElement.style.display='none';" />
       </div>
 
       <p class="example-sub">The same check expanded to its annotations: every failure parsed out with its <code>file:line</code>, the test name, the error message, and stack frames — so you can see exactly what broke before sending the agent in to debug it.</p>
       <div class="example-shot-wrap">
-        <img class="example-shot" src="screenshot-debug-ci-annotations.png"
+        <img class="example-shot" src="klaussy_ci_annotations.png"
              alt="Klaussy's Checks tab showing 10 annotations for a failing 'Lint, format, test, build' run: a Node.js 20 deprecation warning, a 'Process completed with exit code 1' failure, and several test failures in src/hooks/useSpeechRecognition.test.js each with a 'TypeError: () => mockRecognizer is not a constructor' message and expandable stack frames."
              onerror="this.parentElement.style.display='none';" />
       </div>
