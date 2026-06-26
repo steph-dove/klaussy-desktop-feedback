@@ -3,13 +3,13 @@
 **Run multiple repos. Mix any agents. In one window.**
 The multi-agent workspace for professional engineers.
 
-[![GitHub stars](https://img.shields.io/github/stars/steph-dove/klaussy-desktop-feedback.svg?style=social)](https://github.com/steph-dove/klaussy-desktop-feedback/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/steph-dove/klaussy-desktop?style=social)](https://github.com/steph-dove/klaussy-desktop/stargazers)
 
 *Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, GitHub, Twitch, Rad AI, and O'Reilly Media.*
 
 A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions with any mix of AI agents (**Claude, Gemini, Copilot, Codex, Cursor, Cline**) side-by-side. Review pull requests with AI, and get blazing-fast, 100% local autocomplete that never leaves your machine.
 
-### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [★ Star on GitHub](https://github.com/steph-dove/klaussy-desktop-feedback) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
+### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [★ Star on GitHub](https://github.com/steph-dove/klaussy-desktop) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
 The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest).
 
