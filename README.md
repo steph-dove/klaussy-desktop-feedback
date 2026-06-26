@@ -165,7 +165,7 @@ The Sustainable Use License is a source-available license. It allows individuals
 
 ## Report a bug / request a feature
 
-Open an issue in the [Issues tab](https://github.com/steph-dove/klaussy-desktop-feedback/issues) or drop it in the [Discord](https://discord.gg/ZxNhsuMyYu). Both get read.
+Open an issue in the [Issues tab](https://github.com/steph-dove/klaussy-desktop/issues) or drop it in the [Discord](https://discord.gg/ZxNhsuMyYu). Both get read.
 
 Please include:
 - OS and version (macOS / Windows / Linux distro)
