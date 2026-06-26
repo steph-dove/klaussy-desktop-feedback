@@ -1,4 +1,4 @@
-# <img src="brand-mark.png" width="32" height="32" align="center" alt="Klaussy Logo"> Klaussy
+# <img src="brand-mark.png" width="32" height="32" style="vertical-align: middle;" alt="Klaussy Logo"> Klaussy
 
 **Run multiple repos. Mix any agents. In one window.**
 The multi-agent workspace for professional engineers.
