@@ -5,7 +5,7 @@ The multi-agent workspace for professional engineers.
 
 *Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, GitHub, Twitch, Rad AI, and O'Reilly Media.*
 
-A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions with any mix of AI agents (**Claude, Gemini, Copilot, Codex**) side-by-side. Review pull requests with AI, and get blazing-fast, 100% local autocomplete that never leaves your machine.
+A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions with any mix of AI agents (**Claude, Gemini, Copilot, Codex, Cursor, Cline**) side-by-side. Review pull requests with AI, and get blazing-fast, 100% local autocomplete that never leaves your machine.
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [Join the Discord](https://discord.gg/ZxNhsuMyYu)
 
@@ -17,7 +17,7 @@ Source-available under the Sustainable Use License (SUL 1.0). 100% free for indi
 
 ## What it does
 
-- **Any agent, your choice.** Run each session on **Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot** — pick a global default, switch it per terminal, or run the same session in two agents side by side. PR review, implement, CI-debug, and ask all follow your selected agent + model.
+- **Any agent, your choice.** Run each session on **Claude Code, OpenAI Codex, Google Gemini, GitHub Copilot, Cursor, or Cline** — pick a global default, switch it per terminal, or run the same session in two agents side by side. PR review, implement, CI-debug, and ask all follow your selected agent + model.
 - **Sessions, your way.** A session is whatever you need — one repo or many. Pick the repos it touches (including straight from your recent GitHub repos, cloned on demand); each gets the same branch and its own worktree, with any number of agents you choose, even different ones side by side. Run several sessions at once — including more than one on the same repo — and resume any of them later with one click, every repo back with its agent conversations. Manage or delete sessions (worktrees included) from the sidebar. Columns, grid, or single-pane view; no more juggling `cd`s.
 - **Repo-aware agents.** On session start, Klaussy analyzes the repo — extracting its conventions, rules, and import graph (fan-in/out, cycles, endpoint chains) — and gives your agents that context to draw on. PR review, Plan, Debug, and implement runs ground their work in how your codebase fits together instead of generic advice, and the analysis refreshes as the repo changes.
 - **Auto-debug CI failures.** Klaussy connects to your PR's CI checks. When one goes red, pull the logs in with a click and your agent runs a focused debug pass — likely cause, suggested fix, applied straight to the worktree.
@@ -33,13 +33,13 @@ Stack several on one repo, fan one across many repos, or mix agents inside a sin
 
 | <img src="diagram-sessions-per-repo.svg" alt="Three sessions all pointing to one repo" width="320"> | <img src="diagram-repos-per-session.svg" alt="One session fanning out to three repos" width="320"> | <img src="diagram-agents-per-session.svg" alt="One session fanning out to three agents" width="320"> |
 |:--:|:--:|:--:|
-| **Many sessions, one repo.** Parallel sessions on the same repo — a feature here, a hotfix there. | **One session, many repos.** Every repo a change touches, same branch everywhere, side by side. | **One session, many agents.** Mix Claude Code, Codex, Gemini, and Copilot in a single session. |
+| **Many sessions, one repo.** Parallel sessions on the same repo — a feature here, a hotfix there. | **One session, many repos.** Every repo a change touches, same branch everywhere, side by side. | **One session, many agents.** Mix Claude Code, Codex, Gemini, Copilot, Cursor, and Cline in a single session. |
 
 ## Requirements
 
 Klaussy runs on **macOS 12+** (Apple Silicon or Intel), **Windows 10/11**, or **Ubuntu 22.04+** (other modern Linux distros generally work).
 
-You'll also need **at least one supported agent CLI** — [Claude Code](https://claude.ai/code), [OpenAI Codex](https://github.com/openai/codex), [Google Gemini](https://github.com/google-gemini/gemini-cli), or [GitHub Copilot](https://github.com/github/copilot-cli) — and the [GitHub CLI (`gh`)](https://cli.github.com), all authenticated. Ollama is optional and only needed for local inline autocomplete.
+You'll also need **at least one supported agent CLI or IDE extension** — [Claude Code](https://claude.ai/code), [OpenAI Codex](https://github.com/openai/codex), [Google Gemini](https://github.com/google-gemini/gemini-cli), [GitHub Copilot](https://github.com/github/copilot-cli), [Cursor](https://cursor.com), or [Cline](https://github.com/cline/cline) — and the [GitHub CLI (`gh`)](https://cli.github.com), all authenticated. Ollama is optional and only needed for local inline autocomplete.
 
 ## Install
 
@@ -104,7 +104,7 @@ npm install -g @google/gemini-cli          # Google Gemini
 npm install -g @github/copilot             # GitHub Copilot
 ```
 
-Run each agent once to sign in (e.g. `claude`, `codex`, `gemini`, `copilot`) — they use your own account/subscription.
+Run each agent once to sign in (e.g. `claude`, `codex`, `gemini`, `copilot`, `cursor`, `cline`) — they use your own account/subscription.
 
 ### GitHub CLI (for PR review, checkout, CI)
 
@@ -140,10 +140,10 @@ You can book a call directly with our AI Architects via [Calendly](https://calen
 ## FAQ
 
 **Does my code get sent to third parties?**
-When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), or GitHub (Copilot). GitHub operations go through your local `gh`. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
+When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), GitHub (Copilot), Cursor, or Cline. GitHub operations go through your local `gh`. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
 
 **Do I need a subscription for the agents?**
-You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.
+You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, Copilot, Cursor, and Cline all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.
 
 **Why the 2 GB download prompt for inline autocomplete?**
 ~500 MB is Ollama's runtime; ~1 GB is the `qwen2.5-coder:1.5b` model weights. You only see this prompt if you opt in — otherwise a free word-based completer handles Tab.

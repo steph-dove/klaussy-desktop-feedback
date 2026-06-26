@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klaussy — Multi-agent AI coding sessions in one window</title>
-  <meta name="description" content="A desktop app for macOS, Windows, and Linux. Run multi-repo coding sessions with any mix of AI agents (Claude, Gemini, Copilot, Codex) side-by-side. Review pull requests with AI, and get local autocomplete that never leaves your machine.">
+  <meta name="description" content="A desktop app for macOS, Windows, and Linux. Run multi-repo coding sessions with any mix of AI agents (Claude, Gemini, Copilot, Codex, Cursor, Cline) side-by-side. Review pull requests with AI, and get local autocomplete that never leaves your machine.">
   <meta property="og:title" content="Klaussy">
-  <meta property="og:description" content="Run multi-repo coding sessions with any mix of AI agents (Claude, Gemini, Copilot, Codex) side-by-side. macOS, Windows, Linux.">
+  <meta property="og:description" content="Run multi-repo coding sessions with any mix of AI agents (Claude, Gemini, Copilot, Codex, Cursor, Cline) side-by-side. macOS, Windows, Linux.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
@@ -40,7 +40,7 @@
       <h1>Run multiple repos. Mix any agents.<br>In one window.</h1>
       <p class="tagline">The multi-agent workspace for professional engineers.</p>
       <p class="lede">
-        A desktop app for macOS, Windows, and Linux. Run multi-repo coding sessions with any mix of AI agents (Claude, Gemini, Copilot, Codex) side-by-side. Review pull requests with AI, and get blazing-fast local autocomplete that never leaves your machine.
+        A desktop app for macOS, Windows, and Linux. Run multi-repo coding sessions with any mix of AI agents (Claude, Gemini, Copilot, Codex, Cursor, Cline) side-by-side. Review pull requests with AI, and get blazing-fast local autocomplete that never leaves your machine.
       </p>
 
       <div class="logo-strip">
@@ -151,7 +151,7 @@
 
         <figure class="diagram">
           <img src="diagram-agents-per-session.svg" alt="One session fanning out to three agents: Claude Code, Codex, and Gemini." loading="lazy" />
-          <figcaption><strong>One session, many agents.</strong> Mix any number of agents in a session — Claude Code, Codex, Gemini, Copilot — even different ones on the same repo.</figcaption>
+          <figcaption><strong>One session, many agents.</strong> Mix any number of agents in a session — Claude Code, Codex, Gemini, Copilot, Cursor, Cline — even different ones on the same repo.</figcaption>
         </figure>
 
       </div>
@@ -167,7 +167,7 @@
         <div class="feature">
           <div class="feature-icon">⇄</div>
           <h3>Any agent, your choice</h3>
-          <p>Run each session on Claude Code, OpenAI Codex, Google Gemini, or GitHub Copilot. Pick a default, switch per terminal, or run the same session in two agents side by side.</p>
+          <p>Run each session on Claude Code, OpenAI Codex, Google Gemini, GitHub Copilot, Cursor, or Cline. Pick a default, switch per terminal, or run the same session in two agents side by side.</p>
         </div>
 
         <div class="feature">
@@ -261,7 +261,7 @@
              onerror="this.parentElement.style.display='none';" />
       </div>
 
-      <p class="example-sub">Any agent, plus a real editor. Run Claude, Codex, Gemini, or Copilot in the terminal with a built-in <strong>Monaco editor</strong> and LSP diagnostics right beside it — edit, then commit from the diff panel.</p>
+      <p class="example-sub">Any agent, plus a real editor. Run Claude, Codex, Gemini, Copilot, Cursor, or Cline in the terminal with a built-in <strong>Monaco editor</strong> and LSP diagnostics right beside it — edit, then commit from the diff panel.</p>
       <div class="example-shot-wrap">
         <img class="example-shot" src="klaussy_agent_editor.png"
              alt="Klaussy with a Gemini CLI session on the left and the built-in code editor open on api.ts — with a minimap and inline diagnostics — on the right."
@@ -276,7 +276,7 @@
       <h2>What you need</h2>
       <ul class="req-list">
         <li><strong>macOS 12</strong> (Monterey) or later — Apple Silicon or Intel — <strong>Windows 10/11</strong>, or <strong>Ubuntu 22.04+</strong> (other modern Linux distros generally work).</li>
-        <li><strong>At least one agent CLI</strong> installed and authenticated — <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>, <a href="https://github.com/openai/codex" target="_blank" rel="noopener">OpenAI Codex</a>, <a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener">Google Gemini</a>, or <a href="https://github.com/github/copilot-cli" target="_blank" rel="noopener">GitHub Copilot</a>. Klaussy orchestrates the agent you choose — it doesn't replace it.</li>
+        <li><strong>At least one agent CLI or IDE extension</strong> installed and authenticated — <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>, <a href="https://github.com/openai/codex" target="_blank" rel="noopener">OpenAI Codex</a>, <a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener">Google Gemini</a>, <a href="https://github.com/github/copilot-cli" target="_blank" rel="noopener">GitHub Copilot</a>, <a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a>, or <a href="https://github.com/cline/cline" target="_blank" rel="noopener">Cline</a>. Klaussy orchestrates the agent you choose — it doesn't replace it.</li>
         <li><strong><a href="https://cli.github.com" target="_blank" rel="noopener">GitHub CLI (gh)</a></strong> authenticated. Required for PR review features.</li>
         <li><strong>Ollama</strong> (optional). Only needed if you opt into local inline autocomplete. On macOS, Klaussy can install it via Homebrew; on Windows/Linux, install from <a href="https://ollama.com/download" target="_blank" rel="noopener">ollama.com</a>.</li>
       </ul>
@@ -326,12 +326,12 @@
 
       <details>
         <summary>Does my code get sent to third parties?</summary>
-        <p>When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), or GitHub (Copilot). GitHub operations go through your local <code>gh</code>. Inline autocomplete runs entirely locally via Ollama and <code>qwen2.5-coder:1.5b</code> — nothing per-keystroke leaves your machine. We don't run a server of our own.</p>
+        <p>When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), GitHub (Copilot), Cursor, or Cline. GitHub operations go through your local <code>gh</code>. Inline autocomplete runs entirely locally via Ollama and <code>qwen2.5-coder:1.5b</code> — nothing per-keystroke leaves your machine. We don't run a server of our own.</p>
       </details>
 
       <details>
         <summary>Do I need a subscription for the agents?</summary>
-        <p>You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, and Copilot all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.</p>
+        <p>You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, Copilot, Cursor, and Cline all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.</p>
       </details>
 
       <details>
