@@ -1075,8 +1075,11 @@ code {
 /* ---- Responsive tweaks ---- */
 
 @media (max-width: 640px) {
-  .brand-name {
+  .nav .brand-mark {
     display: none;
+  }
+  .nav .brand-name {
+    display: inline;
   }
   .nav-links {
     gap: 14px;
