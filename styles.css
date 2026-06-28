@@ -1078,8 +1078,8 @@ code {
   .nav .brand-mark {
     display: none;
   }
-  .nav .brand-name {
-    display: inline;
+  .brand-name {
+    display: none;
   }
   .nav-links {
     gap: 14px;
