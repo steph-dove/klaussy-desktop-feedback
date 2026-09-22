@@ -215,6 +215,25 @@ code {
   margin-bottom: 16px;
 }
 
+.producthunt-badge {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.producthunt-badge a {
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.producthunt-badge a:hover {
+  opacity: 1;
+}
+
+.producthunt-badge img {
+  display: block;
+}
+
 .hero-note {
   font-size: 12px;
   color: var(--text-dim);
