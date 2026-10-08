@@ -11,7 +11,7 @@ A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions 
 
 ### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [★ Star on GitHub](https://github.com/steph-dove/klaussy-desktop)
 
-The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest).
+The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop/releases/latest).
 
 Source-available under the Sustainable Use License (SUL 1.0). 100% free for individual developers and personal use; paid license required only for commercial production/redistribution.
 
@@ -61,7 +61,7 @@ You'll also need **at least one supported agent CLI or IDE extension** — [Clau
 
 Easiest: open **[klaussy.com](https://www.klaussy.com/#download-btn)** — it detects your OS and offers the right file directly.
 
-Or grab the matching file from the [latest release](https://github.com/steph-dove/klaussy-desktop-feedback/releases/latest) using the picker below.
+Or grab the matching file from the [latest release](https://github.com/steph-dove/klaussy-desktop/releases/latest) using the picker below.
 
 <details>
 <summary><b>macOS</b> — pick by chip type</summary>
