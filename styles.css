@@ -1657,6 +1657,27 @@ a.agent-chip:hover .agent-name {
   color: var(--text);
 }
 
+.footer-made {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.footer-made .heart {
+  width: 12px;
+  height: 11px;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.footer-made .space-needle {
+  width: 12px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .footer-copy {
   font-size: 12px;
   color: var(--text-dim);
