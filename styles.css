@@ -947,6 +947,8 @@ code {
 .agents h2,
 .mirroring h2,
 .devloop h2,
+.products h2,
+.review h2,
 .final-cta h2 {
   font-size: clamp(26px, 3.5vw, 34px);
   font-weight: 700;
@@ -958,7 +960,9 @@ code {
 /* Sections with a sub-heading pull the h2 tighter. Must sit after the
    shared rule above, which targets these same selectors. */
 .mirroring h2,
-.devloop h2 {
+.devloop h2,
+.products h2,
+.review h2 {
   margin-bottom: 16px;
 }
 
@@ -1296,6 +1300,166 @@ a.agent-chip:hover .agent-name {
   font-weight: 600;
 }
 
+/* ---- Product lineup ---- */
+
+.products {
+  padding: 96px 0;
+  border-top: 1px solid var(--border);
+}
+
+.products-sub {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.product-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 18px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.product-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.product-card-featured {
+  border-color: var(--accent);
+}
+
+.product-card-featured:hover {
+  border-color: var(--accent-hover);
+}
+
+.product-card-soon {
+  border-style: dashed;
+  border-color: var(--border-strong);
+  background: transparent;
+}
+
+.product-tag {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.product-tag-paid {
+  color: var(--accent-hover);
+}
+
+.product-tag-soon {
+  color: var(--text-dim);
+}
+
+.product-card h3 {
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+
+.product-card p:not(.product-tag) {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.product-card code {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11.5px;
+}
+
+.product-link {
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.product-link::after {
+  content: " \2192";
+}
+
+/* ---- klaussy review ---- */
+
+.review {
+  padding: 96px 0;
+  border-top: 1px solid var(--border);
+  background:
+    radial-gradient(900px circle at 50% 0%, var(--accent-dim), transparent 55%),
+    var(--bg);
+}
+
+.review-head {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.review-head .eyebrow {
+  margin-bottom: 18px;
+}
+
+.review-sub {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.review-sub strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.review-flow {
+  margin-bottom: 56px;
+}
+
+.review-rows .feature-row h3 {
+  font-size: 15.5px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding-top: 4px;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+.review-cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
+
+.review-note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
 /* ---- Pricing ---- */
 
 .pricing {
@@ -1374,6 +1538,20 @@ a.agent-chip:hover .agent-name {
   color: var(--text-muted);
 }
 
+.price-period {
+  margin-left: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+/* Enterprise has no number, so the label sits at the price's height. */
+.price-amount-text {
+  font-size: 30px;
+  line-height: 44px;
+}
+
 .price-note {
   color: var(--text-muted);
   font-size: 13px;
@@ -1410,6 +1588,7 @@ a.agent-chip:hover .agent-name {
   margin-top: auto;
   align-self: stretch;
   justify-content: center;
+  padding: 15px 24px;
 }
 
 .pricing-fineprint {
@@ -1791,6 +1970,9 @@ a.agent-chip:hover .agent-name {
   .faq,
   .diagrams,
   .agents,
+  .products,
+  .review,
+  .pricing,
   .final-cta {
     padding: 72px 0;
   }
