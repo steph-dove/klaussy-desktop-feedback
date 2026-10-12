@@ -189,24 +189,6 @@ code {
   margin: 0 0 26px;
 }
 
-.spine-callout {
-  max-width: 720px;
-  margin: 40px auto 0;
-  padding: 16px 20px;
-  text-align: left;
-  border-left: 3px solid var(--accent);
-  background: var(--accent-dim);
-  border-radius: 0 10px 10px 0;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
-
-.spine-callout strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
 .hero-cta {
   display: flex;
   justify-content: center;
