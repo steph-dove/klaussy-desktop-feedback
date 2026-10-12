@@ -36,6 +36,7 @@
       <a href="#agents">Agents</a>
       <a href="#mirroring">Mirroring</a>
       <a href="#features">Features</a>
+      <a href="#review">Review</a>
       <a href="#enterprise">Enterprise</a>
       <a href="#faq">FAQ</a>
       <a href="https://github.com/steph-dove/klaussy-desktop" target="_blank" rel="noopener">★ Star</a>
@@ -140,6 +141,47 @@
       </p>
     </div>
 
+  </section>
+
+  <!-- Product lineup -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2>One name, five ways in.</h2>
+      <p class="products-sub">Start with the free desktop app, wire the conventions into any agent from the command line, or put a reviewer on every pull request.</p>
+
+      <ul class="product-grid">
+        <li class="product-card">
+          <p class="product-tag">Free</p>
+          <h3>Klaussy Desktop</h3>
+          <p>Multi-agent sessions, worktrees, PR review and CI debugging on your own machine.</p>
+          <a class="product-link" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" data-smart-download>Download</a>
+        </li>
+        <li class="product-card">
+          <p class="product-tag">Free</p>
+          <h3>klaussy CLI &amp; agent conventions</h3>
+          <p>Your repo's conventions, skills and git guardrails for every coding agent. <code>pip install klaussy-agents</code></p>
+          <a class="product-link" href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">View on GitHub</a>
+        </li>
+        <li class="product-card product-card-featured">
+          <p class="product-tag product-tag-paid">Paid &middot; your key</p>
+          <h3>klaussy review GitHub App</h3>
+          <p>Reviews every pull request with Claude, Copilot or OpenAI and posts findings inline.</p>
+          <a class="product-link" href="#review">How it works</a>
+        </li>
+        <li class="product-card">
+          <p class="product-tag">Free &middot; self-hosted</p>
+          <h3>klaussy review GitHub Action</h3>
+          <p>The same reviewer as a workflow step. Your key, your runners.</p>
+          <a class="product-link" href="https://github.com/steph-dove/klaussy-agents/tree/main/actions/review" target="_blank" rel="noopener">Set up the Action</a>
+        </li>
+        <li class="product-card product-card-soon">
+          <p class="product-tag product-tag-soon">Coming soon</p>
+          <h3>Rest of the Owl</h3>
+          <p>The issue-to-PR dev loop: hand it an issue, get back a pull request. Want early access?</p>
+          <a class="product-link" href="https://calendly.com/doverstephaniem/30min" target="_blank" rel="noopener">Get in touch</a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- Trust / positioning -->
@@ -545,6 +587,129 @@
     </div>
   </section>
 
+  <!-- klaussy review GitHub App -->
+  <section id="review" class="review">
+    <div class="container">
+      <div class="review-head">
+        <p class="eyebrow">klaussy review &middot; GitHub App</p>
+        <h2>A reviewer on every pull request. Running the agent you pick.</h2>
+        <p class="review-sub">Install the app and every pull request gets reviewed by <strong>Claude</strong> (Sonnet by default, Opus if you want it), <strong>GitHub Copilot</strong>, or <strong>OpenAI</strong>. Findings land inline on the exact diff line, each with a suggested change and a collapsed explanation.</p>
+      </div>
+
+      <div class="mirror-flow review-flow">
+        <div class="mirror-step">
+          <div class="mirror-step-num">1</div>
+          <h3>Install the app</h3>
+          <p>Add <strong>klaussy review</strong> to your GitHub organization or account and pick the repositories it covers.</p>
+        </div>
+        <div class="mirror-arrow" aria-hidden="true">→</div>
+        <div class="mirror-step">
+          <div class="mirror-step-num">2</div>
+          <h3>Pick an agent, paste a key</h3>
+          <p>In <a href="https://app.klaussy.com" target="_blank" rel="noopener">app.klaussy.com</a>, choose Claude, Copilot, or OpenAI and add your own API key.</p>
+        </div>
+        <div class="mirror-arrow" aria-hidden="true">→</div>
+        <div class="mirror-step">
+          <div class="mirror-step-num">3</div>
+          <h3>Reviews on every PR</h3>
+          <p>Open a pull request and the review posts inline, on the lines it's about, with a fix you can apply.</p>
+        </div>
+      </div>
+
+      <div class="feature-rows review-rows">
+        <div class="feature-row">
+          <div class="feature-icon">⇌</div>
+          <div class="feature-row-body">
+            <h3>Bring your own key</h3>
+            <p>Model usage goes on your provider account, at your provider's price. We don't resell or mark up tokens.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">▣</div>
+          <div class="feature-row-body">
+            <h3>Isolated, throwaway containers</h3>
+            <p>Each review runs in a fresh container that never holds a GitHub token. No code is stored after the review is posted.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">⑂</div>
+          <div class="feature-row-body">
+            <h3>Inline, on the exact line</h3>
+            <p>Every finding is pinned to the diff line it's about, with a suggested change and the reasoning folded away until you want it.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">✓</div>
+          <div class="feature-row-body">
+            <h3>Built for depth</h3>
+            <p>Multi-pass review with a validation step, so findings get checked before they're posted.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-cta">
+        <a class="btn btn-primary" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
+          <span class="btn-label">Install on GitHub</span>
+          <span class="btn-sub">Free for public repos</span>
+        </a>
+        <a class="btn btn-secondary" href="https://app.klaussy.com" target="_blank" rel="noopener">
+          <span class="btn-label">Open settings</span>
+          <span class="btn-sub">app.klaussy.com</span>
+        </a>
+      </div>
+      <p class="review-note">Rather run it yourself? The <a href="https://github.com/steph-dove/klaussy-agents/tree/main/actions/review" target="_blank" rel="noopener">klaussy review GitHub Action</a> is free: your key, your runners.</p>
+    </div>
+  </section>
+
+  <!-- klaussy review pricing -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>klaussy review pricing</h2>
+      <p class="pricing-sub">Priced per GitHub organization or account, not per seat. You bring the model key, so AI usage is billed by your provider, not by us.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3 class="price-eyebrow">Free</h3>
+          <p class="price-amount"><span class="price-currency">$</span>0</p>
+          <p class="price-note">For open source and trying it out</p>
+          <ul class="price-list">
+            <li>Unlimited reviews on public repos</li>
+            <li>5 private-repo reviews a month</li>
+            <li>Claude, Copilot, or OpenAI on your key</li>
+          </ul>
+          <a class="btn btn-secondary price-cta" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
+            <span class="btn-label">Install free</span>
+          </a>
+        </div>
+
+        <div class="price-card price-card-featured">
+          <h3 class="price-eyebrow">Pro</h3>
+          <p class="price-amount"><span class="price-currency">$</span>49<span class="price-period">/month</span></p>
+          <p class="price-note">7-day free trial, card required</p>
+          <ul class="price-list">
+            <li>Unlimited reviews on public and private repos</li>
+            <li>Fair use up to 1,500 reviews a month</li>
+            <li>Claude, Copilot, or OpenAI on your key</li>
+          </ul>
+          <a class="btn btn-primary price-cta" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
+            <span class="btn-label">Start free trial</span>
+          </a>
+        </div>
+
+        <div class="price-card enterprise-card">
+          <h3 class="price-eyebrow">Enterprise</h3>
+          <p class="price-amount price-amount-text">Let's talk</p>
+          <p class="price-note">For larger organizations. Tell us what you need and we'll work out a plan.</p>
+          <a class="btn btn-secondary price-cta" href="https://calendly.com/doverstephaniem/30min" target="_blank" rel="noopener">
+            <span class="btn-label">Book a Call</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="pricing-fineprint">Klaussy Desktop, the klaussy CLI, and the self-hosted review Action stay free.</p>
+    </div>
+  </section>
+
   <!-- Enterprise Section -->
   <section id="enterprise" class="enterprise">
     <div class="container enterprise-inner">
@@ -583,7 +748,17 @@
 
       <details>
         <summary>Does my code get sent to third parties?</summary>
-        <p>When you use an agent, your prompts and repo context go to whichever provider you picked, through the CLI you already trust. GitHub, GitLab, and Bitbucket operations go through your local CLIs (<code>gh</code>, <code>glab</code>) and direct forge authentication. Inline autocomplete runs on your machine via Ollama and <code>qwen2.5-coder:1.5b</code>, so nothing per-keystroke leaves it. We don't run a server of our own.</p>
+        <p>When you use an agent, your prompts and repo context go to whichever provider you picked, through the CLI you already trust. GitHub, GitLab, and Bitbucket operations go through your local CLIs (<code>gh</code>, <code>glab</code>) and direct forge authentication. Inline autocomplete runs on your machine via Ollama and <code>qwen2.5-coder:1.5b</code>, so nothing per-keystroke leaves it. The desktop app doesn't talk to a server of ours.</p>
+      </details>
+
+      <details>
+        <summary>Does the klaussy review app see my code?</summary>
+        <p>Only to review it. Each review runs in an isolated, throwaway container that never holds a GitHub token, and the diff goes to the model provider you picked, on your key. No code is stored after the review is posted. If you'd rather the review run on your own infrastructure, use the self-hosted <a href="https://github.com/steph-dove/klaussy-agents/tree/main/actions/review" target="_blank" rel="noopener">GitHub Action</a> on your own runners.</p>
+      </details>
+
+      <details>
+        <summary>Who pays for the AI in klaussy review?</summary>
+        <p>You do, directly. klaussy review is bring-your-own-key: model usage is billed to your Anthropic, GitHub Copilot, or OpenAI account at their price. The <a href="#pricing">klaussy review plan</a> covers the app itself, per organization or account rather than per seat.</p>
       </details>
 
       <details>
