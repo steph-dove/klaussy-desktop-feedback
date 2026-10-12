@@ -1970,11 +1970,11 @@ a.agent-chip:hover .agent-name {
   cursor: pointer;
 }
 
-.is-linked a::after {
+/* ::before, since links like .product-link draw their arrow with ::after. */
+.card-link::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit;
 }
 
 .is-linked code,
@@ -1984,11 +1984,11 @@ a.agent-chip:hover .agent-name {
   cursor: text;
 }
 
-.is-linked:has(a:focus-visible) {
+.is-linked:has(.card-link:focus-visible) {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-.is-linked a:focus-visible {
+.card-link:focus-visible {
   outline: none;
 }
