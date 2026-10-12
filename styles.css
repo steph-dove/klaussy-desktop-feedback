@@ -1962,3 +1962,33 @@ a.agent-chip:hover .agent-name {
     padding: 11px 18px;
   }
 }
+
+/* ---- Whole-card links: the card's one link stretches over it ---- */
+
+.is-linked {
+  position: relative;
+  cursor: pointer;
+}
+
+.is-linked a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.is-linked code,
+.is-linked pre {
+  position: relative;
+  z-index: 1;
+  cursor: text;
+}
+
+.is-linked:has(a:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.is-linked a:focus-visible {
+  outline: none;
+}
