@@ -1460,10 +1460,10 @@ a.agent-chip:hover .agent-name {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
   align-items: stretch;
-  max-width: 960px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
