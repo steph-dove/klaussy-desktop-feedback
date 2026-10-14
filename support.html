@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support · Klaussy</title>
+  <meta name="description" content="How to get help with the klaussy review GitHub App.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="./">
+      <img class="brand-mark" src="brand-mark.png" alt="" />
+      <span class="brand-name">Klaussy</span>
+    </a>
+    <nav class="nav-links">
+      <a href="./#how-it-stays-yours">Why Klaussy</a>
+      <a href="./#agents">Agents</a>
+      <a href="./#mirroring">Mirroring</a>
+      <a href="./#features">Features</a>
+      <a href="./#enterprise">Enterprise</a>
+      <a href="./#faq">FAQ</a>
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="doc">
+    <div class="container container-narrow">
+
+      <p class="doc-crumb"><a href="./">← Back to Klaussy</a></p>
+
+      <h1>Support</h1>
+      <p class="doc-meta">klaussy review GitHub App</p>
+
+      <h2>Getting help</h2>
+      <p>Email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>. Include your GitHub account or organization name, and a link to the pull request if your question is about a specific review.</p>
+      <p>klaussy is a small operation, so a reply can take a day or two.</p>
+      <p>For security issues, see the <a href="security.html">security page</a> instead.</p>
+
+      <h2>Quick answers</h2>
+
+      <h3>Change the agent or API key</h3>
+      <p>Sign in at <a href="https://app.klaussy.com" target="_blank" rel="noopener">app.klaussy.com</a> and update the installation's settings. Only the account owner or an organization admin can change them.</p>
+
+      <h3>Ask for a review</h3>
+      <p>Comment <code>/klaussy review</code> on the pull request. You need write access to the repository.</p>
+
+      <h3>Cancel a running review</h3>
+      <p>Click the <strong>Cancel review</strong> button on the klaussy check, or comment <code>/klaussy cancel</code> on the pull request.</p>
+
+      <h3>Review modes</h3>
+      <p>Pick a mode in app.klaussy.com:</p>
+      <ul>
+        <li><strong>Automatic:</strong> klaussy reviews pull requests without being asked.</li>
+        <li><strong>On request:</strong> klaussy only reviews when someone comments <code>/klaussy review</code>.</li>
+        <li><strong>Every push:</strong> klaussy reviews again each time new commits are pushed.</li>
+      </ul>
+
+      <h3>Skip a pull request</h3>
+      <p>Add the <code>no-review</code> label to the pull request.</p>
+
+      <h3>"Credential rejected"</h3>
+      <p>Your AI provider turned down the key you gave klaussy. It may be wrong, revoked or expired. Add a working key in app.klaussy.com.</p>
+
+      <h3>"Out of credits"</h3>
+      <p>Your AI provider account has run out of credit or quota. Add credit or raise the limit with your provider, then ask for the review again.</p>
+
+      <h3>Cancel your plan</h3>
+      <p>Open the Stripe customer portal from app.klaussy.com and cancel there. If you're on the free trial, cancel before it ends and you won't be charged.</p>
+
+      <h3>Uninstall</h3>
+      <p>In GitHub, go to your account or organization settings, open <strong>Installed GitHub Apps</strong>, choose klaussy review and uninstall it. Uninstalling deletes your stored AI credential. If you're on Pro, cancel the plan as well.</p>
+
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-mark" src="brand-mark.png" alt="" />
+      <span>Klaussy</span>
+    </div>
+    <nav class="footer-links">
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="eula.html">EULA</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a href="security.html">Security</a>
+    </nav>
+    <p class="footer-copy">© 2026 Stephanie Dover. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

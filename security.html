@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security · Klaussy</title>
+  <meta name="description" content="How to report a security issue in the klaussy review GitHub App, and how it protects your code.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="./">
+      <img class="brand-mark" src="brand-mark.png" alt="" />
+      <span class="brand-name">Klaussy</span>
+    </a>
+    <nav class="nav-links">
+      <a href="./#how-it-stays-yours">Why Klaussy</a>
+      <a href="./#agents">Agents</a>
+      <a href="./#mirroring">Mirroring</a>
+      <a href="./#features">Features</a>
+      <a href="./#enterprise">Enterprise</a>
+      <a href="./#faq">FAQ</a>
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="doc">
+    <div class="container container-narrow">
+
+      <p class="doc-crumb"><a href="./">← Back to Klaussy</a></p>
+
+      <h1>Security</h1>
+      <p class="doc-meta">klaussy review GitHub App</p>
+
+      <h2>Reporting a vulnerability</h2>
+      <p>Email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a> with "security" in the subject line. Tell us what you found, how to reproduce it, and what you think the impact is.</p>
+      <p>Please don't open a public GitHub issue or share details publicly until we've had a chance to fix it.</p>
+
+      <h2>What we commit to</h2>
+      <ul>
+        <li>We'll acknowledge your report.</li>
+        <li>We'll keep you updated as we look into it and fix it.</li>
+        <li>We'll credit you for the find if you want us to.</li>
+      </ul>
+
+      <h2>How klaussy review protects your code</h2>
+      <ul>
+        <li>Each review runs in its own single-use container with no public IP address.</li>
+        <li>Outbound traffic can only go through a proxy with an allowlist.</li>
+        <li>DNS requests go through a DNS firewall.</li>
+        <li>Your AI credential is held outside the agent by a proxy. The agent only ever sees a placeholder.</li>
+        <li>Stored credentials are encrypted with AWS KMS.</li>
+        <li>The GitHub token for each review is scoped to one repository.</li>
+        <li>Only account owners and organization admins can change settings.</li>
+        <li>Reviews are posted as comments, never as approvals.</li>
+      </ul>
+      <p>For what we store and how long we keep it, see the <a href="privacy.html#klaussy-review">privacy policy</a>.</p>
+
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-mark" src="brand-mark.png" alt="" />
+      <span>Klaussy</span>
+    </div>
+    <nav class="footer-links">
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="eula.html">EULA</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a href="security.html">Security</a>
+    </nav>
+    <p class="footer-copy">© 2026 Stephanie Dover. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

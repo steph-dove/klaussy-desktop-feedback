@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+  DRAFT FOR ATTORNEY REVIEW. Not final. Do not rely on these terms until a
+  lawyer has reviewed them. Every [BRACKETED PLACEHOLDER] must be filled in by
+  the owner before launch.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service · Klaussy</title>
+  <meta name="description" content="Terms of Service for the klaussy review GitHub App.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="./">
+      <img class="brand-mark" src="brand-mark.png" alt="" />
+      <span class="brand-name">Klaussy</span>
+    </a>
+    <nav class="nav-links">
+      <a href="./#how-it-stays-yours">Why Klaussy</a>
+      <a href="./#agents">Agents</a>
+      <a href="./#mirroring">Mirroring</a>
+      <a href="./#features">Features</a>
+      <a href="./#enterprise">Enterprise</a>
+      <a href="./#faq">FAQ</a>
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="doc">
+    <div class="container container-narrow">
+
+      <p class="doc-crumb"><a href="./">← Back to Klaussy</a></p>
+
+      <h1>Terms of Service</h1>
+      <p class="doc-meta">Last updated: October 13, 2026 · Draft pending legal review.</p>
+
+      <p>These Terms of Service ("Terms") are an agreement between you ("you", "Customer") and Dovatech LLC, a [STATE OF ORGANIZATION] limited liability company ("we", "us"). They cover your use of the klaussy review GitHub App and its dashboard at <a href="https://app.klaussy.com" target="_blank" rel="noopener">app.klaussy.com</a> (together, the "Service"). If you accept these Terms for a company or organization, you confirm you're allowed to bind it, and "you" means that organization.</p>
+      <p>These Terms cover the hosted Service only. The Klaussy desktop app is covered by its <a href="eula.html">EULA</a>. Our <a href="privacy.html">Privacy Policy</a> explains what data the Service handles.</p>
+
+      <h2>1. The Service</h2>
+      <p>klaussy review is a GitHub App that reviews pull requests in the repositories you choose. When a review runs, the Service downloads the pull request's code, runs an AI agent against it using the AI provider and credential you set up, and posts the result back to the pull request as comments and a check.</p>
+      <p>We may change, add or remove features over time. If we remove something material to a paid plan, we'll tell you in advance where we reasonably can.</p>
+
+      <h2>2. Accounts and GitHub installation</h2>
+      <ul>
+        <li>You use the Service by installing the GitHub App on a GitHub account or organization. Each installation is its own account with us for plans, limits and billing.</li>
+        <li>You need a valid GitHub account, and your use of GitHub is governed by GitHub's own terms.</li>
+        <li>Only the account owner or an organization admin can change the installation's settings at app.klaussy.com.</li>
+        <li>You're responsible for who in your organization can install, configure or trigger the Service, and for activity under your installation.</li>
+        <li>You can remove the Service at any time by uninstalling the GitHub App.</li>
+      </ul>
+
+      <h2>3. Your AI provider credentials</h2>
+      <p>The Service is bring-your-own-key. You supply a credential for an AI provider you choose (Anthropic, OpenAI or GitHub Copilot).</p>
+      <ul>
+        <li>Your provider bills you directly for model usage. Our plan fees don't include it, and we don't mark it up.</li>
+        <li>Your provider's own terms and policies apply to your use of it, including what it does with the code and text sent to it.</li>
+        <li>You're responsible for having the right to use the credential, for keeping your provider account in good standing, and for any spending limits you set there.</li>
+        <li>If your credential is rejected or runs out of credit, reviews will fail until you fix it. That doesn't pause or reduce plan fees.</li>
+      </ul>
+
+      <h2>4. Plans, billing and cancellation</h2>
+      <h3>Plans</h3>
+      <ul>
+        <li><strong>Free:</strong> unlimited reviews on public repositories, and 5 reviews per month on private repositories.</li>
+        <li><strong>Pro:</strong> $49 per month per installation. Fair use covers up to 1,500 reviews per month.</li>
+      </ul>
+      <p>Each installation is also limited to 100 reviews per day, and each pull request to 10 reviews per day. Reviews past a limit won't run until the limit resets.</p>
+      <h3>Free trial</h3>
+      <p>Pro starts with a 7-day free trial. You need to add a payment card to start it. If you don't cancel before the trial ends, your card is charged for the first month. Cancel any time before the trial ends and you won't be charged.</p>
+      <h3>Billing</h3>
+      <ul>
+        <li>Payments are handled by Stripe. Pro renews monthly and is charged in advance until you cancel.</li>
+        <li>Prices don't include taxes unless we say so. You're responsible for any taxes that apply.</li>
+        <li>If a payment fails, we may suspend paid features until it's fixed.</li>
+        <li>We may change prices with at least [PRICE CHANGE NOTICE PERIOD] notice. A change applies from your next billing period after the notice.</li>
+      </ul>
+      <h3>Cancellation and refunds</h3>
+      <p>You can cancel any time through the Stripe customer portal, linked from app.klaussy.com. Pro stays active until the end of the period you've paid for, then the installation moves to the Free plan. We don't refund partial months unless the law requires it.</p>
+
+      <h2>5. Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Service on code you don't have the right to share with us and with your AI provider.</li>
+        <li>Abuse the Service, including trying to get around plan or rate limits, overloading it, or using it to attack anyone else.</li>
+        <li>Try to break out of the review environment, get around its network or isolation controls, reach other customers' data, or reach our infrastructure.</li>
+        <li>Probe, scan or test the Service's security, except by reporting issues as described on our <a href="security.html">security page</a>.</li>
+        <li>Use the Service for anything illegal, or in a way that breaks GitHub's or your AI provider's terms.</li>
+        <li>Resell or sublicense the Service without our written permission.</li>
+      </ul>
+
+      <h2>6. AI output</h2>
+      <p>Reviews are automated suggestions produced by an AI model. They can be wrong, incomplete or misleading, and they can miss real problems. They're not a substitute for review by a qualified person. You decide what to do with them and you're responsible for the code you merge.</p>
+      <p>The Service posts reviews as comments and checks. It never posts a GitHub approval.</p>
+
+      <h2>7. Your content</h2>
+      <p>You own your code, your pull request content and the review output the Service produces for you. We don't claim any ownership of it.</p>
+      <p>You give us a limited licence to access, copy, process and send your content (including to the AI provider you chose) only as needed to provide, secure and support the Service. We don't sell your content or use it to train models.</p>
+
+      <h2>8. Suspension and termination</h2>
+      <ul>
+        <li>You can stop using the Service any time by uninstalling the GitHub App. Cancel any paid plan through the Stripe portal as well.</li>
+        <li>We may suspend or end your access if you break these Terms, if your use puts the Service or other customers at risk, if payment fails, or if the law requires it. Where it's reasonable, we'll tell you first and give you a chance to fix the problem.</li>
+        <li>We may stop offering the Service. If we do, we'll give you at least [SERVICE SHUTDOWN NOTICE PERIOD] notice and refund any prepaid fees for time after it shuts down.</li>
+        <li>When the app is uninstalled, we delete your stored AI credential. Our <a href="privacy.html">Privacy Policy</a> explains what else we keep and for how long.</li>
+        <li>Sections 6, 7 (ownership), 9, 10, 12 and 13 survive termination.</li>
+      </ul>
+
+      <h2>9. Warranty disclaimer</h2>
+      <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT. WE DON'T PROMISE THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT REVIEWS WILL BE ACCURATE OR FIND EVERY ISSUE. SOME JURISDICTIONS DON'T ALLOW THESE EXCLUSIONS, SO SOME OF THEM MAY NOT APPLY TO YOU.</p>
+
+      <h2>10. Limitation of liability</h2>
+      <p>TO THE FULLEST EXTENT THE LAW ALLOWS, WE WON'T BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR FOR LOST PROFITS, REVENUE, DATA OR GOODWILL, ARISING FROM OR RELATED TO THE SERVICE OR THESE TERMS.</p>
+      <p>OUR TOTAL LIABILITY FOR ALL CLAIMS ARISING FROM OR RELATED TO THE SERVICE OR THESE TERMS WON'T EXCEED [LIABILITY CAP AMOUNT].</p>
+      <p>We aren't responsible for GitHub, Stripe, Amazon Web Services or your AI provider, including their outages, their charges to you, or what they do with data sent to them.</p>
+
+      <h2>11. Changes to these Terms</h2>
+      <p>We may update these Terms. We'll change the "Last updated" date at the top, and for material changes we'll give at least [TERMS CHANGE NOTICE PERIOD] notice by email or in app.klaussy.com before they take effect. If you keep using the Service after a change takes effect, you accept the new Terms. If you don't agree, stop using the Service and cancel your plan.</p>
+
+      <h2>12. Governing law and disputes</h2>
+      <p>These Terms are governed by the laws of [GOVERNING LAW STATE / JURISDICTION], without regard to its conflict-of-laws rules.</p>
+      <p>[DISPUTE RESOLUTION: ARBITRATION OR COURTS, VENUE, CLASS ACTION WAIVER IF ANY]</p>
+
+      <h2>13. General</h2>
+      <ul>
+        <li>These Terms and our Privacy Policy are the whole agreement between us about the Service.</li>
+        <li>If part of these Terms can't be enforced, the rest still applies.</li>
+        <li>If we don't enforce a right, we haven't given it up.</li>
+        <li>You can't transfer these Terms without our written consent. We may transfer them as part of a merger, acquisition or sale of the business.</li>
+      </ul>
+
+      <h2>14. Contact</h2>
+      <p>Questions about these Terms: email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
+
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-mark" src="brand-mark.png" alt="" />
+      <span>Klaussy</span>
+    </div>
+    <nav class="footer-links">
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues" target="_blank" rel="noopener">Feedback</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="eula.html">EULA</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a href="security.html">Security</a>
+    </nav>
+    <p class="footer-copy">© 2026 Stephanie Dover. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

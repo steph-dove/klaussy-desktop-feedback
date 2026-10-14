@@ -1806,7 +1806,9 @@ a.agent-chip:hover .agent-name {
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
   font-size: 13px;
 }
 
@@ -1845,7 +1847,7 @@ a.agent-chip:hover .agent-name {
   color: var(--text-dim);
 }
 
-/* ---- Doc pages (privacy, eula) ---- */
+/* ---- Doc pages (privacy, eula, terms, support, security) ---- */
 
 .container-narrow {
   max-width: 720px;
