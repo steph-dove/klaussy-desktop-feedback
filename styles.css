@@ -192,6 +192,7 @@ code {
 .hero-cta {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   margin-bottom: 16px;
@@ -200,7 +201,6 @@ code {
 .producthunt-badge {
   display: flex;
   justify-content: center;
-  margin: 24px 0;
 }
 
 .producthunt-badge a {
