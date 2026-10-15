@@ -144,20 +144,6 @@ code {
   padding: 6px 12px;
 }
 
-.creator-badge {
-  display: inline-block;
-  color: var(--accent-hover);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: rgba(139, 92, 246, 0.12);
-  border: 1px solid rgba(139, 92, 246, 0.25);
-  padding: 6px 14px;
-  border-radius: 999px;
-  margin-bottom: 22px;
-}
-
 .hero-mark {
   display: block;
   width: clamp(88px, 12vw, 128px);
@@ -1289,6 +1275,16 @@ a.agent-chip:hover .agent-name {
   border-top: 1px solid var(--border);
 }
 
+.hero-download {
+  margin: 0 0 56px;
+  text-align: center;
+}
+
+.hero-products {
+  margin: 48px 0 0;
+  text-align: left;
+}
+
 .products-sub {
   text-align: center;
   max-width: 640px;
@@ -1662,6 +1658,12 @@ a.agent-chip:hover .agent-name {
   font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+.enterprise-founder {
+  margin-top: 28px;
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
 .enterprise-cta-wrap {

@@ -48,12 +48,11 @@
 <main>
 
   <!-- Hero -->
-  <section id="download" class="hero">
+  <section class="hero">
     <div class="container">
       <img class="hero-mark" src="brand-mark.png" width="128" height="128" alt="" />
       <p class="wordmark">Klaussy</p>
       <h1 class="tagline">From first prompt to merged PR, with agents that know your codebase.</h1>
-      <div class="creator-badge">Designed by an ex-GitHub, ex-Twitch &amp; ex-Microsoft App Center engineer</div>
 
       <div class="logo-strip">
         <p class="logo-strip-title">Trusted by engineers at</p>
@@ -67,115 +66,41 @@
         </div>
       </div>
 
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" id="download-btn" data-smart-download>
-          <span class="btn-label">Download Klaussy</span>
-          <span class="btn-sub">macOS &middot; Windows &middot; Linux</span>
-        </a>
-        <a class="btn btn-secondary" href="https://github.com/steph-dove/klaussy-desktop" target="_blank" rel="noopener">
-          <span class="btn-label">★ Star on GitHub</span>
-          <span class="btn-sub">Show your support</span>
-        </a>
-        <div class="producthunt-badge">
-          <a href="https://www.producthunt.com/products/klaussy-desktop/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-klaussy&#0045;desktop" target="_blank" rel="noopener"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1307346&theme=dark" alt="Klaussy&#0032;Desktop - Hand&#0032;it&#0032;a&#0032;ticket&#0046;&#0032;Come&#0032;back&#0032;to&#0032;a&#0032;green&#0032;PR&#0046;&#0032;Free&#0032;and&#0032;local&#0046; | Product Hunt" width="200" height="43" /></a>
-        </div>
-      </div>
-      <p class="hero-note">Source-available under SUL 1.0. Free for personal use and development.<br>Individual developers pay nothing. You only need a license to ship it commercially or redistribute it.</p>
+      <div id="products" class="hero-products">
+        <p class="products-sub">Start with the free desktop app, wire the conventions into any agent from the command line, or put a reviewer on every pull request.</p>
 
-      <details class="download-picker">
-        <summary>Need a different platform? <span class="download-picker-hint">All downloads &darr;</span></summary>
-        <ul class="download-picker-list">
-          <li>
-            <a class="download-row" data-download-pick="mac:arm64" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
-              <span class="download-row-platform">macOS &middot; Apple Silicon</span>
-              <span class="download-row-note">M1 / M2 / M3 / M4 Macs (2020 and later)</span>
-              <span class="download-row-file" data-download-filename>.dmg</span>
-            </a>
+        <ul class="product-grid">
+          <li class="product-card is-linked">
+            <p class="product-tag">Free</p>
+            <h3>Klaussy Desktop</h3>
+            <p>Multi-agent sessions, worktrees, PR review and CI debugging on your own machine.</p>
+            <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" data-smart-download>Download</a>
           </li>
-          <li>
-            <a class="download-row" data-download-pick="mac:x64" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
-              <span class="download-row-platform">macOS &middot; Intel</span>
-              <span class="download-row-note">Pre-2020 MacBooks, iMacs, Mac mini</span>
-              <span class="download-row-file" data-download-filename>.dmg</span>
-            </a>
+          <li class="product-card is-linked">
+            <p class="product-tag">Free</p>
+            <h3>klaussy CLI &amp; agent conventions</h3>
+            <p>Your repo's conventions, skills and git guardrails for every coding agent. <code>pip install klaussy-agents</code></p>
+            <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">View on GitHub</a>
           </li>
-          <li>
-            <a class="download-row" data-download-pick="win:setup" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
-              <span class="download-row-platform">Windows &middot; Installer</span>
-              <span class="download-row-note">Standard install on Windows 10 / 11</span>
-              <span class="download-row-file" data-download-filename>.exe</span>
-            </a>
+          <li class="product-card product-card-featured is-linked">
+            <p class="product-tag product-tag-paid">Paid &middot; your key</p>
+            <h3>klaussy review GitHub App</h3>
+            <p>Reviews every pull request with Claude, Copilot or OpenAI and posts findings inline.</p>
+            <a class="product-link card-link" href="#review">How it works</a>
           </li>
-          <li>
-            <a class="download-row" data-download-pick="win:portable" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
-              <span class="download-row-platform">Windows &middot; Portable</span>
-              <span class="download-row-note">Single-file .exe, no install needed</span>
-              <span class="download-row-file" data-download-filename>.exe</span>
-            </a>
+          <li class="product-card is-linked">
+            <p class="product-tag">Free &middot; self-hosted</p>
+            <h3>klaussy review GitHub Action</h3>
+            <p>The same reviewer as a workflow step. Your key, your runners.</p>
+            <a class="product-link card-link" href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">Set up the Action</a>
           </li>
-          <li>
-            <a class="download-row" data-download-pick="linux:deb" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
-              <span class="download-row-platform">Linux &middot; Debian / Ubuntu</span>
-              <span class="download-row-note">Ubuntu, Debian, Mint, Pop!_OS</span>
-              <span class="download-row-file" data-download-filename>.deb</span>
-            </a>
-          </li>
-          <li>
-            <a class="download-row" data-download-pick="linux:appimage" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
-              <span class="download-row-platform">Linux &middot; AppImage</span>
-              <span class="download-row-note">Works on any Linux (Fedora, Arch, openSUSE, &hellip;)</span>
-              <span class="download-row-file" data-download-filename>.AppImage</span>
-            </a>
+          <li class="product-card product-card-soon">
+            <p class="product-tag product-tag-soon">Coming soon</p>
+            <h3>Rest of the Owl</h3>
+            <p>The issue-to-PR dev loop: hand it an issue, get back a QA&rsquo;d, green pull request.</p>
           </li>
         </ul>
-        <p class="download-picker-mac-help">
-          <strong>Not sure if your Mac is Apple Silicon or Intel?</strong>
-          Click the Apple menu &rarr; <em>About This Mac</em>. If the <em>Chip</em> row says &ldquo;Apple M1/M2/M3/M4&rdquo; you have Apple Silicon. If it says &ldquo;Intel&rdquo;, pick the Intel build.
-        </p>
-      </details>
-
-
-    </div>
-
-  </section>
-
-  <!-- Product lineup -->
-  <section id="products" class="products">
-    <div class="container">
-      <h2>One name, five ways in.</h2>
-      <p class="products-sub">Start with the free desktop app, wire the conventions into any agent from the command line, or put a reviewer on every pull request.</p>
-
-      <ul class="product-grid">
-        <li class="product-card is-linked">
-          <p class="product-tag">Free</p>
-          <h3>Klaussy Desktop</h3>
-          <p>Multi-agent sessions, worktrees, PR review and CI debugging on your own machine.</p>
-          <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" data-smart-download>Download</a>
-        </li>
-        <li class="product-card is-linked">
-          <p class="product-tag">Free</p>
-          <h3>klaussy CLI &amp; agent conventions</h3>
-          <p>Your repo's conventions, skills and git guardrails for every coding agent. <code>pip install klaussy-agents</code></p>
-          <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">View on GitHub</a>
-        </li>
-        <li class="product-card product-card-featured is-linked">
-          <p class="product-tag product-tag-paid">Paid &middot; your key</p>
-          <h3>klaussy review GitHub App</h3>
-          <p>Reviews every pull request with Claude, Copilot or OpenAI and posts findings inline.</p>
-          <a class="product-link card-link" href="#review">How it works</a>
-        </li>
-        <li class="product-card is-linked">
-          <p class="product-tag">Free &middot; self-hosted</p>
-          <h3>klaussy review GitHub Action</h3>
-          <p>The same reviewer as a workflow step. Your key, your runners.</p>
-          <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-agents/tree/main/actions/review" target="_blank" rel="noopener">Set up the Action</a>
-        </li>
-        <li class="product-card product-card-soon">
-          <p class="product-tag product-tag-soon">Coming soon</p>
-          <h3>Rest of the Owl</h3>
-          <p>The issue-to-PR dev loop: hand it an issue, get back a QA&rsquo;d, green pull request.</p>
-        </li>
-      </ul>
+      </div>
     </div>
   </section>
 
@@ -184,6 +109,75 @@
     <div class="container">
       <h2>Klaussy Desktop: no server. No markup. Use any agent.</h2>
       <p class="trust-sub">Klaussy Desktop is an app, not a platform you log into. There's no account, no backend, and no business model that depends on your code passing through us. The klaussy review GitHub App is our one hosted product, and it's opt-in.</p>
+
+      <div id="download" class="hero-download">
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" id="download-btn" data-smart-download>
+            <span class="btn-label">Download Klaussy</span>
+            <span class="btn-sub">macOS &middot; Windows &middot; Linux</span>
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/steph-dove/klaussy-desktop" target="_blank" rel="noopener">
+            <span class="btn-label">★ Star on GitHub</span>
+            <span class="btn-sub">Show your support</span>
+          </a>
+          <div class="producthunt-badge">
+            <a href="https://www.producthunt.com/products/klaussy-desktop/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-klaussy&#0045;desktop" target="_blank" rel="noopener"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1307346&theme=dark" alt="Klaussy&#0032;Desktop - Hand&#0032;it&#0032;a&#0032;ticket&#0046;&#0032;Come&#0032;back&#0032;to&#0032;a&#0032;green&#0032;PR&#0046;&#0032;Free&#0032;and&#0032;local&#0046; | Product Hunt" width="200" height="43" /></a>
+          </div>
+        </div>
+        <p class="hero-note">Source-available under SUL 1.0. Free for personal use and development.<br>Individual developers pay nothing. You only need a license to ship it commercially or redistribute it.</p>
+
+        <details class="download-picker">
+          <summary>Need a different platform? <span class="download-picker-hint">All downloads &darr;</span></summary>
+          <ul class="download-picker-list">
+            <li>
+              <a class="download-row" data-download-pick="mac:arm64" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
+                <span class="download-row-platform">macOS &middot; Apple Silicon</span>
+                <span class="download-row-note">M1 / M2 / M3 / M4 Macs (2020 and later)</span>
+                <span class="download-row-file" data-download-filename>.dmg</span>
+              </a>
+            </li>
+            <li>
+              <a class="download-row" data-download-pick="mac:x64" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
+                <span class="download-row-platform">macOS &middot; Intel</span>
+                <span class="download-row-note">Pre-2020 MacBooks, iMacs, Mac mini</span>
+                <span class="download-row-file" data-download-filename>.dmg</span>
+              </a>
+            </li>
+            <li>
+              <a class="download-row" data-download-pick="win:setup" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
+                <span class="download-row-platform">Windows &middot; Installer</span>
+                <span class="download-row-note">Standard install on Windows 10 / 11</span>
+                <span class="download-row-file" data-download-filename>.exe</span>
+              </a>
+            </li>
+            <li>
+              <a class="download-row" data-download-pick="win:portable" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
+                <span class="download-row-platform">Windows &middot; Portable</span>
+                <span class="download-row-note">Single-file .exe, no install needed</span>
+                <span class="download-row-file" data-download-filename>.exe</span>
+              </a>
+            </li>
+            <li>
+              <a class="download-row" data-download-pick="linux:deb" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
+                <span class="download-row-platform">Linux &middot; Debian / Ubuntu</span>
+                <span class="download-row-note">Ubuntu, Debian, Mint, Pop!_OS</span>
+                <span class="download-row-file" data-download-filename>.deb</span>
+              </a>
+            </li>
+            <li>
+              <a class="download-row" data-download-pick="linux:appimage" href="https://github.com/steph-dove/klaussy-desktop/releases/latest">
+                <span class="download-row-platform">Linux &middot; AppImage</span>
+                <span class="download-row-note">Works on any Linux (Fedora, Arch, openSUSE, &hellip;)</span>
+                <span class="download-row-file" data-download-filename>.AppImage</span>
+              </a>
+            </li>
+          </ul>
+          <p class="download-picker-mac-help">
+            <strong>Not sure if your Mac is Apple Silicon or Intel?</strong>
+            Click the Apple menu &rarr; <em>About This Mac</em>. If the <em>Chip</em> row says &ldquo;Apple M1/M2/M3/M4&rdquo; you have Apple Silicon. If it says &ldquo;Intel&rdquo;, pick the Intel build.
+          </p>
+        </details>
+      </div>
 
       <div class="trust-grid">
 
@@ -652,7 +646,7 @@
           <span class="btn-sub">app.klaussy.com</span>
         </a>
       </div>
-      <p class="review-note">Rather run it yourself? The <a href="https://github.com/Klaussy-Agents/klaussy-review-action" target="_blank" rel="noopener">klaussy review GitHub Action</a> is free: your key, your runners.</p>
+      <p class="review-note">Rather run it yourself? The <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">klaussy review GitHub Action</a> is free: your key, your runners.</p>
     </div>
   </section>
 
@@ -750,6 +744,7 @@
           <span class="btn-sub">Talk to our AI Architects</span>
         </a>
       </div>
+      <p class="enterprise-founder">Built by Stephanie Dover, previously at GitHub, Twitch, Microsoft and Rad AI.</p>
     </div>
   </section>
 
@@ -765,7 +760,7 @@
 
       <details>
         <summary>Does the klaussy review app see my code?</summary>
-        <p>Only to review it. Each review runs in an isolated, throwaway container that never holds a GitHub token, and the diff goes to the model provider you picked, on your key. No code is stored after the review is posted. If you'd rather the review run on your own infrastructure, use the self-hosted <a href="https://github.com/steph-dove/klaussy-agents/tree/main/actions/review" target="_blank" rel="noopener">GitHub Action</a> on your own runners.</p>
+        <p>Only to review it. Each review runs in an isolated, throwaway container that never holds a GitHub token, and the diff goes to the model provider you picked, on your key. No code is stored after the review is posted. If you'd rather the review run on your own infrastructure, use the self-hosted <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">GitHub Action</a> on your own runners.</p>
       </details>
 
       <details>
