@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Help with setup, billing or your account
+    url: https://www.klaussy.com/support.html
+    about: Answers to common questions, and how to reach us by email.
+  - name: Report a security vulnerability
+    url: https://www.klaussy.com/security.html
+    about: Please don't open a public issue. Email us instead.

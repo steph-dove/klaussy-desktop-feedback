@@ -1,21 +1,30 @@
-name: Feature Request
-description: Idea for something Klaussy should do
+name: Feature request
+description: An idea for something klaussy should do
 labels: ["enhancement"]
 body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Which product?
+      options:
+        - Klaussy Desktop
+        - klaussy review (GitHub App or Action)
+        - klaussy CLI (klaussy-agents)
+        - klaussy.com
+    validations:
+      required: true
   - type: textarea
     id: problem
     attributes:
-      label: What problem are you trying to solve?
-      description: Start from the workflow, not the feature. "I need to X" is more useful than "you should add a button for X".
+      label: What are you trying to do?
+      description: Start from the workflow, not the feature. "I need to X" helps more than "add a button for X".
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Your proposed solution (optional)
-      description: How you'd like Klaussy to handle it. Skip if you're not sure — the problem itself is the important part.
+      label: How you'd like it to work (optional)
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives you've tried
-      description: Existing Klaussy features, other tools, manual workflows.
+      label: What you do today instead (optional)

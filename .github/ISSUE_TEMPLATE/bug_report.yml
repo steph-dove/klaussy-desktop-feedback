@@ -1,29 +1,30 @@
-name: Bug Report
-description: Something broke or misbehaved
+name: Bug report
+description: Something broke or didn't work the way it should
 labels: ["bug"]
 body:
-  - type: input
-    id: version
-    attributes:
-      label: Klaussy version
-      description: About → Version
-      placeholder: "0.1.0"
-    validations:
-      required: true
-  - type: input
-    id: macos
-    attributes:
-      label: macOS version
-      placeholder: "14.4 (23E214)"
-    validations:
-      required: true
   - type: dropdown
-    id: arch
+    id: product
     attributes:
-      label: CPU
+      label: Which product?
       options:
-        - Apple Silicon (M-series)
-        - Intel
+        - Klaussy Desktop
+        - klaussy review (GitHub App)
+        - klaussy review (GitHub Action)
+        - klaussy CLI (klaussy-agents)
+        - klaussy.com
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: A few sentences is plenty. For a review, a link to the pull request helps.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
     validations:
       required: true
   - type: textarea
@@ -31,26 +32,17 @@ body:
     attributes:
       label: Steps to reproduce
       placeholder: |
-        1. Open a worktree
-        2. Click …
-        3. …
-    validations:
-      required: true
-  - type: textarea
-    id: expected
+        1. …
+        2. …
+  - type: input
+    id: version
     attributes:
-      label: What did you expect to happen?
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: What actually happened?
-    validations:
-      required: true
+      label: Version and OS
+      description: For Desktop, Help → About; for the CLI, `klaussy --version`. Skip for the hosted App.
+      placeholder: "Klaussy 0.24.2, macOS 15.1 (Apple Silicon)"
   - type: textarea
     id: logs
     attributes:
-      label: Relevant logs
-      description: Paste the tail of ~/Library/Logs/Klaussy/main.log, or any errors from the DevTools console if relevant.
+      label: Logs or error messages
+      description: For Desktop, Cmd+K → View Logs. Remove anything private, like API keys or code you can't share.
       render: shell
