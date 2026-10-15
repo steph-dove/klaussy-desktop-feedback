@@ -1289,8 +1289,13 @@ a.agent-chip:hover .agent-name {
   border-top: 1px solid var(--border);
 }
 
+.hero-download {
+  margin: 0 0 56px;
+  text-align: center;
+}
+
 .hero-products {
-  margin: 48px 0 56px;
+  margin: 48px 0 0;
   text-align: left;
 }
 
