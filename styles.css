@@ -1289,6 +1289,11 @@ a.agent-chip:hover .agent-name {
   border-top: 1px solid var(--border);
 }
 
+.hero-products {
+  margin: 48px 0 56px;
+  text-align: left;
+}
+
 .products-sub {
   text-align: center;
   max-width: 640px;
