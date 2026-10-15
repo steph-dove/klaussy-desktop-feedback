@@ -1,5 +1,8 @@
 # <img src="brand-mark.png" width="32" height="32" align="absmiddle" alt="Klaussy Logo"> Klaussy
 
+> [!IMPORTANT]
+> **© 2026 Dovatech LLC. All rights reserved.** This repository hosts www.klaussy.com. Its text, images, video, and design aren't licensed for reuse, and copying them for commercial use is copyright infringement. The Klaussy Desktop app itself is covered by the [Sustainable Use License](https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE).
+
 **Run multiple repos. Mix any agents. In one window.**
 The multi-agent workspace for professional engineers.
 
@@ -200,4 +203,4 @@ Please include:
 
 ---
 
-[Privacy](https://steph-dove.github.io/klaussy-desktop-feedback/privacy.html) · [EULA](https://steph-dove.github.io/klaussy-desktop-feedback/eula.html) · © 2026 Stephanie Dover.
+[Privacy](https://steph-dove.github.io/klaussy-desktop-feedback/privacy.html) · [EULA](https://steph-dove.github.io/klaussy-desktop-feedback/eula.html) · © 2026 Dovatech LLC.
