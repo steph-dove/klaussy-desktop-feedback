@@ -34,7 +34,6 @@
     <nav class="nav-links">
       <a href="#how-it-stays-yours">Why Klaussy</a>
       <a href="#agents">Agents</a>
-      <a href="#mirroring">Mirroring</a>
       <a href="#features">Features</a>
       <a href="#loop">Loop</a>
       <a href="#review">Review</a>
@@ -100,7 +99,7 @@
   <section id="how-it-stays-yours" class="trust">
     <div class="container">
       <h2>Klaussy Desktop: no server. No markup. Use any agent.</h2>
-      <p class="trust-sub">Klaussy Desktop is an app, not a platform you log into. There's no account, no backend, and no business model that depends on your code passing through us. The klaussy review GitHub App is our one hosted product, and it's opt-in.</p>
+      <p class="trust-sub">Klaussy Desktop is an app, not a platform you log into. There's no account, no backend, and no business model that depends on your code passing through us. Klaussy Loop and klaussy review are the hosted apps, and both are opt-in.</p>
 
       <div id="download" class="hero-download">
         <div class="hero-cta">
@@ -171,115 +170,12 @@
         </details>
       </div>
 
-      <div class="trust-grid">
+      <ul class="trust-points">
+        <li><strong>Serverless by design.</strong> Everything runs on your machine, with no copy of your repos on anyone else's disk.</li>
+        <li><strong>Bring your own subscription.</strong> Your keys and your plan, or free local models through Ollama.</li>
+        <li><strong>Your data isn't the product.</strong> Nothing to sell or train on. The <a href="privacy.html">privacy policy</a> is short.</li>
+      </ul>
 
-        <div class="trust-card">
-          <div class="trust-icon">⌂</div>
-          <h3>Serverless by design</h3>
-          <p>Desktop runs everything on your machine. It has no backend, so there's no copy of your repos, prompts, or history on someone else's disk.</p>
-          <p class="trust-line">no account · no cloud sync · no backend</p>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon">⇌</div>
-          <h3>Bring your own subscription</h3>
-          <p>Not a token reseller. Your keys, your plan, the provider's own price. Or pay nothing at all and run free and local models through Ollama.</p>
-          <p class="trust-line">your keys · your plan · your rate</p>
-        </div>
-
-        <div class="trust-card is-linked">
-          <div class="trust-icon">∅</div>
-          <h3>Your data isn't the product</h3>
-          <p>Nothing collected about how you work, so nothing to sell or train on. The <a href="privacy.html" class="card-link">privacy policy</a> is short, go read it.</p>
-          <p class="trust-line">not harvested · not sold · not trained on</p>
-        </div>
-
-        <div class="trust-card is-linked">
-          <div class="trust-icon">✓</div>
-          <h3>Free for individual developers</h3>
-          <p>Not a trial, and not a seat that disappears when someone rewrites the pricing page. A paid license is only for commercial production or redistribution. Want a bespoke edition? <a href="#enterprise" class="card-link">Talk to us</a>.</p>
-          <p class="trust-line">free forever for individuals · source-available</p>
-        </div>
-
-      </div>
-
-      <p class="trust-close">The whole thing is inspectable, runs locally, and keeps working if we disappear.</p>
-
-      <div class="compare-wrap">
-        <table class="compare">
-          <caption>How the three approaches differ. Categories, not specific products, since everyone's pricing moves.</caption>
-          <thead>
-            <tr>
-              <th scope="col">&nbsp;</th>
-              <th scope="col" class="compare-us">Klaussy</th>
-              <th scope="col">Hosted agent platforms</th>
-              <th scope="col">Single-vendor AI IDEs</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Runs on your machine</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">No, their cloud</span></td>
-              <td><span class="yes">Yes</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Uses your own subscription</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">Their credits</span></td>
-              <td><span class="no">Their plan</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Marks up your tokens</th>
-              <td class="compare-us"><span class="yes">Never</span></td>
-              <td><span class="no">Usually</span></td>
-              <td><span class="no">Usually</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Runs on free or local models</th>
-              <td class="compare-us"><span class="yes">Yes, via Ollama</span></td>
-              <td><span class="no">No</span></td>
-              <td><span class="no">Rarely</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Works with no AI subscription at all</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">No</span></td>
-              <td><span class="no">No</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Mixes agents in one session</th>
-              <td class="compare-us"><span class="yes">Any of 11</span></td>
-              <td><span class="no">One at a time</span></td>
-              <td><span class="no">Theirs only</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Many repos in one session</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">Rarely</span></td>
-              <td><span class="no">One window each</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Reviews the diff before you commit</th>
-              <td class="compare-us"><span class="yes">Built in</span></td>
-              <td><span class="no">No</span></td>
-              <td><span class="no">No</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Docker-sandboxed agents</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="yes">Yes, theirs</span></td>
-              <td><span class="no">No</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Cost for one developer</th>
-              <td class="compare-us"><span class="yes">Free</span></td>
-              <td><span class="no">Per seat + usage</span></td>
-              <td><span class="no">Per seat</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
   </section>
 
@@ -329,88 +225,6 @@
                aria-label="A Klaussy session running three agents from three vendors. Antigravity CLI starts the work and writes a session note describing the colour change and the hex codes it plans to use. Claude Opus and OpenAI Codex are then opened as tabs in the same session, and the Session notes panel shows them the same note.">
           <source src="klaussy_session_context.mp4" type="video/mp4">
           <p>Your browser can't play this video. <a href="klaussy_session_context.mp4">Download the recording</a> instead.</p>
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agent mirroring -->
-  <section id="mirroring" class="mirroring">
-    <div class="container">
-      <h2>Leave your desk. The session keeps going.</h2>
-      <p class="mirroring-sub">Turn on notifications for a session and it mirrors into <strong>Discord</strong> or <strong>Slack</strong> as a thread you can talk to from your phone. Steer the agent while you're out on errands, then walk back to Klaussy and pick the same conversation up mid-sentence. Full scrollback, same worktree, nothing replayed.</p>
-
-      <div class="mirror-flow">
-        <div class="mirror-step">
-          <div class="mirror-step-num">1</div>
-          <h3>Turn on notifications</h3>
-          <p>Switch on <strong>notifications</strong> for the session and point them at Discord or Slack. Klaussy opens a thread there and streams the agent's output into it as it works.</p>
-        </div>
-        <div class="mirror-arrow" aria-hidden="true">→</div>
-        <div class="mirror-step">
-          <div class="mirror-step-num">2</div>
-          <h3>Drive it from anywhere</h3>
-          <p>Reply in the thread and the agent picks it up on your machine. Answer a prompt, approve a plan, redirect the work, all from your phone in the grocery line.</p>
-        </div>
-        <div class="mirror-arrow" aria-hidden="true">→</div>
-        <div class="mirror-step">
-          <div class="mirror-step-num">3</div>
-          <h3>Come back and continue</h3>
-          <p>Everything said in the thread lands in the Klaussy tab. Sit down and keep typing. One session the whole way through, no handoff brief, nothing lost.</p>
-        </div>
-      </div>
-
-      <div class="mirror-demo">
-        <div class="mirror-demo-bar">
-          <span class="mirror-demo-hash">#</span>
-          <span class="mirror-demo-title">klaussy · api · refactor-auth</span>
-          <span class="mirror-demo-tag">mirrored</span>
-        </div>
-        <div class="mirror-demo-body">
-          <div class="mirror-msg mirror-msg-agent">
-            <span class="mirror-who">Claude Code <em>via Klaussy</em></span>
-            <p>Ran the migration against a scratch DB. 41 tests pass, 2 fail on the legacy token path. Want me to keep the old format readable for one release, or hard-cut it?</p>
-          </div>
-          <div class="mirror-msg mirror-msg-you">
-            <span class="mirror-who">you <em>on your phone</em></span>
-            <p>keep it readable for one release, put the cutover behind a flag</p>
-          </div>
-          <div class="mirror-msg mirror-msg-agent">
-            <span class="mirror-who">Claude Code <em>via Klaussy</em></span>
-            <p>Done. <code>AUTH_LEGACY_TOKENS</code> defaults on, cutover path tested. Branch is clean and ready for you to review back in Klaussy.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Full Dev Loop ("Rest of the Owl") -->
-  <section id="dev-loop" class="devloop">
-    <div class="container">
-      <div class="devloop-head">
-        <p class="eyebrow">Full Dev Loop &middot; &ldquo;Rest of the Owl&rdquo;</p>
-        <h2>Hand it a ticket. Come back to a green PR.</h2>
-        <p class="devloop-sub">Most of Klaussy is hands-on. <strong>Full Dev Loop</strong> is the mode you pick when a task is defined well enough to walk away from: nine phases, start to finish, with a rail that tells you where it is the whole way. The run below took 17 minutes and ended on an open pull request.</p>
-      </div>
-
-      <ol class="devloop-flow">
-        <li><span class="devloop-chip"><span class="devloop-num">01</span>Plan &amp; Discovery</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">02</span>Implementation</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">03</span>Local Review &amp; Humanize</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">04</span>QA &amp; Evidence</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">05</span>Create PR</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">06</span>Re-review Remote PR</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">07</span>Fix CI Failures</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">08</span>Resolve Review Comments</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">09</span>Notify when Green</span></li>
-        <li class="devloop-flow-stop"><span class="devloop-chip"><span class="devloop-num">&mdash;</span>Merge stays yours</span></li>
-      </ol>
-
-      <div class="devloop-video">
-        <video autoplay muted loop playsinline controls preload="metadata" poster="klaussy_dev_loop_poster.jpg" width="1600" height="1096"
-               aria-label="The Full Dev Loop panel at the end of a run. Phases 1 to 5, Plan, Implementation, Local Review, QA, and Create PR, are marked done; phase 6 is re-reviewing the remote pull request, with PR #16 open on the forge; phases 7 to 9 are still pending.">
-          <source src="klaussy_dev_loop.mp4" type="video/mp4">
-          <p>Your browser can't play this video. <a href="klaussy_dev_loop.mp4">Download the recording</a> instead.</p>
         </video>
       </div>
     </div>
@@ -501,7 +315,7 @@
             <div class="feature-icon">▾</div>
             <div class="feature-row-body">
               <h4>Plan · Debug · Review · Full Dev Loop</h4>
-              <p>A dropdown on every worktree spawns a dedicated agent tab: a guided Plan flow, a Debug pass, a multi-phase PR review, or the <a href="#dev-loop" class="card-link">nine-phase Full Dev Loop</a>.</p>
+              <p>A dropdown on every worktree spawns a dedicated agent tab: a guided Plan flow, a Debug pass, a multi-phase PR review, or the nine-phase Full Dev Loop.</p>
             </div>
           </div>
           <div class="feature-row">
@@ -532,7 +346,7 @@
             <div class="feature-icon">◈</div>
             <div class="feature-row-body">
               <h4>Agent mirroring to Discord &amp; Slack</h4>
-              <p>Mirror a session into a Discord or Slack thread and steer it from your phone. <a href="#mirroring" class="card-link">See how it works</a>.</p>
+              <p>Mirror a session into a Discord or Slack thread and steer it from your phone.</p>
             </div>
           </div>
           <div class="feature-row">
@@ -646,37 +460,6 @@
         </div>
       </div>
 
-      <div class="feature-rows review-rows">
-        <div class="feature-row">
-          <div class="feature-icon">⇌</div>
-          <div class="feature-row-body">
-            <h3>Bring your own key</h3>
-            <p>Model usage goes on your provider account, at your provider's price. We don't resell or mark up tokens.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <div class="feature-icon">▣</div>
-          <div class="feature-row-body">
-            <h3>Isolated, throwaway containers</h3>
-            <p>Each review runs in a fresh container that never holds a GitHub token. No code is stored after the review is posted.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <div class="feature-icon">⑂</div>
-          <div class="feature-row-body">
-            <h3>Inline, on the exact line</h3>
-            <p>Every finding is pinned to the diff line it's about, with a suggested change and the reasoning folded away until you want it.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <div class="feature-icon">✓</div>
-          <div class="feature-row-body">
-            <h3>Built for depth</h3>
-            <p>Multi-pass review with a validation step, so findings get checked before they're posted.</p>
-          </div>
-        </div>
-      </div>
-
       <div class="review-cta">
         <a class="btn btn-primary" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
           <span class="btn-label">Install on GitHub</span>
@@ -739,11 +522,6 @@
       </details>
 
       <details>
-        <summary>Who pays for the AI in klaussy review?</summary>
-        <p>You do, directly. klaussy review is bring-your-own-key: model usage is billed to your Anthropic, GitHub Copilot, or OpenAI account at their price.</p>
-      </details>
-
-      <details>
         <summary>Do I need a subscription, and does Klaussy mark up AI usage?</summary>
         <p>For Klaussy Desktop, you need whatever plan each agent CLI is set up with, on your own accounts. Desktop never sits between you and your provider, so there's nothing to resell, mark up, or meter. Or run free and local models through Ollama and pay for nothing at all. The klaussy review App also runs on your own key and never marks up tokens; it sends each pull request's diff to the provider you chose so it can review it.</p>
       </details>
@@ -756,16 +534,6 @@
       <details>
         <summary>Which platforms are supported?</summary>
         <p>macOS 12+ (Apple Silicon and Intel), Windows 10/11, and Ubuntu 22.04+ (other modern Linux distros generally work). All builds are signed where the platform supports it.</p>
-      </details>
-
-      <details>
-        <summary>Why the 2 GB download prompt for inline autocomplete?</summary>
-        <p>~500 MB is Ollama's runtime, ~1 GB is the <code>qwen2.5-coder:1.5b</code> model weights. You only see the prompt if you opt in. Otherwise a free word-based completer handles Tab.</p>
-      </details>
-
-      <details>
-        <summary>What happens to my data if I uninstall?</summary>
-        <p>On macOS, remove <code>~/Library/Application Support/Klaussy</code> and <code>~/Library/Logs/Klaussy</code>. On Windows, remove <code>%APPDATA%\Klaussy</code>. On Linux, remove <code>~/.config/Klaussy</code> and <code>~/.local/share/Klaussy</code>. Ollama and its models stick around on their own, so uninstall it through your package manager and remove <code>~/.ollama</code>.</p>
       </details>
 
       <details>
