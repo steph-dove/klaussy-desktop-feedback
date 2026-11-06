@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Klaussy</title>
-  <meta name="description" content="Privacy policy for the Klaussy desktop application and the klaussy review GitHub App.">
+  <meta name="description" content="Privacy policy for the Klaussy desktop application, the klaussy review GitHub App and Klaussy Loop.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -35,9 +35,9 @@
       <p class="doc-crumb"><a href="./">← Back to Klaussy</a></p>
 
       <h1>Privacy Policy</h1>
-      <p class="doc-meta">Last updated: August 31, 2026 · Draft pending legal review.</p>
+      <p class="doc-meta">Last updated: November 6, 2026 · Draft pending legal review.</p>
 
-      <p>Sections 1 to 8 cover the Klaussy desktop app. The klaussy review GitHub App is a hosted service with its own section: <a href="#klaussy-review">klaussy review GitHub App</a>.</p>
+      <p>Sections 1 to 8 cover the Klaussy desktop app. The klaussy review GitHub App and Klaussy Loop are hosted services, each with its own section: <a href="#klaussy-review">klaussy review GitHub App</a> and <a href="#klaussy-loop">Klaussy Loop</a>.</p>
 
       <h2>1. What Klaussy collects</h2>
       <p>Klaussy is a desktop application. We do not run a backend, and we receive none of your data. Everything below leaves your machine only because you pointed Klaussy at a service and asked it to do something. Each provider's own policy governs what they keep.</p>
@@ -171,6 +171,48 @@
 
       <h3>Deletion and requests</h3>
       <p>To ask for your data to be deleted, or for any other privacy request about klaussy review, email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
+
+
+      <h2 id="klaussy-loop">Klaussy Loop</h2>
+      <p class="doc-meta">Last updated: November 6, 2026 · Draft pending legal review.</p>
+      <p>Klaussy Loop is a hosted service run by Dovatech LLC. It runs on Amazon Web Services in the US, and some QA jobs run on Google Cloud or on hardware Klaussy operates. This section covers what it stores, what it sends and for how long.</p>
+
+      <h3>What we store about your account</h3>
+      <ul>
+        <li>Your forge connection: the GitHub, GitLab or Bitbucket account it's for, and the repositories Loop can work in.</li>
+        <li>Your AI provider credential.</li>
+        <li>Your Loop settings, including the MCP servers you've turned on and the repository variables and secrets you've set.</li>
+      </ul>
+
+      <h3>What happens during a run</h3>
+      <ul>
+        <li>Your repository's code is checked out into an isolated sandbox on AWS. The agent plans the change there, writes code on a branch and runs your tests.</li>
+        <li>The agent reads the issue it's working on, and later the review comments on the pull or merge request it opened.</li>
+        <li>Repository variables and secrets from your Loop settings go to the run that needs them, and only for that run.</li>
+        <li>The QA step takes screenshots and screen recordings of your app and captures its terminal output. An AI QA judge reviews them. Whatever your app shows on screen ends up in those captures, so run it on test data rather than real customer data where you can.</li>
+        <li>For iOS and Android apps, QA may run in a disposable macOS virtual machine on hardware Klaussy operates, or in an Android emulator on Google Cloud in a US region. Both are deleted after each job.</li>
+        <li>If you've turned on MCP servers, the agent can send them data during the run, under their own terms.</li>
+      </ul>
+
+      <h3>What we keep after a run</h3>
+      <p>QA captures (screenshots, recordings and terminal output), run logs and run records are kept for 90 days, then deleted.</p>
+
+      <h3>Your AI provider</h3>
+      <p>Every model call Loop makes, the QA judge included, runs on your own AI provider key. Your code, issues, review comments and QA captures go to that provider under your credential and its terms.</p>
+
+      <h3>What we don't do</h3>
+      <p>We don't sell your data. We don't use your code or QA captures to train models.</p>
+
+      <h3>Subprocessors</h3>
+      <ul>
+        <li><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Amazon Web Services</a> (hosting, US)</li>
+        <li><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud</a> (Android emulators, US region)</li>
+        <li>The forge you connected: <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub</a>, <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">GitLab</a> or <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian</a> (Bitbucket)</li>
+        <li>The AI provider you chose: <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a> or <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub Copilot</a></li>
+      </ul>
+
+      <h3>Deletion and requests</h3>
+      <p>To have your Klaussy Loop data deleted before the 90 days are up, or for any other privacy request about Loop, email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
 
     </div>
   </article>
