@@ -1461,10 +1461,10 @@ a.agent-chip:hover .agent-name {
 
 .loop-shots {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 220px));
+  grid-template-columns: repeat(2, minmax(0, 400px));
   justify-content: center;
   align-items: start;
-  gap: 24px;
+  gap: 32px;
 }
 
 .loop-shots figure {
@@ -1475,16 +1475,16 @@ a.agent-chip:hover .agent-name {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 340px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid var(--border);
 }
 
 .loop-shots figcaption {
-  margin-top: 10px;
-  font-size: 12.5px;
+  margin-top: 12px;
+  font-size: 13.5px;
   line-height: 1.5;
   color: var(--text-muted);
   text-align: center;
