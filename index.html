@@ -32,11 +32,10 @@
       <span class="brand-name">Klaussy</span>
     </a>
     <nav class="nav-links">
-      <a href="#how-it-stays-yours">Why Klaussy</a>
-      <a href="#agents">Agents</a>
-      <a href="#mirroring">Mirroring</a>
-      <a href="#features">Features</a>
+      <a href="#loop">Loop</a>
       <a href="#review">Review</a>
+      <a href="#agents">Desktop</a>
+      <a href="#features">Features</a>
       <a href="#enterprise">Enterprise</a>
       <a href="#faq">FAQ</a>
       <a href="https://github.com/steph-dove/klaussy-desktop" target="_blank" rel="noopener">★ Star</a>
@@ -67,7 +66,7 @@
       </div>
 
       <div id="products" class="hero-products">
-        <p class="products-sub">Start with the free desktop app, wire the conventions into any agent from the command line, or put a reviewer on every pull request.</p>
+        <p class="products-sub">Start with the free desktop app, hand Klaussy Loop an issue and get back a pull request, or put a reviewer on every pull request.</p>
 
         <ul class="product-grid">
           <li class="product-card is-linked">
@@ -76,39 +75,136 @@
             <p>Multi-agent sessions, worktrees, PR review and CI debugging on your own machine.</p>
             <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" data-smart-download>Download</a>
           </li>
-          <li class="product-card is-linked">
-            <p class="product-tag">Free</p>
-            <h3>klaussy CLI &amp; agent conventions</h3>
-            <p>Your repo's conventions, skills and git guardrails for every coding agent. <code>pip install klaussy-agents</code></p>
-            <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">View on GitHub</a>
-          </li>
           <li class="product-card product-card-featured is-linked">
-            <p class="product-tag product-tag-paid">Paid &middot; your key</p>
-            <h3>klaussy review GitHub App</h3>
-            <p>Reviews every pull request with Claude, Copilot or OpenAI and posts findings inline.</p>
-            <a class="product-link card-link" href="#review">How it works</a>
+            <p class="product-tag product-tag-paid">Free plan &middot; your key</p>
+            <h3>Klaussy Loop</h3>
+            <p>The issue-to-PR dev loop: hand it an issue, get back a QA&rsquo;d, green pull request.</p>
+            <p class="product-forges">GitHub &middot; GitLab &middot; Bitbucket</p>
+            <a class="product-link card-link" href="https://app.klaussy.com/?app=loop" target="_blank" rel="noopener">Get started</a>
           </li>
           <li class="product-card is-linked">
-            <p class="product-tag">Free &middot; self-hosted</p>
-            <h3>klaussy review GitHub Action</h3>
-            <p>The same reviewer as a workflow step. Your key, your runners.</p>
-            <a class="product-link card-link" href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">Set up the Action</a>
-          </li>
-          <li class="product-card product-card-soon">
-            <p class="product-tag product-tag-soon">Coming soon</p>
-            <h3>Rest of the Owl</h3>
-            <p>The issue-to-PR dev loop: hand it an issue, get back a QA&rsquo;d, green pull request.</p>
+            <p class="product-tag">Free plan &middot; your key</p>
+            <h3>klaussy review</h3>
+            <p>Reviews every pull or merge request with Claude, Copilot or OpenAI and posts findings inline.</p>
+            <p class="product-forges">GitHub &middot; GitLab &middot; Bitbucket &middot; Azure DevOps</p>
+            <a class="product-link card-link" href="https://app.klaussy.com" target="_blank" rel="noopener">Get started</a>
           </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Trust / positioning -->
-  <section id="how-it-stays-yours" class="trust">
+  <!-- Klaussy Loop -->
+  <section id="loop" class="review loop">
     <div class="container">
-      <h2>Klaussy Desktop: no server. No markup. Use any agent.</h2>
-      <p class="trust-sub">Klaussy Desktop is an app, not a platform you log into. There's no account, no backend, and no business model that depends on your code passing through us. The klaussy review GitHub App is our one hosted product, and it's opt-in.</p>
+      <div class="review-head">
+        <p class="eyebrow">Klaussy Loop &middot; GitHub, GitLab, Bitbucket</p>
+        <h2>Hand it an issue. Get back a QA&rsquo;d, green pull request.</h2>
+        <p class="review-sub">Loop runs the whole dev loop in the cloud: it plans, builds, reviews its own work, <strong>QAs the change with real screenshots and recordings</strong>, opens the pull request, fixes CI and answers review comments. It runs on your own model key, and you can follow every phase as it goes.</p>
+      </div>
+
+      <div class="loop-shots">
+        <figure>
+          <img src="loop-overview.jpg" width="1080" height="1972" loading="lazy" alt="A Loop run's page: a Tasks table with each stage's time (Plan 38s, Build 2m 9s, QA 2m 16s, CI 1s, Land 20s) and model cost, above a live log of what the agent is doing.">
+          <figcaption>Every stage&rsquo;s time and cost, and a live log of what the agent is doing.</figcaption>
+        </figure>
+        <figure>
+          <img src="loop-qa-artifacts.jpg" width="1080" height="1962" loading="lazy" alt="A Loop run's Artifacts tab: a screenshot of the todo app after a page reload and an 11-second recording of the add, complete, filter, reload, clear and delete flow, each marked QA review: passed.">
+          <figcaption>The QA evidence it keeps, each capture checked by an independent QA review.</figcaption>
+        </figure>
+      </div>
+
+      <div class="review-cta">
+        <a class="btn btn-primary" href="https://app.klaussy.com/?app=loop" target="_blank" rel="noopener">
+          <span class="btn-label">Get started</span>
+          <span class="btn-sub">Free plan &middot; your key</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- klaussy review GitHub App -->
+  <section id="review" class="review">
+    <div class="container">
+      <div class="review-head">
+        <p class="eyebrow">klaussy review &middot; GitHub App</p>
+        <h2>A reviewer on every pull request. Running the agent you pick.</h2>
+        <p class="review-sub">Install the app and every pull request gets reviewed by <strong>Claude</strong> (Sonnet by default, Opus if you want it), <strong>GitHub Copilot</strong>, or <strong>OpenAI</strong>. Findings land inline on the exact diff line, each with a suggested change and a collapsed explanation.</p>
+      </div>
+
+      <div class="mirror-flow review-flow">
+        <div class="mirror-step is-linked">
+          <div class="mirror-step-num">1</div>
+          <h3>Install the app</h3>
+          <p>Add <a href="https://github.com/apps/klaussy-review/installations/new" target="_blank" rel="noopener" class="card-link"><strong>klaussy review</strong></a> to your GitHub organization or account and pick the repositories it covers.</p>
+        </div>
+        <div class="mirror-arrow" aria-hidden="true">→</div>
+        <div class="mirror-step is-linked">
+          <div class="mirror-step-num">2</div>
+          <h3>Pick an agent, paste a key</h3>
+          <p>In <a href="https://app.klaussy.com" target="_blank" rel="noopener" class="card-link">app.klaussy.com</a>, choose Claude, Copilot, or OpenAI and add your own API key.</p>
+        </div>
+        <div class="mirror-arrow" aria-hidden="true">→</div>
+        <div class="mirror-step">
+          <div class="mirror-step-num">3</div>
+          <h3>Reviews on every PR</h3>
+          <p>Open a pull request and the review posts inline, on the lines it's about, with a fix you can apply.</p>
+        </div>
+      </div>
+
+      <figure class="review-shot">
+        <img src="review-inline.png" width="946" height="732" loading="lazy" alt="A klaussy review on a GitHub pull request: a Request Changes verdict with 14 findings, and one finding pinned to lines 122 to 125 of main/util/slack-socket.js explaining that reconnect() during an in-flight connect() returns immediately.">
+        <figcaption>Findings land on the exact line, with what goes wrong and when.</figcaption>
+      </figure>
+
+      <div class="review-cta">
+        <a class="btn btn-primary" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
+          <span class="btn-label">Install on GitHub</span>
+          <span class="btn-sub">Free plan to try it</span>
+        </a>
+        <a class="btn btn-secondary" href="https://app.klaussy.com" target="_blank" rel="noopener">
+          <span class="btn-label">Open settings</span>
+          <span class="btn-sub">app.klaussy.com</span>
+        </a>
+      </div>
+      <p class="review-note">Rather run it yourself? The <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">klaussy review GitHub Action</a> is free: your key, your runners.</p>
+    </div>
+  </section>
+
+  <!-- Supported agents -->
+  <section id="agents" class="agents">
+    <div class="container">
+      <h2>Bring your own agent. All of them, if you like.</h2>
+      <p class="agents-sub">Klaussy drives the agent you choose, it doesn&rsquo;t replace it. Pick a global default, switch it per tab, or run several side by side in the same session, each on its own worktree. You need at least one installed and authenticated. Klaussy&rsquo;s first-run check tells you what&rsquo;s missing.</p>
+
+      <ul class="agent-grid">
+        <li><a class="agent-chip" href="https://claude.ai/code" target="_blank" rel="noopener"><span class="agent-name">Claude Code</span><span class="agent-vendor">Anthropic &middot; the default</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/openai/codex" target="_blank" rel="noopener"><span class="agent-name">Codex</span><span class="agent-vendor">OpenAI</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"><span class="agent-name">Gemini</span><span class="agent-vendor">Google</span></a></li>
+        <li><a class="agent-chip" href="https://antigravity.google" target="_blank" rel="noopener"><span class="agent-name">Antigravity</span><span class="agent-vendor">Google</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/github/copilot-cli" target="_blank" rel="noopener"><span class="agent-name">Copilot</span><span class="agent-vendor">GitHub</span></a></li>
+        <li><a class="agent-chip" href="https://cursor.com" target="_blank" rel="noopener"><span class="agent-name">Cursor</span><span class="agent-vendor">Anysphere</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/cline/cline" target="_blank" rel="noopener"><span class="agent-name">Cline</span><span class="agent-vendor">VS Code extension</span></a></li>
+        <li><a class="agent-chip" href="https://opencode.ai" target="_blank" rel="noopener"><span class="agent-name">opencode</span><span class="agent-vendor">open source</span></a></li>
+        <li><a class="agent-chip" href="https://moonshotai.github.io/kimi-code/" target="_blank" rel="noopener"><span class="agent-name">Kimi Code</span><span class="agent-vendor">Moonshot AI</span></a></li>
+        <li><a class="agent-chip" href="https://ollama.com" target="_blank" rel="noopener"><span class="agent-name">Ollama</span><span class="agent-vendor">via Aider &middot; local models</span></a></li>
+        <li><span class="agent-chip agent-chip-static"><span class="agent-name">Plain shell</span><span class="agent-vendor">no agent, just a terminal</span></span></li>
+        <li><a class="agent-chip agent-chip-sandbox" href="https://github.com/DeepBlueDynamics/nemesis8" target="_blank" rel="noopener"><span class="agent-name">Nemesis8 Sandbox</span><span class="agent-vendor">any agent, in Docker</span></a></li>
+      </ul>
+
+      <div class="context-share">
+        <h3>And they share what they find</h3>
+        <p>Agents in a session leave each other notes. When one moves a port, changes a schema, or hits something the next one would trip over, it writes that down. The notes are shared by every repo in the session and live outside your repository, so nothing lands in a commit and a teammate on another branch never sees them. Whichever agent picks the work up next gets handed the recent ones as current.</p>
+        <p class="context-share-note">Below: a session started on Antigravity, which writes a note about the colour change it is planning. Claude Opus and Codex open as new tabs in the same session and both read it.</p>
+      </div>
+
+      <div class="context-video">
+        <video autoplay muted loop playsinline controls preload="none" poster="klaussy_session_context_poster.jpg" width="1600" height="1096"
+               aria-label="A Klaussy session running three agents from three vendors. Antigravity CLI starts the work and writes a session note describing the colour change and the hex codes it plans to use. Claude Opus and OpenAI Codex are then opened as tabs in the same session, and the Session notes panel shows them the same note.">
+          <source src="klaussy_session_context.mp4" type="video/mp4">
+          <p>Your browser can't play this video. <a href="klaussy_session_context.mp4">Download the recording</a> instead.</p>
+        </video>
+      </div>
 
       <div id="download" class="hero-download">
         <div class="hero-cta">
@@ -177,249 +273,6 @@
             Click the Apple menu &rarr; <em>About This Mac</em>. If the <em>Chip</em> row says &ldquo;Apple M1/M2/M3/M4&rdquo; you have Apple Silicon. If it says &ldquo;Intel&rdquo;, pick the Intel build.
           </p>
         </details>
-      </div>
-
-      <div class="trust-grid">
-
-        <div class="trust-card">
-          <div class="trust-icon">⌂</div>
-          <h3>Serverless by design</h3>
-          <p>Desktop runs everything on your machine. It has no backend, so there's no copy of your repos, prompts, or history on someone else's disk.</p>
-          <p class="trust-line">no account · no cloud sync · no backend</p>
-        </div>
-
-        <div class="trust-card">
-          <div class="trust-icon">⇌</div>
-          <h3>Bring your own subscription</h3>
-          <p>Not a token reseller. Your keys, your plan, the provider's own price. Or pay nothing at all and run free and local models through Ollama.</p>
-          <p class="trust-line">your keys · your plan · your rate</p>
-        </div>
-
-        <div class="trust-card is-linked">
-          <div class="trust-icon">∅</div>
-          <h3>Your data isn't the product</h3>
-          <p>Nothing collected about how you work, so nothing to sell or train on. The <a href="privacy.html" class="card-link">privacy policy</a> is short, go read it.</p>
-          <p class="trust-line">not harvested · not sold · not trained on</p>
-        </div>
-
-        <div class="trust-card is-linked">
-          <div class="trust-icon">✓</div>
-          <h3>Free for individual developers</h3>
-          <p>Not a trial, and not a seat that disappears when someone rewrites the pricing page. A paid license is only for commercial production or redistribution. Want a bespoke edition? <a href="#enterprise" class="card-link">Talk to us</a>.</p>
-          <p class="trust-line">free forever for individuals · source-available</p>
-        </div>
-
-      </div>
-
-      <p class="trust-close">The whole thing is inspectable, runs locally, and keeps working if we disappear.</p>
-
-      <div class="compare-wrap">
-        <table class="compare">
-          <caption>How the three approaches differ. Categories, not specific products, since everyone's pricing moves.</caption>
-          <thead>
-            <tr>
-              <th scope="col">&nbsp;</th>
-              <th scope="col" class="compare-us">Klaussy</th>
-              <th scope="col">Hosted agent platforms</th>
-              <th scope="col">Single-vendor AI IDEs</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Runs on your machine</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">No, their cloud</span></td>
-              <td><span class="yes">Yes</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Uses your own subscription</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">Their credits</span></td>
-              <td><span class="no">Their plan</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Marks up your tokens</th>
-              <td class="compare-us"><span class="yes">Never</span></td>
-              <td><span class="no">Usually</span></td>
-              <td><span class="no">Usually</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Runs on free or local models</th>
-              <td class="compare-us"><span class="yes">Yes, via Ollama</span></td>
-              <td><span class="no">No</span></td>
-              <td><span class="no">Rarely</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Works with no AI subscription at all</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">No</span></td>
-              <td><span class="no">No</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Mixes agents in one session</th>
-              <td class="compare-us"><span class="yes">Any of 11</span></td>
-              <td><span class="no">One at a time</span></td>
-              <td><span class="no">Theirs only</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Many repos in one session</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="no">Rarely</span></td>
-              <td><span class="no">One window each</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Reviews the diff before you commit</th>
-              <td class="compare-us"><span class="yes">Built in</span></td>
-              <td><span class="no">No</span></td>
-              <td><span class="no">No</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Docker-sandboxed agents</th>
-              <td class="compare-us"><span class="yes">Yes</span></td>
-              <td><span class="yes">Yes, theirs</span></td>
-              <td><span class="no">No</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Cost for one developer</th>
-              <td class="compare-us"><span class="yes">Free</span></td>
-              <td><span class="no">Per seat + usage</span></td>
-              <td><span class="no">Per seat</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Supported agents -->
-  <section id="agents" class="agents">
-    <div class="container">
-      <h2>Bring your own agent. All of them, if you like.</h2>
-      <p class="agents-sub">Klaussy drives the agent you choose, it doesn&rsquo;t replace it. Pick a global default, switch it per tab, or run several side by side in the same session, each on its own worktree. You need at least one installed and authenticated. Klaussy&rsquo;s first-run check tells you what&rsquo;s missing.</p>
-
-      <ul class="agent-grid">
-        <li><a class="agent-chip" href="https://claude.ai/code" target="_blank" rel="noopener"><span class="agent-name">Claude Code</span><span class="agent-vendor">Anthropic &middot; the default</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/openai/codex" target="_blank" rel="noopener"><span class="agent-name">Codex</span><span class="agent-vendor">OpenAI</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"><span class="agent-name">Gemini</span><span class="agent-vendor">Google</span></a></li>
-        <li><a class="agent-chip" href="https://antigravity.google" target="_blank" rel="noopener"><span class="agent-name">Antigravity</span><span class="agent-vendor">Google</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/github/copilot-cli" target="_blank" rel="noopener"><span class="agent-name">Copilot</span><span class="agent-vendor">GitHub</span></a></li>
-        <li><a class="agent-chip" href="https://cursor.com" target="_blank" rel="noopener"><span class="agent-name">Cursor</span><span class="agent-vendor">Anysphere</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/cline/cline" target="_blank" rel="noopener"><span class="agent-name">Cline</span><span class="agent-vendor">VS Code extension</span></a></li>
-        <li><a class="agent-chip" href="https://opencode.ai" target="_blank" rel="noopener"><span class="agent-name">opencode</span><span class="agent-vendor">open source</span></a></li>
-        <li><a class="agent-chip" href="https://moonshotai.github.io/kimi-code/" target="_blank" rel="noopener"><span class="agent-name">Kimi Code</span><span class="agent-vendor">Moonshot AI</span></a></li>
-        <li><a class="agent-chip" href="https://ollama.com" target="_blank" rel="noopener"><span class="agent-name">Ollama</span><span class="agent-vendor">via Aider &middot; local models</span></a></li>
-        <li><span class="agent-chip agent-chip-static"><span class="agent-name">Plain shell</span><span class="agent-vendor">no agent, just a terminal</span></span></li>
-      </ul>
-
-      <div class="sandbox-card is-linked">
-        <div class="sandbox-icon">▣</div>
-        <div class="sandbox-body">
-          <h3>Or run any agent in a sandbox</h3>
-          <p>
-            Pick <strong>Nemesis8 Sandbox</strong> as the agent for any tab and it runs inside an isolated
-            <a href="https://github.com/DeepBlueDynamics/nemesis8" target="_blank" rel="noopener" class="card-link">Nemesis8</a>
-            Docker container instead of directly on your machine, so its blast radius stays off your host.
-            Add a gateway under <strong>Preferences → Nemesis8 Sandboxes</strong>. One click sets one up locally, or point it at a
-            remote one. Add more than one and each shows up in the agent picker as <strong>Nemesis8: &lt;name&gt;</strong>,
-            so a sandboxed Claude and a sandboxed Codex can run side by side.
-          </p>
-        </div>
-      </div>
-
-      <div class="context-share">
-        <h3>And they share what they find</h3>
-        <p>Agents in a session leave each other notes. When one moves a port, changes a schema, or hits something the next one would trip over, it writes that down. The notes are shared by every repo in the session and live outside your repository, so nothing lands in a commit and a teammate on another branch never sees them. Whichever agent picks the work up next gets handed the recent ones as current.</p>
-        <p class="context-share-note">Below: a session started on Antigravity, which writes a note about the colour change it is planning. Claude Opus and Codex open as new tabs in the same session and both read it.</p>
-      </div>
-
-      <div class="context-video">
-        <video autoplay muted loop playsinline controls preload="none" poster="klaussy_session_context_poster.jpg" width="1600" height="1096"
-               aria-label="A Klaussy session running three agents from three vendors. Antigravity CLI starts the work and writes a session note describing the colour change and the hex codes it plans to use. Claude Opus and OpenAI Codex are then opened as tabs in the same session, and the Session notes panel shows them the same note.">
-          <source src="klaussy_session_context.mp4" type="video/mp4">
-          <p>Your browser can't play this video. <a href="klaussy_session_context.mp4">Download the recording</a> instead.</p>
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agent mirroring -->
-  <section id="mirroring" class="mirroring">
-    <div class="container">
-      <h2>Leave your desk. The session keeps going.</h2>
-      <p class="mirroring-sub">Turn on notifications for a session and it mirrors into <strong>Discord</strong> or <strong>Slack</strong> as a thread you can talk to from your phone. Steer the agent while you're out on errands, then walk back to Klaussy and pick the same conversation up mid-sentence. Full scrollback, same worktree, nothing replayed.</p>
-
-      <div class="mirror-flow">
-        <div class="mirror-step">
-          <div class="mirror-step-num">1</div>
-          <h3>Turn on notifications</h3>
-          <p>Switch on <strong>notifications</strong> for the session and point them at Discord or Slack. Klaussy opens a thread there and streams the agent's output into it as it works.</p>
-        </div>
-        <div class="mirror-arrow" aria-hidden="true">→</div>
-        <div class="mirror-step">
-          <div class="mirror-step-num">2</div>
-          <h3>Drive it from anywhere</h3>
-          <p>Reply in the thread and the agent picks it up on your machine. Answer a prompt, approve a plan, redirect the work, all from your phone in the grocery line.</p>
-        </div>
-        <div class="mirror-arrow" aria-hidden="true">→</div>
-        <div class="mirror-step">
-          <div class="mirror-step-num">3</div>
-          <h3>Come back and continue</h3>
-          <p>Everything said in the thread lands in the Klaussy tab. Sit down and keep typing. One session the whole way through, no handoff brief, nothing lost.</p>
-        </div>
-      </div>
-
-      <div class="mirror-demo">
-        <div class="mirror-demo-bar">
-          <span class="mirror-demo-hash">#</span>
-          <span class="mirror-demo-title">klaussy · api · refactor-auth</span>
-          <span class="mirror-demo-tag">mirrored</span>
-        </div>
-        <div class="mirror-demo-body">
-          <div class="mirror-msg mirror-msg-agent">
-            <span class="mirror-who">Claude Code <em>via Klaussy</em></span>
-            <p>Ran the migration against a scratch DB. 41 tests pass, 2 fail on the legacy token path. Want me to keep the old format readable for one release, or hard-cut it?</p>
-          </div>
-          <div class="mirror-msg mirror-msg-you">
-            <span class="mirror-who">you <em>on your phone</em></span>
-            <p>keep it readable for one release, put the cutover behind a flag</p>
-          </div>
-          <div class="mirror-msg mirror-msg-agent">
-            <span class="mirror-who">Claude Code <em>via Klaussy</em></span>
-            <p>Done. <code>AUTH_LEGACY_TOKENS</code> defaults on, cutover path tested. Branch is clean and ready for you to review back in Klaussy.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Full Dev Loop ("Rest of the Owl") -->
-  <section id="dev-loop" class="devloop">
-    <div class="container">
-      <div class="devloop-head">
-        <p class="eyebrow">Full Dev Loop &middot; &ldquo;Rest of the Owl&rdquo;</p>
-        <h2>Hand it a ticket. Come back to a green PR.</h2>
-        <p class="devloop-sub">Most of Klaussy is hands-on. <strong>Full Dev Loop</strong> is the mode you pick when a task is defined well enough to walk away from: nine phases, start to finish, with a rail that tells you where it is the whole way. The run below took 17 minutes and ended on an open pull request.</p>
-      </div>
-
-      <ol class="devloop-flow">
-        <li><span class="devloop-chip"><span class="devloop-num">01</span>Plan &amp; Discovery</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">02</span>Implementation</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">03</span>Local Review &amp; Humanize</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">04</span>QA &amp; Evidence</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">05</span>Create PR</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">06</span>Re-review Remote PR</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">07</span>Fix CI Failures</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">08</span>Resolve Review Comments</span></li>
-        <li><span class="devloop-chip"><span class="devloop-num">09</span>Notify when Green</span></li>
-        <li class="devloop-flow-stop"><span class="devloop-chip"><span class="devloop-num">&mdash;</span>Merge stays yours</span></li>
-      </ol>
-
-      <div class="devloop-video">
-        <video autoplay muted loop playsinline controls preload="metadata" poster="klaussy_dev_loop_poster.jpg" width="1600" height="1096"
-               aria-label="The Full Dev Loop panel at the end of a run. Phases 1 to 5, Plan, Implementation, Local Review, QA, and Create PR, are marked done; phase 6 is re-reviewing the remote pull request, with PR #16 open on the forge; phases 7 to 9 are still pending.">
-          <source src="klaussy_dev_loop.mp4" type="video/mp4">
-          <p>Your browser can't play this video. <a href="klaussy_dev_loop.mp4">Download the recording</a> instead.</p>
-        </video>
       </div>
     </div>
   </section>
@@ -509,7 +362,7 @@
             <div class="feature-icon">▾</div>
             <div class="feature-row-body">
               <h4>Plan · Debug · Review · Full Dev Loop</h4>
-              <p>A dropdown on every worktree spawns a dedicated agent tab: a guided Plan flow, a Debug pass, a multi-phase PR review, or the <a href="#dev-loop" class="card-link">nine-phase Full Dev Loop</a>.</p>
+              <p>A dropdown on every worktree spawns a dedicated agent tab: a guided Plan flow, a Debug pass, a multi-phase PR review, or the nine-phase Full Dev Loop.</p>
             </div>
           </div>
           <div class="feature-row">
@@ -540,7 +393,7 @@
             <div class="feature-icon">◈</div>
             <div class="feature-row-body">
               <h4>Agent mirroring to Discord &amp; Slack</h4>
-              <p>Mirror a session into a Discord or Slack thread and steer it from your phone. <a href="#mirroring" class="card-link">See how it works</a>.</p>
+              <p>Mirror a session into a Discord or Slack thread and steer it from your phone.</p>
             </div>
           </div>
           <div class="feature-row">
@@ -573,146 +426,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- klaussy review GitHub App -->
-  <section id="review" class="review">
-    <div class="container">
-      <div class="review-head">
-        <p class="eyebrow">klaussy review &middot; GitHub App</p>
-        <h2>A reviewer on every pull request. Running the agent you pick.</h2>
-        <p class="review-sub">Install the app and every pull request gets reviewed by <strong>Claude</strong> (Sonnet by default, Opus if you want it), <strong>GitHub Copilot</strong>, or <strong>OpenAI</strong>. Findings land inline on the exact diff line, each with a suggested change and a collapsed explanation.</p>
-      </div>
-
-      <div class="mirror-flow review-flow">
-        <div class="mirror-step is-linked">
-          <div class="mirror-step-num">1</div>
-          <h3>Install the app</h3>
-          <p>Add <a href="https://github.com/apps/klaussy-review/installations/new" target="_blank" rel="noopener" class="card-link"><strong>klaussy review</strong></a> to your GitHub organization or account and pick the repositories it covers.</p>
-        </div>
-        <div class="mirror-arrow" aria-hidden="true">→</div>
-        <div class="mirror-step is-linked">
-          <div class="mirror-step-num">2</div>
-          <h3>Pick an agent, paste a key</h3>
-          <p>In <a href="https://app.klaussy.com" target="_blank" rel="noopener" class="card-link">app.klaussy.com</a>, choose Claude, Copilot, or OpenAI and add your own API key.</p>
-        </div>
-        <div class="mirror-arrow" aria-hidden="true">→</div>
-        <div class="mirror-step">
-          <div class="mirror-step-num">3</div>
-          <h3>Reviews on every PR</h3>
-          <p>Open a pull request and the review posts inline, on the lines it's about, with a fix you can apply.</p>
-        </div>
-      </div>
-
-      <div class="feature-rows review-rows">
-        <div class="feature-row">
-          <div class="feature-icon">⇌</div>
-          <div class="feature-row-body">
-            <h3>Bring your own key</h3>
-            <p>Model usage goes on your provider account, at your provider's price. We don't resell or mark up tokens.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <div class="feature-icon">▣</div>
-          <div class="feature-row-body">
-            <h3>Isolated, throwaway containers</h3>
-            <p>Each review runs in a fresh container that never holds a GitHub token. No code is stored after the review is posted.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <div class="feature-icon">⑂</div>
-          <div class="feature-row-body">
-            <h3>Inline, on the exact line</h3>
-            <p>Every finding is pinned to the diff line it's about, with a suggested change and the reasoning folded away until you want it.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <div class="feature-icon">✓</div>
-          <div class="feature-row-body">
-            <h3>Built for depth</h3>
-            <p>Multi-pass review with a validation step, so findings get checked before they're posted.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-cta">
-        <a class="btn btn-primary" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
-          <span class="btn-label">Install on GitHub</span>
-          <span class="btn-sub">Free plan to try it</span>
-        </a>
-        <a class="btn btn-secondary" href="https://app.klaussy.com" target="_blank" rel="noopener">
-          <span class="btn-label">Open settings</span>
-          <span class="btn-sub">app.klaussy.com</span>
-        </a>
-      </div>
-      <p class="review-note">Rather run it yourself? The <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">klaussy review GitHub Action</a> is free: your key, your runners.</p>
-    </div>
-  </section>
-
-  <!-- klaussy review pricing -->
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <h2>klaussy review pricing</h2>
-      <p class="pricing-sub">Priced per GitHub organization or account, not per seat. You bring the model key, so AI usage is billed by your provider, not by us.</p>
-
-      <div class="pricing-grid">
-        <div class="price-card is-linked">
-          <h3 class="price-eyebrow">Free</h3>
-          <p class="price-amount"><span class="price-currency">$</span>0</p>
-          <p class="price-note">For open source and trying it out</p>
-          <ul class="price-list">
-            <li>20 public-repo reviews a month</li>
-            <li>5 private-repo reviews a month</li>
-            <li>5 reviews a day, 3 at once</li>
-            <li>Claude, Copilot, or OpenAI on your key</li>
-          </ul>
-          <a class="btn btn-secondary price-cta card-link" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
-            <span class="btn-label">Install free</span>
-          </a>
-        </div>
-
-        <div class="price-card is-linked">
-          <h3 class="price-eyebrow">Personal</h3>
-          <p class="price-amount"><span class="price-currency">$</span>15<span class="price-period">/month</span></p>
-          <p class="price-note">For your own GitHub account. 7-day free trial, card required</p>
-          <ul class="price-list">
-            <li>Public and private repos</li>
-            <li>Up to 500 reviews a month (fair use)</li>
-            <li>100 reviews a day, 3 at once</li>
-            <li>Claude, Copilot, or OpenAI on your key</li>
-          </ul>
-          <a class="btn btn-secondary price-cta card-link" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
-            <span class="btn-label">Start free trial</span>
-          </a>
-        </div>
-
-        <div class="price-card price-card-featured is-linked">
-          <h3 class="price-eyebrow">Team</h3>
-          <p class="price-amount"><span class="price-currency">$</span>49<span class="price-period">/month</span></p>
-          <p class="price-note">For an organization, any number of members. 7-day free trial, card required</p>
-          <ul class="price-list">
-            <li>Public and private repos</li>
-            <li>Up to 1,500 reviews a month (fair use)</li>
-            <li>300 reviews a day, 5 at once</li>
-            <li>Claude, Copilot, or OpenAI on your key</li>
-          </ul>
-          <a class="btn btn-primary price-cta card-link" href="https://github.com/apps/klaussy-review" target="_blank" rel="noopener">
-            <span class="btn-label">Start free trial</span>
-          </a>
-        </div>
-
-        <div class="price-card enterprise-card is-linked">
-          <h3 class="price-eyebrow">Enterprise</h3>
-          <p class="price-amount price-amount-text">Let's talk</p>
-          <p class="price-note">Custom review limits, invoicing, a DPA and priority support for larger organizations.</p>
-          <a class="btn btn-secondary price-cta card-link" href="https://calendly.com/doverstephaniem/30min" target="_blank" rel="noopener">
-            <span class="btn-label">Book a Call</span>
-          </a>
-        </div>
-      </div>
-
-      <p class="pricing-fineprint">Klaussy Desktop, the klaussy CLI, and the self-hosted review Action stay free.</p>
     </div>
   </section>
 
@@ -764,11 +477,6 @@
       </details>
 
       <details>
-        <summary>Who pays for the AI in klaussy review?</summary>
-        <p>You do, directly. klaussy review is bring-your-own-key: model usage is billed to your Anthropic, GitHub Copilot, or OpenAI account at their price. The <a href="#pricing">klaussy review plan</a> covers the app itself, per organization or account rather than per seat.</p>
-      </details>
-
-      <details>
         <summary>Do I need a subscription, and does Klaussy mark up AI usage?</summary>
         <p>For Klaussy Desktop, you need whatever plan each agent CLI is set up with, on your own accounts. Desktop never sits between you and your provider, so there's nothing to resell, mark up, or meter. Or run free and local models through Ollama and pay for nothing at all. The klaussy review App also runs on your own key and never marks up tokens; it sends each pull request's diff to the provider you chose so it can review it.</p>
       </details>
@@ -781,16 +489,6 @@
       <details>
         <summary>Which platforms are supported?</summary>
         <p>macOS 12+ (Apple Silicon and Intel), Windows 10/11, and Ubuntu 22.04+ (other modern Linux distros generally work). All builds are signed where the platform supports it.</p>
-      </details>
-
-      <details>
-        <summary>Why the 2 GB download prompt for inline autocomplete?</summary>
-        <p>~500 MB is Ollama's runtime, ~1 GB is the <code>qwen2.5-coder:1.5b</code> model weights. You only see the prompt if you opt in. Otherwise a free word-based completer handles Tab.</p>
-      </details>
-
-      <details>
-        <summary>What happens to my data if I uninstall?</summary>
-        <p>On macOS, remove <code>~/Library/Application Support/Klaussy</code> and <code>~/Library/Logs/Klaussy</code>. On Windows, remove <code>%APPDATA%\Klaussy</code>. On Linux, remove <code>~/.config/Klaussy</code> and <code>~/.local/share/Klaussy</code>. Ollama and its models stick around on their own, so uninstall it through your package manager and remove <code>~/.ollama</code>.</p>
       </details>
 
       <details>
