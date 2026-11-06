@@ -1436,6 +1436,40 @@ a.agent-chip:hover .agent-name {
   margin-top: 56px;
 }
 
+.loop-shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 320px));
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+}
+
+.loop-shots figure {
+  margin: 0;
+}
+
+.loop-shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.loop-shots figcaption {
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .loop-shots {
+    grid-template-columns: minmax(0, 320px);
+  }
+}
+
 .review-note {
   margin-top: 20px;
   text-align: center;
