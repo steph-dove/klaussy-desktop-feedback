@@ -1133,6 +1133,10 @@ a.agent-chip:hover .agent-name {
   color: var(--text-dim);
 }
 
+.agent-chip-sandbox {
+  border-color: var(--accent);
+}
+
 .sandbox-card {
   display: flex;
   gap: 18px;
