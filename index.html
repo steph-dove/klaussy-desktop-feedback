@@ -34,8 +34,7 @@
     <nav class="nav-links">
       <a href="#loop">Loop</a>
       <a href="#review">Review</a>
-      <a href="#how-it-stays-yours">Desktop</a>
-      <a href="#agents">Agents</a>
+      <a href="#agents">Desktop</a>
       <a href="#features">Features</a>
       <a href="#enterprise">Enterprise</a>
       <a href="#faq">FAQ</a>
@@ -172,11 +171,40 @@
     </div>
   </section>
 
-  <!-- Trust / positioning -->
-  <section id="how-it-stays-yours" class="trust">
+  <!-- Supported agents -->
+  <section id="agents" class="agents">
     <div class="container">
-      <h2>Klaussy Desktop: no server. No markup. Use any agent.</h2>
-      <p class="trust-sub">Klaussy Desktop is an app, not a platform you log into. There's no account, no backend, and no business model that depends on your code passing through us. Klaussy Loop and klaussy review are the hosted apps, and both are opt-in.</p>
+      <h2>Bring your own agent. All of them, if you like.</h2>
+      <p class="agents-sub">Klaussy drives the agent you choose, it doesn&rsquo;t replace it. Pick a global default, switch it per tab, or run several side by side in the same session, each on its own worktree. You need at least one installed and authenticated. Klaussy&rsquo;s first-run check tells you what&rsquo;s missing.</p>
+
+      <ul class="agent-grid">
+        <li><a class="agent-chip" href="https://claude.ai/code" target="_blank" rel="noopener"><span class="agent-name">Claude Code</span><span class="agent-vendor">Anthropic &middot; the default</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/openai/codex" target="_blank" rel="noopener"><span class="agent-name">Codex</span><span class="agent-vendor">OpenAI</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"><span class="agent-name">Gemini</span><span class="agent-vendor">Google</span></a></li>
+        <li><a class="agent-chip" href="https://antigravity.google" target="_blank" rel="noopener"><span class="agent-name">Antigravity</span><span class="agent-vendor">Google</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/github/copilot-cli" target="_blank" rel="noopener"><span class="agent-name">Copilot</span><span class="agent-vendor">GitHub</span></a></li>
+        <li><a class="agent-chip" href="https://cursor.com" target="_blank" rel="noopener"><span class="agent-name">Cursor</span><span class="agent-vendor">Anysphere</span></a></li>
+        <li><a class="agent-chip" href="https://github.com/cline/cline" target="_blank" rel="noopener"><span class="agent-name">Cline</span><span class="agent-vendor">VS Code extension</span></a></li>
+        <li><a class="agent-chip" href="https://opencode.ai" target="_blank" rel="noopener"><span class="agent-name">opencode</span><span class="agent-vendor">open source</span></a></li>
+        <li><a class="agent-chip" href="https://moonshotai.github.io/kimi-code/" target="_blank" rel="noopener"><span class="agent-name">Kimi Code</span><span class="agent-vendor">Moonshot AI</span></a></li>
+        <li><a class="agent-chip" href="https://ollama.com" target="_blank" rel="noopener"><span class="agent-name">Ollama</span><span class="agent-vendor">via Aider &middot; local models</span></a></li>
+        <li><span class="agent-chip agent-chip-static"><span class="agent-name">Plain shell</span><span class="agent-vendor">no agent, just a terminal</span></span></li>
+        <li><a class="agent-chip agent-chip-sandbox" href="https://github.com/DeepBlueDynamics/nemesis8" target="_blank" rel="noopener"><span class="agent-name">Nemesis8 Sandbox</span><span class="agent-vendor">any agent, in Docker</span></a></li>
+      </ul>
+
+      <div class="context-share">
+        <h3>And they share what they find</h3>
+        <p>Agents in a session leave each other notes. When one moves a port, changes a schema, or hits something the next one would trip over, it writes that down. The notes are shared by every repo in the session and live outside your repository, so nothing lands in a commit and a teammate on another branch never sees them. Whichever agent picks the work up next gets handed the recent ones as current.</p>
+        <p class="context-share-note">Below: a session started on Antigravity, which writes a note about the colour change it is planning. Claude Opus and Codex open as new tabs in the same session and both read it.</p>
+      </div>
+
+      <div class="context-video">
+        <video autoplay muted loop playsinline controls preload="none" poster="klaussy_session_context_poster.jpg" width="1600" height="1096"
+               aria-label="A Klaussy session running three agents from three vendors. Antigravity CLI starts the work and writes a session note describing the colour change and the hex codes it plans to use. Claude Opus and OpenAI Codex are then opened as tabs in the same session, and the Session notes panel shows them the same note.">
+          <source src="klaussy_session_context.mp4" type="video/mp4">
+          <p>Your browser can't play this video. <a href="klaussy_session_context.mp4">Download the recording</a> instead.</p>
+        </video>
+      </div>
 
       <div id="download" class="hero-download">
         <div class="hero-cta">
@@ -245,50 +273,6 @@
             Click the Apple menu &rarr; <em>About This Mac</em>. If the <em>Chip</em> row says &ldquo;Apple M1/M2/M3/M4&rdquo; you have Apple Silicon. If it says &ldquo;Intel&rdquo;, pick the Intel build.
           </p>
         </details>
-      </div>
-
-      <ul class="trust-points">
-        <li><strong>Serverless by design.</strong> Everything runs on your machine, with no copy of your repos on anyone else's disk.</li>
-        <li><strong>Bring your own subscription.</strong> Your keys and your plan, or free local models through Ollama.</li>
-        <li><strong>Your data isn't the product.</strong> Nothing to sell or train on. The <a href="privacy.html">privacy policy</a> is short.</li>
-      </ul>
-
-    </div>
-  </section>
-
-  <!-- Supported agents -->
-  <section id="agents" class="agents">
-    <div class="container">
-      <h2>Bring your own agent. All of them, if you like.</h2>
-      <p class="agents-sub">Klaussy drives the agent you choose, it doesn&rsquo;t replace it. Pick a global default, switch it per tab, or run several side by side in the same session, each on its own worktree. You need at least one installed and authenticated. Klaussy&rsquo;s first-run check tells you what&rsquo;s missing.</p>
-
-      <ul class="agent-grid">
-        <li><a class="agent-chip" href="https://claude.ai/code" target="_blank" rel="noopener"><span class="agent-name">Claude Code</span><span class="agent-vendor">Anthropic &middot; the default</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/openai/codex" target="_blank" rel="noopener"><span class="agent-name">Codex</span><span class="agent-vendor">OpenAI</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"><span class="agent-name">Gemini</span><span class="agent-vendor">Google</span></a></li>
-        <li><a class="agent-chip" href="https://antigravity.google" target="_blank" rel="noopener"><span class="agent-name">Antigravity</span><span class="agent-vendor">Google</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/github/copilot-cli" target="_blank" rel="noopener"><span class="agent-name">Copilot</span><span class="agent-vendor">GitHub</span></a></li>
-        <li><a class="agent-chip" href="https://cursor.com" target="_blank" rel="noopener"><span class="agent-name">Cursor</span><span class="agent-vendor">Anysphere</span></a></li>
-        <li><a class="agent-chip" href="https://github.com/cline/cline" target="_blank" rel="noopener"><span class="agent-name">Cline</span><span class="agent-vendor">VS Code extension</span></a></li>
-        <li><a class="agent-chip" href="https://opencode.ai" target="_blank" rel="noopener"><span class="agent-name">opencode</span><span class="agent-vendor">open source</span></a></li>
-        <li><a class="agent-chip" href="https://moonshotai.github.io/kimi-code/" target="_blank" rel="noopener"><span class="agent-name">Kimi Code</span><span class="agent-vendor">Moonshot AI</span></a></li>
-        <li><a class="agent-chip" href="https://ollama.com" target="_blank" rel="noopener"><span class="agent-name">Ollama</span><span class="agent-vendor">via Aider &middot; local models</span></a></li>
-        <li><span class="agent-chip agent-chip-static"><span class="agent-name">Plain shell</span><span class="agent-vendor">no agent, just a terminal</span></span></li>
-        <li><a class="agent-chip agent-chip-sandbox" href="https://github.com/DeepBlueDynamics/nemesis8" target="_blank" rel="noopener"><span class="agent-name">Nemesis8 Sandbox</span><span class="agent-vendor">any agent, in Docker</span></a></li>
-      </ul>
-
-      <div class="context-share">
-        <h3>And they share what they find</h3>
-        <p>Agents in a session leave each other notes. When one moves a port, changes a schema, or hits something the next one would trip over, it writes that down. The notes are shared by every repo in the session and live outside your repository, so nothing lands in a commit and a teammate on another branch never sees them. Whichever agent picks the work up next gets handed the recent ones as current.</p>
-        <p class="context-share-note">Below: a session started on Antigravity, which writes a note about the colour change it is planning. Claude Opus and Codex open as new tabs in the same session and both read it.</p>
-      </div>
-
-      <div class="context-video">
-        <video autoplay muted loop playsinline controls preload="none" poster="klaussy_session_context_poster.jpg" width="1600" height="1096"
-               aria-label="A Klaussy session running three agents from three vendors. Antigravity CLI starts the work and writes a session note describing the colour change and the hex codes it plans to use. Claude Opus and OpenAI Codex are then opened as tabs in the same session, and the Session notes panel shows them the same note.">
-          <source src="klaussy_session_context.mp4" type="video/mp4">
-          <p>Your browser can't play this video. <a href="klaussy_session_context.mp4">Download the recording</a> instead.</p>
-        </video>
       </div>
     </div>
   </section>

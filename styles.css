@@ -454,6 +454,10 @@ code {
   color: var(--text-muted);
 }
 
+.agents .hero-download {
+  margin-top: 40px;
+}
+
 .trust-points {
   list-style: none;
   max-width: 660px;
