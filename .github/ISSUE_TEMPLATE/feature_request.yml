@@ -8,7 +8,8 @@ body:
       label: Which product?
       options:
         - Klaussy Desktop
-        - klaussy review (GitHub App or Action)
+        - Klaussy Loop
+        - klaussy review (hosted App or Action)
         - klaussy CLI (klaussy-agents)
         - klaussy.com
     validations:

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klaussy Desktop: multi-agent coding sessions, AI PR review, and CI debugging</title>
-  <meta name="description" content="A desktop app for macOS, Windows, and Linux. Run Claude Code, Codex, Gemini, Copilot, Cursor, and more side by side, each in its own git worktree or Docker sandbox across GitHub, GitLab, and Bitbucket. Agents work from your repo's own conventions, review your pull and merge requests, and debug failing CI. No server, no markup, bring your own subscription.">
-  <meta property="og:title" content="Klaussy Desktop">
-  <meta property="og:description" content="From first prompt to merged PR, with agents that know your codebase. Multi-agent, multi-repo sessions with Claude Code, Codex, Gemini, Copilot, Cursor, and more, plus AI PR/MR review and CI debugging across GitHub, GitLab, and Bitbucket. macOS, Windows, Linux.">
+  <title>Klaussy: Klaussy Loop, klaussy review, Klaussy Desktop, and klaussy-agents</title>
+  <meta name="description" content="From first prompt to merged PR, with agents that know your codebase. Hand Klaussy Loop an issue and get back a QA'd pull request, put klaussy review on every PR or MR across GitHub, GitLab, Bitbucket, and Azure DevOps, or run multi-agent sessions locally in Klaussy Desktop (macOS, Windows, Linux) powered by klaussy-agents.">
+  <meta property="og:title" content="Klaussy">
+  <meta property="og:description" content="From first prompt to merged PR, with agents that know your codebase. Klaussy Loop, klaussy review, and Klaussy Desktop across GitHub, GitLab, Bitbucket, and Azure DevOps, powered by klaussy-agents.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.klaussy.com/">
   <meta property="og:site_name" content="Klaussy">
@@ -15,8 +15,8 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The Klaussy Desktop home screen: a sidebar showing token usage across Claude Code, Antigravity CLI, OpenAI Codex, and opencode, beside four action cards for Full Dev Loop, New Git Session, Open Local Folder, and Review PR or MR.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Klaussy Desktop">
-  <meta name="twitter:description" content="From first prompt to merged PR across GitHub, GitLab, and Bitbucket, with agents that know your codebase. No server, no markup, use any agent. macOS, Windows, Linux.">
+  <meta name="twitter:title" content="Klaussy">
+  <meta name="twitter:description" content="From first prompt to merged PR across GitHub, GitLab, Bitbucket, and Azure DevOps, with agents that know your codebase. Klaussy Loop, klaussy review, Klaussy Desktop, and klaussy-agents.">
   <meta name="twitter:image" content="https://www.klaussy.com/og-klaussy-desktop.png">
   <link rel="canonical" href="https://www.klaussy.com/">
   <link rel="icon" type="image/png" href="favicon.png">
@@ -70,7 +70,7 @@
 
         <ul class="product-grid">
           <li class="product-card is-linked">
-            <p class="product-tag">Free</p>
+            <p class="product-tag">Free &middot; SUL 1.0</p>
             <h3>Klaussy Desktop</h3>
             <p>Multi-agent sessions, worktrees, PR review and CI debugging on your own machine.</p>
             <a class="product-link card-link" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" data-smart-download>Download</a>
@@ -216,7 +216,7 @@
             <a href="https://www.producthunt.com/products/klaussy-desktop/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-klaussy&#0045;desktop" target="_blank" rel="noopener"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1307346&theme=dark" alt="Klaussy&#0032;Desktop - Hand&#0032;it&#0032;a&#0032;ticket&#0046;&#0032;Come&#0032;back&#0032;to&#0032;a&#0032;green&#0032;PR&#0046;&#0032;Free&#0032;and&#0032;local&#0046; | Product Hunt" width="200" height="43" /></a>
           </div>
         </div>
-        <p class="hero-note">Source-available under SUL 1.0. Free for personal use and development.<br>Individual developers pay nothing. You only need a license to ship it commercially or redistribute it.</p>
+        <p class="hero-note">Source-available under SUL 1.0. Free for personal use, development, and internal business use.<br>Individual developers pay nothing. You only need a license to sell it or offer it as a commercial service.</p>
 
         <details class="download-picker">
           <summary>Need a different platform? <span class="download-picker-hint">All downloads &darr;</span></summary>
@@ -468,28 +468,28 @@
       </details>
 
       <details>
-        <summary>Does the klaussy review app see my code?</summary>
-        <p>Only to review it. Each review runs in an isolated, throwaway container that never holds a GitHub token, and the diff goes to the model provider you picked, on your key. No code is stored after the review is posted. If you'd rather the review run on your own infrastructure, use the self-hosted <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">GitHub Action</a> on your own runners.</p>
+        <summary>Do Klaussy Loop and klaussy review see my code?</summary>
+        <p>Only to run your task or review your pull request. Each run executes in an isolated, single-use sandbox or container, and your code and diffs go to the model provider you picked, on your own key. We never sell your code or use it to train models. For klaussy review, no code is stored after the review is posted (or you can run the self-hosted <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">GitHub Action</a> on your own runners). For Klaussy Loop, QA captures, run logs, and run records are kept for 90 days so you can inspect the evidence, then deleted.</p>
       </details>
 
       <details>
         <summary>Do I need a subscription, and does Klaussy mark up AI usage?</summary>
-        <p>For Klaussy Desktop, you need whatever plan each agent CLI is set up with, on your own accounts. Desktop never sits between you and your provider, so there's nothing to resell, mark up, or meter. Or run free and local models through Ollama and pay for nothing at all. The klaussy review App also runs on your own key and never marks up tokens; it sends each pull request's diff to the provider you chose so it can review it.</p>
+        <p>For Klaussy Desktop, you need whatever plan each agent CLI is set up with, on your own accounts. Desktop never sits between you and your provider, so there's nothing to resell, mark up, or meter. Or run free and local models through Ollama and pay for nothing at all. Klaussy Loop and klaussy review also run on your own AI provider key (with a free tier and paid plans) and never mark up tokens.</p>
       </details>
 
       <details>
         <summary>What is klaussy-agents?</summary>
-        <p><a href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">klaussy-agents</a> is the engine underneath the desktop app: the conventions, custom skills, and git-level guardrails that keep agents aligned with your codebase. The desktop is the face, the engine is the spine. It's source-available under the Functional Source License (FSL-1.1-MIT), and each release becomes MIT-licensed two years after it ships.</p>
+        <p><a href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">klaussy-agents</a> is the engine underneath Klaussy Desktop, Klaussy Loop, and klaussy review: the conventions, custom skills, multi-agent review passes, and git-level guardrails that keep agents aligned with your codebase. The desktop is the face, the engine is the spine. It's source-available under the Functional Source License (FSL-1.1-MIT), and each release becomes MIT-licensed two years after it ships.</p>
       </details>
 
       <details>
         <summary>Which platforms are supported?</summary>
-        <p>macOS 12+ (Apple Silicon and Intel), Windows 10/11, and Ubuntu 22.04+ (other modern Linux distros generally work). All builds are signed where the platform supports it.</p>
+        <p>Klaussy Desktop runs on macOS 12+ (Apple Silicon and Intel), Windows 10/11, and Ubuntu 22.04+ (other modern Linux distros generally work). All builds are signed where the platform supports it. Klaussy Loop and klaussy review run in the cloud from any browser at <a href="https://app.klaussy.com" target="_blank" rel="noopener">app.klaussy.com</a>.</p>
       </details>
 
       <details>
-        <summary>Is this open source, and what is SUL 1.0?</summary>
-        <p>Klaussy Desktop is source-available under the Sustainable Use License. You can inspect, modify, run, and self-host it for personal use, development, and internal business use. Commercial production use needs a separate agreement, and you can't use it to host a competing service, so <a href="#enterprise">get in touch</a> if you want to partner. The engine underneath, <a href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">klaussy-agents</a>, is fully open source under MIT. Bundled components are listed in About → Licenses.</p>
+        <summary>Is this open source, and how is each product licensed?</summary>
+        <p><strong>Klaussy Desktop</strong> is source-available under the <a href="https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE" target="_blank" rel="noopener">Sustainable Use License (SUL 1.0)</a>: you can inspect, modify, run, and self-host it for personal use, development, and internal business use, while selling it or hosting a competing commercial service requires a separate agreement (<a href="#enterprise">get in touch</a> to partner). <strong><a href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">klaussy-agents</a></strong> (along with <a href="https://github.com/steph-dove/klaussy-repo-conventions" target="_blank" rel="noopener">klaussy-repo-conventions</a> and the <a href="https://github.com/marketplace/actions/klaussy-review" target="_blank" rel="noopener">klaussy review GitHub Action</a>) is source-available under the Functional Source License (FSL-1.1-MIT), converting to MIT two years after each release ships. <strong>Klaussy Loop</strong> and the hosted <strong>klaussy review</strong> app at <a href="https://app.klaussy.com" target="_blank" rel="noopener">app.klaussy.com</a> are hosted cloud services governed by our <a href="terms.html">Terms of Service</a>. Bundled desktop components are listed in About → Licenses.</p>
       </details>
 
       <details>
@@ -504,7 +504,7 @@
   <section class="final-cta">
     <div class="container">
       <h2>Get Klaussy.</h2>
-      <p>macOS, Windows, Linux. Source-available under SUL 1.0, free for personal use and development.</p>
+      <p>macOS, Windows, Linux. Source-available under SUL 1.0, free for personal use, development, and internal business use.</p>
       <a class="btn btn-primary" href="https://github.com/steph-dove/klaussy-desktop/releases/latest" data-smart-download>
         <span class="btn-label">Download Klaussy</span>
         <span class="btn-sub">macOS &middot; Windows &middot; Linux</span>
