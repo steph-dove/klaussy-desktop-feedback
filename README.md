@@ -1,33 +1,36 @@
 # <img src="brand-mark.png" width="32" height="32" align="absmiddle" alt="Klaussy Logo"> Klaussy
 
 > [!IMPORTANT]
-> **© 2026 Dovatech LLC. All rights reserved.** This repository hosts www.klaussy.com. Its text, images, video, and design aren't licensed for reuse, and copying them for commercial use is copyright infringement. The Klaussy Desktop app itself is covered by the [Sustainable Use License](https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE).
+> **© 2026 Dovatech LLC. All rights reserved.** This repository hosts www.klaussy.com. Its text, images, video, and design aren't licensed for reuse, and copying them for commercial use is copyright infringement. **Klaussy Desktop** is covered by the [Sustainable Use License (SUL 1.0)](https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE), **[klaussy-agents](https://github.com/steph-dove/klaussy-agents)** is covered by the [Functional Source License (FSL-1.1-MIT)](https://github.com/steph-dove/klaussy-agents/blob/main/LICENSE), and the hosted **Klaussy Loop** and **klaussy review** services at [app.klaussy.com](https://app.klaussy.com) are covered by our [Terms of Service](https://www.klaussy.com/terms.html).
 
-**Run multiple repos. Mix any agents. In one window.**
-The multi-agent workspace for professional engineers.
+**From first prompt to merged PR, with agents that know your codebase.**
+The multi-agent workspace and dev loop for professional engineers.
 
 [![GitHub stars](https://img.shields.io/github/stars/steph-dove/klaussy-desktop?style=social)](https://github.com/steph-dove/klaussy-desktop/stargazers)
 
 *Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, Meta, GitHub, Twitch, Rad AI, and O'Reilly Media.*
 
-A desktop app for **macOS, Windows, and Linux**. Run multi-repo coding sessions with any mix of AI agents (**Claude, Gemini, Copilot, Codex, Cursor, Cline**) side-by-side. Review pull and merge requests with AI across **GitHub, GitLab, and Bitbucket**, and get blazing-fast, 100% local autocomplete that never leaves your machine.
+- **Klaussy Desktop** (macOS, Windows, Linux): Run multi-repo coding sessions with any mix of AI agents (**Claude Code, Codex, Gemini, Antigravity, Copilot, Cursor, Cline, opencode, Kimi Code, Ollama, Nemesis8 Sandbox**) side by side, review PRs/MRs across **GitHub, GitLab, and Bitbucket**, and debug failing CI. Source-available under **SUL 1.0**.
+- **[Klaussy Loop](https://app.klaussy.com/?app=loop)**: The cloud issue-to-PR dev loop across GitHub, GitLab, and Bitbucket: hand it an issue, get back a QA'd, green pull request on your own model key.
+- **[klaussy review](https://app.klaussy.com)**: Automated inline PR/MR reviews across GitHub, GitLab, Bitbucket, and Azure DevOps using Claude, Copilot, or OpenAI on your own key (or self-hosted via the [GitHub Action](https://github.com/marketplace/actions/klaussy-review)).
+- **[klaussy-agents](https://github.com/steph-dove/klaussy-agents)**: The underlying engine powering repo conventions, custom skills, multi-agent review passes, and git-level guardrails. Source-available under **FSL-1.1-MIT** (converting to MIT two years after each release ships).
 
-### [⬇ Download Klaussy](https://www.klaussy.com/#download-btn) · [★ Star on GitHub](https://github.com/steph-dove/klaussy-desktop)
+### [⬇ Download Klaussy Desktop](https://www.klaussy.com/#download-btn) · [🚀 Launch Klaussy Loop & Review](https://app.klaussy.com) · [★ Star on GitHub](https://github.com/steph-dove/klaussy-desktop)
 
-The download page auto-detects your OS and architecture and gives you the right file — or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop/releases/latest).
+The download page auto-detects your OS and architecture and gives you the right file, or pick one yourself from the [latest release](https://github.com/steph-dove/klaussy-desktop/releases/latest).
 
-Source-available under the Sustainable Use License (SUL 1.0). 100% free for individual developers and personal use; paid license required only for commercial production/redistribution.
+Klaussy Desktop is source-available under the Sustainable Use License (SUL 1.0), free for personal use, development, and internal business use. You only need a commercial license to sell it or offer it as a commercial service.
 
 ---
 
-## No server. No markup. Use any agent.
+## No server for Desktop. No markup. Use any agent.
 
-Klaussy is a desktop app, not a platform you log into. There's no account, no backend, and no business model that depends on your code passing through us.
+Klaussy Desktop runs locally on your machine, and our hosted services (**Klaussy Loop** and **klaussy review**) run on your own AI provider keys with zero token markup.
 
-- **Serverless by design.** Everything runs on your machine. We operate no backend, so there's no copy of your repos, prompts, or history on someone else's disk. Your code goes only to the agent provider you picked, through the CLI you already installed and trust.
-- **Bring your own subscription.** Klaussy is not a token reseller. It drives the agent CLIs you already pay for, on your own keys and plans, at the provider's own price — no resold credits, no marked-up tokens, no per-seat AI surcharge, nothing metered by us. Or pay nothing at all and point it at free and local models through Ollama.
-- **Your data isn't the product.** Klaussy doesn't collect what you open, what you run, or what's in your repos. Nobody here has a pile of your data to sell or train on, because we never took it.
-- **Free for individual developers.** 100% free for personal use and development — not a trial. Source-available under SUL 1.0, so you can read exactly what it does. A paid license is only required for commercial production or redistribution. If your company wants a bespoke edition built around its own tooling and security rules, we're happy to talk. See [Enterprise & Partnerships](#enterprise--partnerships).
+- **Serverless desktop by design.** Everything in Klaussy Desktop runs on your machine. We operate no backend for Desktop, so there's no copy of your repos, prompts, or history on someone else's disk. Your code goes only to the agent provider you picked, through the CLI you already installed and trust.
+- **Bring your own subscription or key.** Klaussy is not a token reseller. Desktop drives the agent CLIs you already pay for, and Klaussy Loop and klaussy review use the API key you provide at the provider's own price: no resold credits, no marked-up tokens, nothing metered on AI usage. Or pay nothing at all and point Desktop at free and local models through Ollama.
+- **Your data isn't the product.** We never sell your code or use your repositories, diffs, or QA captures to train models.
+- **Free for individual developers and internal teams.** Klaussy Desktop is 100% free for personal use, development, and internal business use under SUL 1.0, and `klaussy-agents` is source-available under FSL-1.1-MIT. Klaussy Loop and klaussy review both include a free tier on your own key. If your company wants a bespoke edition built around its own tooling and security rules, we're happy to talk. See [Enterprise & Partnerships](#enterprise--partnerships).
 
 The whole thing is inspectable, runs locally, and keeps working if we disappear. That's the point.
 
@@ -167,33 +170,39 @@ You can book a call directly with our AI Architects via [Calendly](https://calen
 ## FAQ
 
 **Does my code get sent to third parties?**
-When you use an agent, prompts + repo context go to that agent's provider via the CLI you already trust — Anthropic (Claude), OpenAI (Codex), Google (Gemini), GitHub (Copilot), Cursor, or Cline. GitHub, GitLab, and Bitbucket operations go through your local `gh` / `glab` CLI or direct forge credentials. Inline autocomplete runs entirely locally via Ollama and `qwen2.5-coder:1.5b` — nothing per-keystroke leaves your machine. There is no Klaussy server.
+In **Klaussy Desktop**, prompts + repo context go only to the agent provider you picked via the CLI you already trust: Anthropic (Claude), OpenAI (Codex), Google (Gemini, Antigravity), GitHub (Copilot), Cursor, Cline, opencode, Kimi Code, or Aider. GitHub, GitLab, and Bitbucket operations go through your local `gh` / `glab` CLI or direct forge credentials. Inline autocomplete runs locally via Ollama and `qwen2.5-coder:1.5b`, so nothing per-keystroke leaves your machine. There is no Klaussy server for Desktop.
 
-**Do I need a subscription for the agents?**
-You need whatever plan each agent CLI you use is configured for — Claude, Codex, Gemini, Copilot, Cursor, and Cline all run on your own accounts. Klaussy doesn't bill separately or charge for AI usage.
+**Do Klaussy Loop and klaussy review see my code?**
+Only to run your task or review your pull request. Each run executes in an isolated, single-use sandbox or container, and your code and diffs go to the model provider you picked, on your own key. We never sell your code or use it to train models. For **klaussy review**, no code is stored after the review is posted (or you can run the self-hosted [GitHub Action](https://github.com/marketplace/actions/klaussy-review) on your own runners). For **Klaussy Loop**, QA captures, run logs, and run records are kept for 90 days so you can inspect the evidence, then deleted.
+
+**Do I need a subscription, and does Klaussy mark up AI usage?**
+For **Klaussy Desktop**, you need whatever plan each agent CLI you use is configured for, on your own accounts, or use free local models via Ollama. **Klaussy Loop** and **klaussy review** also run on your own AI provider key (with a free tier and paid plans) and never mark up tokens.
+
+**What is klaussy-agents?**
+[klaussy-agents](https://github.com/steph-dove/klaussy-agents) is the engine underneath Klaussy Desktop, Klaussy Loop, and klaussy review: the conventions, custom skills, multi-agent review passes, and git-level guardrails that keep agents aligned with your codebase. It's source-available under the Functional Source License (FSL-1.1-MIT), and each release becomes MIT-licensed two years after it ships.
 
 **Why the 2 GB download prompt for inline autocomplete?**
-~500 MB is Ollama's runtime; ~1 GB is the `qwen2.5-coder:1.5b` model weights. You only see this prompt if you opt in — otherwise a free word-based completer handles Tab.
+~500 MB is Ollama's runtime; ~1 GB is the `qwen2.5-coder:1.5b` model weights. You only see this prompt if you opt in, otherwise a free word-based completer handles Tab.
 
-**What happens to my data if I uninstall?**
-- macOS: remove `~/Library/Application Support/Klaussy` and `~/Library/Logs/Klaussy`
+**What happens to my local data if I uninstall Klaussy Desktop?**
+- macOS: remove `~/Library/Application Support/Klaussy`, `~/.klaussy`, and `~/Library/Logs/Klaussy`
 - Windows: remove `%APPDATA%\Klaussy`
 - Linux: remove `~/.config/Klaussy` and `~/.local/share/Klaussy`
 
-Ollama and its models persist independently — uninstall it through your package manager and remove `~/.ollama`.
+Ollama and its models persist independently; uninstall it through your package manager and remove `~/.ollama`.
 
-**Is this open source?**
-Klaussy Desktop is source-available under the Sustainable Use License (SUL 1.0). You can view, customize, and build the software from source for personal use or development. For custom enterprise integrations, self-hosting, or custom AI routing, contact our team to partner. Bundled open-source components are listed in About → Licenses.
-
-**What is the Sustainable Use License (SUL 1.0)?**
-The Sustainable Use License is a source-available license. It allows individuals and organizations to inspect, modify, and run the code for personal use or development. However, commercial production usage requires a separate agreement, and you cannot use the software to host a competing service.
+**Is this open source, and how is each product licensed?**
+- **Klaussy Desktop** is source-available under the [Sustainable Use License (SUL 1.0)](https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE). You can inspect, modify, run, and self-host the software for personal use, non-commercial use, development, and internal business use. Selling it or offering it as part of a paid or competing commercial service requires a separate commercial agreement. Bundled open-source components are listed in About → Licenses.
+- **[klaussy-agents](https://github.com/steph-dove/klaussy-agents)** (along with [klaussy-repo-conventions](https://github.com/steph-dove/klaussy-repo-conventions) and the [klaussy review GitHub Action](https://github.com/marketplace/actions/klaussy-review)) is source-available under the [Functional Source License (FSL-1.1-MIT)](https://github.com/steph-dove/klaussy-agents/blob/main/LICENSE): free to use, modify, and self-host for anything except a competing commercial product or service, converting to MIT two years after each release ships.
+- **Klaussy Loop** and **klaussy review** at [app.klaussy.com](https://app.klaussy.com) are hosted cloud services governed by our [Terms of Service](https://www.klaussy.com/terms.html).
 
 ## Report a bug / request a feature
 
-Open an issue in the [Issues tab](https://github.com/steph-dove/klaussy-desktop/issues). Every one gets read.
+Open an issue in the [Issues tab](https://github.com/steph-dove/klaussy-desktop-feedback/issues/new/choose). Every one gets read.
 
 Please include:
-- OS and version (macOS / Windows / Linux distro)
+- Product (Klaussy Desktop, Klaussy Loop, klaussy review, or klaussy-agents)
+- OS and version (if Klaussy Desktop)
 - Klaussy version (About → Version)
 - Steps to reproduce, expected vs. actual behavior
 - Logs if relevant:
@@ -203,4 +212,4 @@ Please include:
 
 ---
 
-[Privacy](https://steph-dove.github.io/klaussy-desktop-feedback/privacy.html) · [EULA](https://steph-dove.github.io/klaussy-desktop-feedback/eula.html) · © 2026 Dovatech LLC.
+[Privacy](https://www.klaussy.com/privacy.html) · [EULA](https://www.klaussy.com/eula.html) · [Terms](https://www.klaussy.com/terms.html) · [Support](https://www.klaussy.com/support.html) · [Security](https://www.klaussy.com/security.html) · © 2026 Dovatech LLC.
