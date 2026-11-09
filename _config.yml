@@ -1,0 +1,3 @@
+# Jekyll skips dot folders; Microsoft Entra reads the publisher domain file from .well-known.
+include:
+  - .well-known
