@@ -35,7 +35,7 @@
       <p class="doc-crumb"><a href="./">← Back to Klaussy</a></p>
 
       <h1>Privacy Policy</h1>
-      <p class="doc-meta">Last updated: November 6, 2026 · Draft pending legal review.</p>
+      <p class="doc-meta">Last updated: November 8, 2026 · Draft pending legal review.</p>
 
       <p>Sections 1 to 8 cover the <strong>Klaussy Desktop</strong> app (licensed under <a href="https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE" target="_blank" rel="noopener">SUL 1.0</a>) and the local <strong><a href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">klaussy-agents</a></strong> engine (licensed under <a href="https://github.com/steph-dove/klaussy-agents/blob/main/LICENSE" target="_blank" rel="noopener">FSL-1.1-MIT</a>). <strong>klaussy review</strong> and <strong>Klaussy Loop</strong> are hosted cloud services governed by our <a href="terms.html">Terms of Service</a>, each with its own section below: <a href="#klaussy-review">klaussy review</a> and <a href="#klaussy-loop">Klaussy Loop</a>.</p>
 
@@ -174,12 +174,12 @@
 
 
       <h2 id="klaussy-loop">Klaussy Loop</h2>
-      <p class="doc-meta">Last updated: November 6, 2026 · Draft pending legal review.</p>
+      <p class="doc-meta">Last updated: November 8, 2026 · Draft pending legal review.</p>
       <p>Klaussy Loop is a hosted service run by Dovatech LLC. It runs on Amazon Web Services in the US, and some QA jobs run on Google Cloud or on hardware Klaussy operates. This section covers what it stores, what it sends and for how long.</p>
 
       <h3>What we store about your account</h3>
       <ul>
-        <li>Your forge connection: the GitHub, GitLab or Bitbucket account it's for, and the repositories Loop can work in.</li>
+        <li>Your forge connection: the GitHub, GitLab, Bitbucket or Azure DevOps account it's for, and the repositories Loop can work in.</li>
         <li>Your AI provider credential.</li>
         <li>Your Loop settings, including the MCP servers you've turned on and the repository variables and secrets you've set.</li>
       </ul>
@@ -187,7 +187,7 @@
       <h3>What happens during a run</h3>
       <ul>
         <li>Your repository's code is checked out into an isolated sandbox on AWS. The agent plans the change there, writes code on a branch and runs your tests.</li>
-        <li>The agent reads the issue it's working on, and later the review comments on the pull or merge request it opened.</li>
+        <li>The agent reads the issue (or Azure Boards work item) it&rsquo;s working on, and later the review comments on the pull or merge request it opened.</li>
         <li>Repository variables and secrets from your Loop settings go to the run that needs them, and only for that run.</li>
         <li>The QA step takes screenshots and screen recordings of your app and captures its terminal output. An AI QA judge reviews them. Whatever your app shows on screen ends up in those captures, so run it on test data rather than real customer data where you can.</li>
         <li>For iOS and Android apps, QA may run in a disposable macOS virtual machine on hardware Klaussy operates, or in an Android emulator on Google Cloud in a US region. Both are deleted after each job.</li>
@@ -207,7 +207,7 @@
       <ul>
         <li><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Amazon Web Services</a> (hosting, US)</li>
         <li><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud</a> (Android emulators, US region)</li>
-        <li>The forge you connected: <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub</a>, <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">GitLab</a> or <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian</a> (Bitbucket)</li>
+        <li>The forge you connected: <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub</a>, <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">GitLab</a>, <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian</a> (Bitbucket) or <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft</a> (Azure DevOps)</li>
         <li>The AI provider you chose: <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a> or <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub Copilot</a></li>
       </ul>
 

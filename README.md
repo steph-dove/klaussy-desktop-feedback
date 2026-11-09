@@ -11,7 +11,7 @@ The multi-agent workspace and dev loop for professional engineers.
 *Created by an ex-GitHub, Microsoft & Twitch engineer. Trusted by engineers at Microsoft, Meta, GitHub, Twitch, Rad AI, and O'Reilly Media.*
 
 - **Klaussy Desktop** (macOS, Windows, Linux): Run multi-repo coding sessions with any mix of AI agents (**Claude Code, Codex, Gemini, Antigravity, Copilot, Cursor, Cline, opencode, Kimi Code, Ollama, Nemesis8 Sandbox**) side by side, review PRs/MRs across **GitHub, GitLab, and Bitbucket**, and debug failing CI. Source-available under **SUL 1.0**.
-- **[Klaussy Loop](https://app.klaussy.com/?app=loop)**: The cloud issue-to-PR dev loop across GitHub, GitLab, and Bitbucket: hand it an issue, get back a QA'd, green pull request on your own model key.
+- **[Klaussy Loop](https://app.klaussy.com/?app=loop)**: The cloud issue-to-PR dev loop across GitHub, GitLab, Bitbucket, and Azure DevOps: hand it an issue, get back a QA'd, green pull request on your own model key.
 - **[klaussy review](https://app.klaussy.com)**: Automated inline PR/MR reviews across GitHub, GitLab, Bitbucket, and Azure DevOps using Claude, Copilot, or OpenAI on your own key (or self-hosted via the [GitHub Action](https://github.com/marketplace/actions/klaussy-review)).
 - **[klaussy-agents](https://github.com/steph-dove/klaussy-agents)**: The underlying engine powering repo conventions, custom skills, multi-agent review passes, and git-level guardrails. Source-available under **FSL-1.1-MIT** (converting to MIT two years after each release ships).
 
