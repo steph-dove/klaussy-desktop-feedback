@@ -130,15 +130,15 @@
       <p>We'll update this page and bump the "Last updated" date at the top. Material changes will be noted in the release notes of the version that introduces them.</p>
 
 
-      <h2 id="klaussy-review">klaussy review GitHub App</h2>
-      <p class="doc-meta">Last updated: October 13, 2026 · Draft pending legal review.</p>
-      <p>Unlike the desktop app, klaussy review is a hosted service run by Dovatech LLC. It's hosted on Amazon Web Services in the us-east-1 region. This section covers what it stores, what it sends and for how long.</p>
+      <h2 id="klaussy-review">Klaussy Review</h2>
+      <p class="doc-meta">Last updated: November 9, 2026 · Draft pending legal review.</p>
+      <p>Unlike the desktop app, Klaussy Review is a hosted service run by Dovatech LLC. It's hosted on Amazon Web Services in the us-east-1 region. This section covers what it stores, what it sends and for how long.</p>
 
       <h3>What we store about your installation</h3>
       <ul>
-        <li>Your GitHub installation id, and the account login, id and type it's installed on.</li>
+        <li>Your GitHub App installation, or your GitLab, Bitbucket or Azure DevOps connection, and the account login, id and type it's for.</li>
         <li>Your settings: agent, model, review mode and per-review budget.</li>
-        <li>Your AI credential, encrypted with AWS KMS and bound to your installation. Only the last 4 characters are kept readable. It's deleted when you uninstall the app.</li>
+        <li>Your AI credential, encrypted with AWS KMS and bound to your installation. Only the last 4 characters are kept readable. It's deleted when you uninstall the app or disconnect your forge.</li>
         <li>Your plan, and your Stripe customer and subscription ids.</li>
       </ul>
 
@@ -152,11 +152,11 @@
       <h3>What we keep after a review</h3>
       <ul>
         <li><strong>Run records</strong>, kept for 400 days for limits and billing: repository name, pull request number, commit SHA, status, cost, number of findings and duration.</li>
-        <li><strong>Service logs</strong>, kept for 14 days. They normally hold ids and status only. If a review fails, its log can include a short excerpt (up to about 1.5 KB) of the agent's output.</li>
+        <li><strong>Service logs</strong>, kept for 365 days for security and audit. They normally hold ids and status only. If a review fails, its log can include a short excerpt (up to about 1.5 KB) of the agent's output.</li>
       </ul>
 
       <h3>Your AI provider</h3>
-      <p>Your code and pull request content are sent to the AI provider you chose (Anthropic, OpenAI or GitHub Copilot), under your own credential and that provider's terms. klaussy never holds your credential inside the review agent.</p>
+      <p>Your code and pull request content are sent to the AI provider you chose (Anthropic or OpenAI), under your own credential and that provider's terms. Klaussy never holds your credential inside the review agent.</p>
 
       <h3>What we don't do</h3>
       <p>We don't sell your data. We don't use your code to train models.</p>
@@ -164,23 +164,23 @@
       <h3>Subprocessors</h3>
       <ul>
         <li><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Amazon Web Services</a> (hosting)</li>
-        <li><a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub</a> (the platform the app runs on)</li>
+        <li>The forge you connected: <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub</a>, <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">GitLab</a>, <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian</a> (Bitbucket) or <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft</a> (Azure DevOps)</li>
         <li><a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a> (billing)</li>
-        <li>The AI provider you chose: <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a> or <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub Copilot</a></li>
+        <li>The AI provider you chose: <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a> or <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a></li>
       </ul>
 
       <h3>Deletion and requests</h3>
-      <p>To ask for your data to be deleted, or for any other privacy request about klaussy review, email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
+      <p>To ask for your data to be deleted, or for any other privacy request about Klaussy Review, email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
 
 
       <h2 id="klaussy-loop">Klaussy Loop</h2>
-      <p class="doc-meta">Last updated: November 8, 2026 · Draft pending legal review.</p>
+      <p class="doc-meta">Last updated: November 9, 2026 · Draft pending legal review.</p>
       <p>Klaussy Loop is a hosted service run by Dovatech LLC. It runs on Amazon Web Services in the US, and some QA jobs run on Google Cloud or on hardware Klaussy operates. This section covers what it stores, what it sends and for how long.</p>
 
       <h3>What we store about your account</h3>
       <ul>
         <li>Your forge connection: the GitHub, GitLab, Bitbucket or Azure DevOps account it's for, and the repositories Loop can work in.</li>
-        <li>Your AI provider credential.</li>
+        <li>Your Anthropic API key, encrypted with AWS KMS.</li>
         <li>Your Loop settings, including the MCP servers you've turned on and the repository variables and secrets you've set.</li>
       </ul>
 
@@ -195,10 +195,15 @@
       </ul>
 
       <h3>What we keep after a run</h3>
-      <p>QA captures (screenshots, recordings and terminal output), run logs and run records are kept for 90 days, then deleted.</p>
+      <ul>
+        <li><strong>QA captures</strong> (screenshots, recordings and terminal output), test results and run activity, kept for 30 days.</li>
+        <li><strong>Run files</strong> (what the run was asked, the plan's wireframes and what it needs to resume) and Android emulator job files, kept for 90 days. A run paused longer than that can't be resumed.</li>
+        <li><strong>Run records</strong>, kept for 400 days for limits and billing: repository, issue, pull or merge request, status, cost, what the run was asked and the plan you approved.</li>
+        <li><strong>Service logs</strong>, kept for 365 days for security and audit. They can include parts of the agent's output.</li>
+      </ul>
 
       <h3>Your AI provider</h3>
-      <p>Every model call Loop makes, the QA judge included, runs on your own AI provider key. Your code, issues, review comments and QA captures go to that provider under your credential and its terms.</p>
+      <p>Every model call Loop makes, the QA judge included, runs on your own Anthropic API key. Your code, issues, review comments and QA captures go to Anthropic under your credential and its terms.</p>
 
       <h3>What we don't do</h3>
       <p>We don't sell your data. We don't use your code or QA captures to train models.</p>
@@ -208,11 +213,12 @@
         <li><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Amazon Web Services</a> (hosting, US)</li>
         <li><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud</a> (Android emulators, US region)</li>
         <li>The forge you connected: <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub</a>, <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">GitLab</a>, <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian</a> (Bitbucket) or <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft</a> (Azure DevOps)</li>
-        <li>The AI provider you chose: <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a> or <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">GitHub Copilot</a></li>
+        <li><a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a> (billing)</li>
+        <li>Your AI provider: <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a></li>
       </ul>
 
       <h3>Deletion and requests</h3>
-      <p>To have your Klaussy Loop data deleted before the 90 days are up, or for any other privacy request about Loop, email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
+      <p>To have your Klaussy Loop data deleted sooner, or for any other privacy request about Loop, email <a href="mailto:stephanie@klaussy.com">stephanie@klaussy.com</a>.</p>
 
     </div>
   </article>
