@@ -50,6 +50,8 @@
 
       <h3>Start a Klaussy Loop run</h3>
       <p>Connect your GitHub, GitLab, Bitbucket, or Azure DevOps repository at <a href="https://app.klaussy.com/?app=loop" target="_blank" rel="noopener">app.klaussy.com</a>, hand Loop an issue, and approve the generated plan. Loop builds on a branch, runs tests and QA captures, and opens a pull or merge request.</p>
+      <!-- iOS/macOS QA date: also in index.html; update both, and drop both once it ships. -->
+      <p>QA takes screenshots and recordings of web, Electron and Android apps. Loop runs on iOS and native macOS apps too, but QA can&rsquo;t take screenshots or screen recordings of them yet, so it runs their tests and keeps the terminal output as evidence instead. Screenshot and recording support for iOS and macOS is coming November 26, 2026.</p>
 
       <h3>Ask for a review</h3>
       <p>Comment <code>/klaussy review</code> on the pull request. You need write access to the repository.</p>
@@ -74,8 +76,12 @@
       <h3>"Out of credits"</h3>
       <p>Your AI provider account has run out of credit or quota. Add credit or raise the limit with your provider, then run the review or Loop task again.</p>
 
+      <h3>A free review or Loop run didn't start</h3>
+      <p>On Free, check whether you've used this month's allowance in app.klaussy.com. If you haven't, the overall limit everyone on Free shares has been reached: reviews start again the next day and Loop runs on the 1st of the month. A paid plan isn't affected by it. See <a href="#plans">Plans &amp; Licensing</a>.</p>
+
       <h3 id="plans">Plans &amp; Licensing</h3>
-      <p><strong>klaussy review:</strong> Free covers 20 public-repository and 5 private-repository reviews a month, up to 5 a day. Personal is $15 a month for a personal account, with up to 500 reviews a month and 100 a day. Team is $49 a month, with any number of members, up to 1,500 reviews a month and 300 a day; individuals can choose it too. <strong>Klaussy Loop:</strong> plans and limits are shown at <a href="https://app.klaussy.com/?app=loop" target="_blank" rel="noopener">app.klaussy.com</a>. Need higher limits or invoicing? <a href="mailto:stephanie@klaussy.com">Ask about Enterprise</a>.</p>
+      <p><strong>klaussy review:</strong> Free covers 20 public-repository and 10 private-repository reviews a month, up to 10 a day. Personal is $19 a month for a personal account, with up to 500 reviews a month and 100 a day. Pro is $29 a month, with up to 1,000 reviews a month and 200 a day. Team is $49 a month, with up to 2,000 reviews a month and 500 a day. Pro and Team take any number of members, and individuals can choose them too. <strong>Klaussy Loop:</strong> every Loop plan includes its klaussy review plan. Free Loop has 10 runs a month. Personal + Loop is $39 a month with 40 runs, Pro + Loop is $79 with 110, and Team + Loop is $149 with 240. Only Team + Loop keeps going past its runs, at $1 a run; the other plans start again the next month. Each account runs up to 3 Loop runs at once, and the rest wait their turn. Set it up at <a href="https://app.klaussy.com/?app=loop" target="_blank" rel="noopener">app.klaussy.com</a>. If you subscribed before November 10, 2026, you keep your plan's price. Need higher limits or invoicing? <a href="mailto:stephanie@klaussy.com">Ask about Enterprise</a>.</p>
+      <p>Free reviews and Free Loop runs each have an overall limit shared by everyone on Free: a daily one for reviews and a monthly one for Loop runs. When one is reached, free reviews or runs pause until the next day or month, even if your own allowance isn't used up. Paid plans aren't affected.</p>
       <p><strong>Klaussy Desktop &amp; klaussy-agents:</strong> Klaussy Desktop is source-available under the <a href="https://github.com/steph-dove/klaussy-desktop/blob/main/LICENSE" target="_blank" rel="noopener">Sustainable Use License (SUL 1.0)</a> (free for personal use, development, and internal business use), and <a href="https://github.com/steph-dove/klaussy-agents" target="_blank" rel="noopener">klaussy-agents</a> is source-available under the <a href="https://github.com/steph-dove/klaussy-agents/blob/main/LICENSE" target="_blank" rel="noopener">Functional Source License (FSL-1.1-MIT)</a>.</p>
 
       <h3>Cancel your plan</h3>
