@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A solo-built code reviewer outranked OpenAI and GitHub on GitHub's own benchmark · Klaussy Blog</title>
+  <meta name="description" content="klaussy review ranks #3 of 24 on ReviewBench across all severities, ahead of GitHub Copilot, OpenAI Codex, Devin, Qodo, Greptile and Cursor. Here's the benchmark, how it works, and how to try it.">
+  <meta property="og:title" content="A solo-built code reviewer outranked OpenAI and GitHub on GitHub's own benchmark">
+  <meta property="og:description" content="klaussy review ranks #3 of 24 on ReviewBench across all severities, finding about twice as many confirmed issues as Copilot and three times as many as Codex, in 55 seconds per review.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.klaussy.com/blog/reviewbench/">
+  <meta property="og:site_name" content="Klaussy">
+  <meta property="og:image" content="https://www.klaussy.com/og-klaussy-sdlc.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.klaussy.com/og-klaussy-sdlc.png">
+  <link rel="canonical" href="https://www.klaussy.com/blog/reviewbench/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">
+      <img class="brand-mark" src="/brand-mark.png" alt="" />
+      <span class="brand-name">Klaussy</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#loop">Loop</a>
+      <a href="/#review">Review</a>
+      <a href="/#agents">Desktop</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues/new/choose" target="_blank" rel="noopener">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post">
+
+  <header class="post-hero">
+    <div class="container post-col">
+      <p class="post-crumb"><a href="/blog/">← Klaussy Blog</a></p>
+      <p class="eyebrow">klaussy review · Benchmark</p>
+      <h1 class="post-title">A solo-built code reviewer outranked OpenAI and GitHub on GitHub's own benchmark</h1>
+      <p class="post-dek">klaussy review ranks #3 of 24 on ReviewBench, finding about twice as many real bugs as Copilot and three times as many as Codex, in under a minute.</p>
+      <p class="post-meta">Stephanie, creator of Klaussy <span aria-hidden="true">·</span> November 2026 <span aria-hidden="true">·</span> Numbers as of Nov 18, 2026</p>
+    </div>
+  </header>
+
+  <div class="container post-col">
+
+    <div class="post-stats" role="list">
+      <div class="post-stat" role="listitem">
+        <span class="post-stat-num">#3</span>
+        <span class="post-stat-label">of 24 on ReviewBench, all severities</span>
+      </div>
+      <div class="post-stat" role="listitem">
+        <span class="post-stat-num">2&times;</span>
+        <span class="post-stat-label">the bugs found by Copilot's best setting</span>
+      </div>
+      <div class="post-stat" role="listitem">
+        <span class="post-stat-num">55s</span>
+        <span class="post-stat-label">per review, against 16 minutes for Copilot Max</span>
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      <p>I'm one developer. I built klaussy review, an AI reviewer for pull requests, on my own. On <a href="https://review-bench.ai/?severities=Low%2CMedium%2CHigh" target="_blank" rel="noopener">ReviewBench</a>, the open code review benchmark GitHub publishes, it ranks <strong>#3 of 24</strong> across all severities.</p>
+
+      <p>Here's everything at or above it, and the best entry from each big name below it:</p>
+
+      <figure class="post-table">
+        <div class="post-table-scroll">
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Reviewer</th><th class="num">Bugs found<span>recall</span></th><th class="num">Comments correct<span>precision</span></th><th class="num">F1</th><th class="num">Time<span>per review</span></th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>OhMyBug</td><td class="num">60.2%</td><td class="num">81.7%</td><td class="num">69.3%</td><td class="num">5m 22s</td></tr>
+              <tr><td>2</td><td>intent-review-agent · v1</td><td class="num">60.0%</td><td class="num">80.7%</td><td class="num">68.8%</td><td class="num">5m 37s</td></tr>
+              <tr class="is-us"><td>3</td><td>klaussy review</td><td class="num">58.1%</td><td class="num">80.2%</td><td class="num">67.4%</td><td class="num">55s</td></tr>
+              <tr class="is-gap"><td colspan="6">…</td></tr>
+              <tr><td>10</td><td>GitHub Copilot code review · Max</td><td class="num">28.0%</td><td class="num">87.8%</td><td class="num">42.4%</td><td class="num">16m 13s</td></tr>
+              <tr><td>12</td><td>Devin AI</td><td class="num">23.8%</td><td class="num">84.0%</td><td class="num">37.0%</td><td class="num">3m 13s</td></tr>
+              <tr><td>16</td><td>Qodo</td><td class="num">22.1%</td><td class="num">85.3%</td><td class="num">35.1%</td><td class="num">4m 34s</td></tr>
+              <tr><td>18</td><td>OpenAI Codex · GPT-5.6 Sol · Max</td><td class="num">18.5%</td><td class="num">86.0%</td><td class="num">30.4%</td><td class="num">9m 28s</td></tr>
+              <tr><td>20</td><td>Greptile</td><td class="num">16.2%</td><td class="num">86.1%</td><td class="num">27.2%</td><td class="num">4m 49s</td></tr>
+              <tr><td>22</td><td>Cubic</td><td class="num">14.9%</td><td class="num">84.3%</td><td class="num">25.3%</td><td class="num">n/a</td></tr>
+              <tr><td>24</td><td>Cursor</td><td class="num">9.6%</td><td class="num">87.7%</td><td class="num">17.3%</td><td class="num">n/a</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption>ReviewBench, all severities selected, retrieved Nov 18, 2026. <a href="https://review-bench.ai/?severities=Low%2CMedium%2CHigh" target="_blank" rel="noopener">See the full leaderboard</a>.</figcaption>
+      </figure>
+
+      <p>klaussy review found about twice as many confirmed issues as GitHub Copilot's best setting and three times as many as OpenAI Codex's. It finished each review in under a minute.</p>
+
+      <h2>The benchmark</h2>
+      <p>ReviewBench is an open benchmark for AI code review: 219 real pull requests from 187 public repositories in 19 languages. Every reviewer runs on every PR, and its comments are scored against issues that human reviewers confirmed. Recall is the share of those issues a reviewer found. Precision is the share of its comments that were right. The leaderboard ranks by F1, which balances the two.</p>
+      <p>ReviewBench opens filtered to high severity: 175 of the benchmark's 2,565 confirmed issues. It's the only severity filter in which Copilot's best entry makes the top five. Across all 2,565 issues, klaussy review ranks #3 and Copilot ranks #10. You can check both: <a href="https://review-bench.ai/?severities=Low%2CMedium%2CHigh" target="_blank" rel="noopener">all severities</a> and <a href="https://review-bench.ai/" target="_blank" rel="noopener">high severity only</a>.</p>
+
+      <h2>How klaussy review works</h2>
+      <p>Most AI reviewers treat two questions as one:</p>
+      <ul>
+        <li>What's wrong with this PR?</li>
+        <li>What does this team want to hear about?</li>
+      </ul>
+      <p>When those share one setting, the only way to cut noise is to find less. You can see it in the table. Every big-name reviewer's comments are right 84–88% of the time, and every one of them misses between 72% and 90% of the issues. Noisy reviewers get uninstalled, so these tools say less, and the bugs they don't mention get merged.</p>
+      <p>klaussy review splits the two. The review pass looks for everything: bugs, risky changes, style problems, nits. Then your settings decide what gets posted. Turn nits off and it still finds them; it just doesn't post them. Filtering never makes it worse at finding bugs.</p>
+      <p>Findings land inline on the exact diff line, each with a suggested change and a collapsed explanation. It runs the agent you pick (Claude, GitHub Copilot or OpenAI) on your own API key, across GitHub, GitLab, Bitbucket and Azure DevOps.</p>
+
+      <figure class="post-shot">
+        <img src="/review-inline.png" width="946" height="732" loading="lazy" alt="A klaussy review on a GitHub pull request: a Request Changes verdict with 14 findings, and one finding pinned to lines 122 to 125 of main/util/slack-socket.js explaining that reconnect() during an in-flight connect() returns immediately.">
+        <figcaption>Findings land on the exact line, with what goes wrong and when.</figcaption>
+      </figure>
+
+      <h2>How it reviews a PR in 55 seconds</h2>
+      <p>The benchmark run used Klaussy's fast mode, which is built for one job: a full review back before you've switched tabs. On ReviewBench it averaged 55 seconds per pull request. The other top entries took between 1 minute 27 seconds and 5 minutes 37 seconds, Copilot Max took 16 minutes, and Codex Max took 9.</p>
+      <p>Speed matters for review more than it looks. A review that lands in under a minute shows up while the author still has the change in their head. One that lands 16 minutes later arrives after they've moved on, and the fix waits for the next round.</p>
+
+      <h2>Why it's better</h2>
+      <ul>
+        <li><strong>It finds more.</strong> 58% of confirmed issues, against 28% for Copilot Max and 18.5% for Codex Max.</li>
+        <li><strong>It's fast.</strong> 55 seconds per review, the fastest of the 20 entries that report a time. Copilot Max takes 16 minutes and Codex Max takes 9.</li>
+        <li><strong>You choose what it posts.</strong> The benchmark run had nits included, with everything posted, to show how much it catches. That's why its precision (80%) sits below Copilot's and Codex's (86–88%). Teams that turn nits off see fewer comments without losing bug coverage.</li>
+      </ul>
+
+    </div>
+
+    <aside class="post-cta">
+      <h2>Try klaussy review</h2>
+      <ul>
+        <li><strong>Hosted:</strong> sign in at app.klaussy.com with GitHub, GitLab, Bitbucket or Azure DevOps, pick your repos, and add your own AI key. There's a free plan, and tokens are never marked up.</li>
+        <li><strong>Your code:</strong> each review runs in an isolated, single-use sandbox, and no code is stored after the review is posted. Reviews post as comments, never approvals. Details are on the <a href="/security.html">security page</a>.</li>
+      </ul>
+      <div class="post-cta-buttons">
+        <a class="btn btn-primary" href="https://app.klaussy.com" target="_blank" rel="noopener">
+          <span class="btn-label">Get started free</span>
+          <span class="btn-sub">GitHub · GitLab · Bitbucket · Azure DevOps</span>
+        </a>      </div>
+    </aside>
+
+    <p class="post-signoff">I'm a solo developer, so feedback goes straight to the person building it. Where would you set the filter: every nit, or only what could break production? <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues/new/choose" target="_blank" rel="noopener">Tell me</a>.</p>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-mark" src="/brand-mark.png" alt="" />
+      <span>Klaussy</span>
+    </div>
+    <nav class="footer-links">
+      <a href="/blog/">Blog</a>
+      <a href="https://github.com/steph-dove/klaussy-desktop-feedback/issues/new/choose" target="_blank" rel="noopener">Feedback</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/eula.html">EULA</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/support.html">Support</a>
+      <a href="/security.html">Security</a>
+    </nav>
+    <p class="footer-copy">© 2026 Dovatech LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
