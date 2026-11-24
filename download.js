@@ -9,16 +9,19 @@
 (() => {
   const REPO = 'steph-dove/klaussy-desktop';
   const API_URL = `https://api.github.com/repos/${REPO}/releases/latest`;
-  const CACHE_KEY = 'klaussy-latest-release';
+  // v2: the cache holds the asset names too, not just the version.
+  const CACHE_KEY = 'klaussy-latest-release-v2';
   const CACHE_TTL_MS = 60 * 60 * 1000;
 
-  const ASSET_FOR = {
-    'mac:arm64':      v => `Klaussy-${v}-macOS-arm64.dmg`,
-    'mac:x64':        v => `Klaussy-${v}-macOS-x64.dmg`,
-    'win:setup':      v => `Klaussy-${v}-Windows-Setup.exe`,
-    'win:portable':   v => `Klaussy-${v}-Windows-Portable.exe`,
-    'linux:appimage': v => `Klaussy-${v}-Linux.AppImage`,
-    'linux:deb':      v => `Klaussy-${v}-Linux-Debian-Ubuntu.deb`,
+  // Matched by ending against the release's own asset list, so the product
+  // name in front (Klaussy-, Maussian-) can change between releases.
+  const ASSET_SUFFIX = {
+    'mac:arm64':      '-macOS-arm64.dmg',
+    'mac:x64':        '-macOS-x64.dmg',
+    'win:setup':      '-Windows-Setup.exe',
+    'win:portable':   '-Windows-Portable.exe',
+    'linux:appimage': '-Linux.AppImage',
+    'linux:deb':      '-Linux-Debian-Ubuntu.deb',
   };
 
   const PRIMARY_LABEL = {
@@ -79,44 +82,54 @@
     }
   }
 
-  async function fetchLatestVersion() {
+  // Returns { version, names } for the latest release, or null.
+  async function fetchLatestRelease() {
     try {
       const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
-      if (cached && Date.now() - cached.ts < CACHE_TTL_MS) return cached.version;
+      if (cached && Date.now() - cached.ts < CACHE_TTL_MS && Array.isArray(cached.names)) return cached;
     } catch (_) {}
     try {
       const r = await fetch(API_URL, { headers: { Accept: 'application/vnd.github+json' } });
       if (!r.ok) return null;
       const data = await r.json();
       const version = String(data.tag_name || '').replace(/^v/, '');
-      if (!version) return null;
-      try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ version, ts: Date.now() })); } catch (_) {}
-      return version;
+      const names = (data.assets || []).map(a => String(a.name || ''));
+      if (!version || !names.length) return null;
+      const release = { version, names, ts: Date.now() };
+      try { sessionStorage.setItem(CACHE_KEY, JSON.stringify(release)); } catch (_) {}
+      return release;
     } catch (_) {
       return null;
     }
   }
 
-  function downloadUrl(key, version) {
-    const filename = ASSET_FOR[key](version);
-    return `https://github.com/${REPO}/releases/download/v${version}/${filename}`;
+  function assetName(key, release) {
+    const suffix = ASSET_SUFFIX[key];
+    return suffix ? release.names.find(n => n.endsWith(suffix)) || null : null;
   }
 
-  function updatePrimary(btn, key, version) {
-    btn.href = downloadUrl(key, version);
+  function downloadUrl(release, filename) {
+    return `https://github.com/${REPO}/releases/download/v${release.version}/${filename}`;
+  }
+
+  // A platform missing from the release keeps its static /releases/latest href.
+  function updatePrimary(btn, key, release) {
+    const filename = assetName(key, release);
+    if (!filename) return;
+    btn.href = downloadUrl(release, filename);
     const label = btn.querySelector('.btn-label');
     const sub = btn.querySelector('.btn-sub');
     if (label && PRIMARY_LABEL[key]) label.textContent = PRIMARY_LABEL[key];
-    if (sub) sub.textContent = `v${version}`;
+    if (sub) sub.textContent = `v${release.version}`;
   }
 
-  function updatePicker(version) {
+  function updatePicker(release) {
     document.querySelectorAll('[data-download-pick]').forEach(row => {
-      const key = row.getAttribute('data-download-pick');
-      if (!ASSET_FOR[key]) return;
-      row.href = downloadUrl(key, version);
+      const filename = assetName(row.getAttribute('data-download-pick'), release);
+      if (!filename) return;
+      row.href = downloadUrl(release, filename);
       const filenameEl = row.querySelector('.download-row-file');
-      if (filenameEl) filenameEl.textContent = ASSET_FOR[key](version);
+      if (filenameEl) filenameEl.textContent = filename;
     });
   }
 
@@ -125,14 +138,14 @@
     const pickerRows = document.querySelectorAll('[data-download-pick]');
     if (!primaryButtons.length && !pickerRows.length) return;
 
-    const [platform, version] = await Promise.all([detectPlatform(), fetchLatestVersion()]);
-    if (!version) return; // leave static /releases/latest fallback in place
+    const [platform, release] = await Promise.all([detectPlatform(), fetchLatestRelease()]);
+    if (!release) return; // leave static /releases/latest fallback in place
 
     if (platform && PRIMARY_LABEL[platform]) {
-      primaryButtons.forEach(btn => updatePrimary(btn, platform, version));
+      primaryButtons.forEach(btn => updatePrimary(btn, platform, release));
       document.body.dataset.detectedPlatform = platform;
     }
-    updatePicker(version);
+    updatePicker(release);
   }
 
   if (document.readyState === 'loading') {
